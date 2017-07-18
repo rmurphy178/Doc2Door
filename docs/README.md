@@ -10,7 +10,9 @@
 ## Minimum Viable Product
 
 Doc2Door is a web application inspired by TaskRabbit built using Ruby on Rails
-and React/Redux.  By August 4th, this app will, at a minimum, have the following features:
+and React/Redux. By the end of week 9, this app will, at a minimum, satisfy the
+following criteria with smooth, bug-free navigation, adequate seed data and
+sufficient CSS styling:
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
@@ -39,29 +41,28 @@ and React/Redux.  By August 4th, this app will, at a minimum, have the following
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Notes Model, API, and components (2 days)
+### Phase 2: Appointment Requests, API, and components (2 days)
 
-**Objective:** Notes can be created, read, edited and destroyed through
-the API.
+**Objective:** Appointments can be requested by a logged-in user in the API.
 
-### Phase 3: Notebooks (2 days)
+### Phase 3: Doctors API (2 days)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Doctors can be rated and requested through the API.
 
-### Phase 4: Tags (1 day)
+### Phase 4: Reviews (2 day)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**Objective:** Reviews can be created with one by each user for a
+given category/specialty and linked to the Doctor and the appointment.
 
-### Phase 5: Allow Complex Styling in Notes (1 day, W2 Th 6pm)
+### Phase 5: CSS Styling (1 day)
 
-**Objective:** Allow rich text editing of notes.
+**Objective:** Ensure beautiful and aesthetically pleasing site/views.
 
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
+### Phase 6: - More Formatting, Styling & Site Building (1 day)
 
-**Objective:** Add infinite scroll to Notes Index
+**Objective:** Refactor for optimized user experience.
 
 ### Bonus Features (TBD)
-- [ ] Search notes by content
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
+- [ ] Google Maps API
+- [ ] Specialist/provider registration
+- [ ] Payment and billing
