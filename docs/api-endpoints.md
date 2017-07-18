@@ -2,30 +2,29 @@
 
 ## Root
 
-- `GET /` - loads React web app
+- `GET /` - loads React
 
 ## JSON API
 
 ### Users
 
 - `POST /api/users`
-- `PATCH /api/users`
+- `Patch /api/users/`
 
 ### Session
 
 - `POST /api/session`
+  - log in user
 - `DELETE /api/session`
+  - log out user
+### Appointments
 
-### Tasks
-
-- `GET /api/specialties`
-  - specialty search and index
-  - accepts `description/title` text to search specialties in database
-- `POST /api/specialties`
-- `GET /api/specialties/:id`
-- `PATCH /api/specialties/:id`
-- `DELETE /api/specialties/:id`
-- `GET /api/specialties/:id/review`
+- `GET /api/appointments`
+- `POST /api/appointments`
+- `GET /api/appointments/:id`
+- `PATCH /api/appointments/:id`
+- `DELETE /api/appointments/:id`
+- `GET /api/appointments/:id/review`
 
 ### Doctors
 
@@ -38,6 +37,6 @@
 ### Bonus
 
 - `GET /api/doctors/:id/reviews`
-  - look up all reviews for a given tasker
+  - look up all reviews for a given doctor
 - `GET /api/users/:id/reviews`
   - Find all the reviews posted by a user
