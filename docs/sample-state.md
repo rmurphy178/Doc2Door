@@ -61,7 +61,7 @@
         user_id: 1,
         doctor_id: 2,
         rating: integer,
-        text: "Dr. Byers..."
+        text: "Dr. Warner..."
       }
     }
   }

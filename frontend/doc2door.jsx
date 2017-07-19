@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<h1>Welcome to Doc2Door!</h1>, root);
 });
 
-
 window.login = login;
 window.signup = signup;
 window.logout = logout;
