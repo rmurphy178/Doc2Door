@@ -2,10 +2,10 @@
 
 [Heroku link][heroku] **Note:** This should be a link to your production site
 
-[Trello link][trello]
+[Trello link]: https://trello.com/b/YGrnUu0g/doc2door-demo
 
-[heroku]: http://www.herokuapp.com
-[trello]: https://trello.com/b/ALgfuX0Q/freshernote
+[Heroku link]: https://doc2door.herokuapp.com/
+[Trello link]: https://trello.com/b/YGrnUu0g/doc2door-demo
 
 ## Minimum Viable Product
 
