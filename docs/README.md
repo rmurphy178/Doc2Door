@@ -60,7 +60,8 @@ given category/specialty and linked to the Doctor and the appointment.
 
 ### Phase 6: - More Formatting, Styling & Site Building (1 day)
 
-**Objective:** Refactor for optimized user experience.
+**Objective:** Refactor for optimized user experience and resolve
+any outstanding issues.
 
 ### Bonus Features (TBD)
 - [ ] Google Maps API
