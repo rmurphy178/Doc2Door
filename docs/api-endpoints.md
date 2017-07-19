@@ -9,7 +9,7 @@
 ### Users
 
 - `POST /api/users`
-- `Patch /api/users/`
+- `PATCH /api/users/`
 
 ### Session
 

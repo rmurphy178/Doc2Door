@@ -4,8 +4,8 @@
 - AuthForm
 
 **HomeContainer**
-- HomeView
-- TopNav
+- Home
+- NavBar
 - SearchContainer
 - SearchBar
 - SearchResults
