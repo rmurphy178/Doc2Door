@@ -1,9 +1,5 @@
 # Doc2Door
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
-
-[Trello link]: https://trello.com/b/YGrnUu0g/doc2door-demo
-
 [Heroku link]: https://doc2door.herokuapp.com/
 [Trello link]: https://trello.com/b/YGrnUu0g/doc2door-demo
 
