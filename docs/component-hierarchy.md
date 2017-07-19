@@ -1,33 +1,24 @@
-##Component Hierarchy
+## Component Hierarchy
 
-**AuthFormContainer**
-- AuthForm
+**Bolded** components are associated with routes.
 
-**HomeContainer**
-- Home
-- NavBar
-- SearchContainer
-- SearchBar
-- SearchResults
+* **AuthFormContainer**
+    * AuthForm
 
-**AppointmentContainer**
-- AppointmentDetailForm
-- SelectDoctorForm
-- BookAppointmentForm
-
-## Routes
-
-|Path   | Component   |
-|-------|-------------|
-| "/signup" | "AuthContainer" |
-| "/login" | "AuthContainer" |
-| "/" | "HomeContainer" |
-| "/profile" | "ProfileContainer" |
-| "/profile/edit" | "ProfileEditFormContainer" |
-| "/appointments" | "AppointmentsIndexContainer" |
-| "/appointments/:id" | "AppointmentContainer" |
-| "/appointments/:id/detail" | "AppointmentDetailContainer" |
-| "/appointments/:id/request" | "AppointmentRequestFormContainer" |
-| "/appointments/:id/:request_id" | "AppointmentRequestContainer" |
-| "/doctors" | "DoctorsIndexContainer" |
-| "/doctors/:id" | "DoctorsContainer"
+* **App**
+  * **LoginUser**
+    * LoginForm (link to create new user)
+      * **NewUser**
+        * SignUpForm
+    * **AppointmentIndex**
+      * NavBar
+        * LogOut
+      * SearchBar
+      * DisplayAppointmentCategories
+    * **AppointmentDetail**
+      * NewAppointmentForm
+      * AppointmentDetailForm
+        * DoctorList
+          * DisplayReferences
+      * BookingForm
+      * DisplayReferences
