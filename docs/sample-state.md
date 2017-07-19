@@ -29,13 +29,12 @@
     byId: {
       2: {
         id: 2,
-        firstName: 'Dr. Sean',
-        lastName: 'Byers'
+        name: 'Dr. Jack Warner',
         image_url: 'image_url',
         reviews: [2, 3],
         appointments: [2, 3, 8]
       }
-      doctor_detail: 2
+      doctorDetail: 2
     }
   }
 
