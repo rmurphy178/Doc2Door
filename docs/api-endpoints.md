@@ -2,7 +2,7 @@
 
 ## Root
 
-- `GET /` - loads React
+- `GET /` - loads React web app
 
 ## JSON API
 
@@ -14,17 +14,16 @@
 ### Session
 
 - `POST /api/session`
-  - log in user
 - `DELETE /api/session`
-  - log out user
-### Appointments
+
+### Appointment (References users table and doctors table)
 
 - `GET /api/appointments`
 - `POST /api/appointments`
 - `GET /api/appointments/:id`
 - `PATCH /api/appointments/:id`
 - `DELETE /api/appointments/:id`
-- `GET /api/appointments/:id/review`
+
 
 ### Doctors
 
@@ -34,9 +33,11 @@
 - `DELETE /api/doctors/:id`
 
 
-### Bonus
+### Bonus: Reviews (References users table and doctors table)
 
-- `GET /api/doctors/:id/reviews`
-  - look up all reviews for a given doctor
-- `GET /api/users/:id/reviews`
+- `GET /api/reviews`
+- `GET /api/reviews/:id`
+- `GET /api/reviews/users/:id`
   - Find all the reviews posted by a user
+- `GET /api/reviews/doctors/:id`
+  - Find all the reviews for a doctor

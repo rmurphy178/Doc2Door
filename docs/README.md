@@ -51,8 +51,8 @@ sufficient CSS styling:
 
 ### Phase 4: Reviews (2 day)
 
-**Objective:** Reviews can be created with one by each user for a
-given category/specialty and linked to the Doctor and the appointment.
+**Objective:** Reviews can be created by a user and linked to the
+Doctor seen at the appointment.
 
 ### Phase 5: CSS Styling (1 day)
 
@@ -65,5 +65,5 @@ any outstanding issues.
 
 ### Bonus Features (TBD)
 - [ ] Google Maps API
-- [ ] Specialist/provider registration
+- [ ] Doctor registration
 - [ ] Payment and billing

@@ -32,7 +32,8 @@
         name: 'Dr. Jack Warner',
         image_url: 'image_url',
         reviews: [2, 3],
-        appointments: [2, 3, 8]
+        appointments: [2, 3, 8],
+        reviewRating: 88%
       }
       doctorDetail: 2
     }
@@ -59,6 +60,7 @@
         id: 3,
         user_id: 1,
         doctor_id: 2,
+        rating: integer,
         text: "Dr. Byers..."
       }
     }

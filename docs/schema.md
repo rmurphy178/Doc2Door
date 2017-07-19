@@ -31,6 +31,7 @@ id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
 doctor_id   | integer   | not null, foreign key (references doctors), indexed
 rating      | integer   | not null, indexed
+body        | text      | not null
 
 ## doctors
 column name | data type | details
