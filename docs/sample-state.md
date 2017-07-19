@@ -2,7 +2,7 @@
 {
   session: {
     currentUser: 1,
-    firstName: "Ryan",
+    email: "ryanmurphy222@gmail.com",
     errors: []
   }
 
