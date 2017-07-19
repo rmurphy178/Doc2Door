@@ -7,8 +7,6 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :zip, null: false
       t.string :first_name, null: false
       t.string :last_name, null: false
-      t.array :appointments
-      t.array :reviews
 
       t.timestamps null: false
     end

@@ -4,8 +4,7 @@ class CreateDoctors < ActiveRecord::Migration
       t.string :name, null: false
       t.string :image_url, null: false
       t.integer :rating, null: false
-      t.array :reviews
-      t.array :appointments
+
 
       t.timestamps null: false
     end
