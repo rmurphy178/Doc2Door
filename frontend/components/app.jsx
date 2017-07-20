@@ -12,6 +12,7 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import { AuthRoute } from '../util/route_util';
+import SignUpContainer from './sign_up/sign_up_container';
 
 
 const App = () => (
@@ -24,7 +25,7 @@ const App = () => (
     </header>
     <Switch>
       <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
+      <AuthRoute path="/signup" component={SignUpContainer} />
     </Switch>
   </div>
 );
