@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.header-link {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+
+}
