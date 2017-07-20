@@ -29,4 +29,21 @@
 .login-form-container {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+}
+
+.header-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-button {
+  display: flex;
+  justify-content: center;
+}
+
+.header-name {
+  display: flex;
+  justify-content: center;
 }
