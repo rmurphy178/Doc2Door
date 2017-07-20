@@ -14,47 +14,10 @@
  *= require_self
  */
 
-.header-link {
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-
-.login-signup {
-  display: flex;
-  justify-content: center;
-
-}
-
-.login-form-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.header-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.header-button {
-  display: flex;
-  align-self: center;
-  width: 60px;
-}
 
 
-.header-name {
-  display: flex;
-  justify-content: center;
-}
 
 
-.signup-form-container {
-  display: flex;
-  justify-content: center;
-}
 
 .login-signup-forms {
   width: 60vw;
