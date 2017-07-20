@@ -49,3 +49,16 @@
   display: flex;
   justify-content: center;
 }
+
+
+.signup-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-signup-forms {
+  background-color: slategray;
+  width: 60vw;
+  height: 40vh;
+  margin: 30vh 20vw 30vh 20vw;
+}

@@ -17,6 +17,7 @@ import SignUpContainer from './sign_up/sign_up_container';
 
 const App = () => (
   <div>
+    <div className="login-signup-forms">
     <header>
       <Link to="/" className="header-link">
         <h1>Doc2Door</h1>
@@ -27,6 +28,7 @@ const App = () => (
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SignUpContainer} />
     </Switch>
+    </div>
   </div>
 );
 
