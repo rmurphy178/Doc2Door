@@ -25,15 +25,18 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = this.state;
+    let user;
+    if (e.currentTarget.innerHTML === "Guest Login") {
+      user = {
+        email: "Guest@Doc2Door.com",
+        password: "password"
+      };
+    } else {
+      user = this.state;
+    }
     this.props.processForm(user);
   }
 
-  demoSignIn(e) {
-    e.preventDefault();
-    const guest = {email: 'Guest', password: '123456'};
-    this.props.processForm(guest);
-  }
 
   navLink() {
     if (this.props.formType === 'login') {
@@ -85,7 +88,11 @@ class SessionForm extends React.Component {
             <br/>
             <input type="submit" value="Submit" />
           </div>
-             <button type="submit" className="sign-button" onClick={this.demosignin}>Demo Login</button>
+             <button
+               className="login-items"
+               onClick={this.handleSubmit}>
+               Guest Login
+             </button>
         </form>
       </div>
     );
