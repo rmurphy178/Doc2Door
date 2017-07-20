@@ -29,6 +29,12 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  demoSignIn(e) {
+    e.preventDefault();
+    const guest = {email: 'Guest', password: '123456'};
+    this.props.processForm(guest);
+  }
+
   navLink() {
     if (this.props.formType === 'login') {
       return <Link to="/signup">sign up instead</Link>;
@@ -79,6 +85,7 @@ class SessionForm extends React.Component {
             <br/>
             <input type="submit" value="Submit" />
           </div>
+             <button type="submit" className="sign-button" onClick={this.demosignin}>Demo Login</button>
         </form>
       </div>
     );
