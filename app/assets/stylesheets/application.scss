@@ -16,7 +16,7 @@
 
 
  .main-background {
-  background: url(http://res.cloudinary.com/dq5wzf090/image/upload/v1500589182/placeholder_ybsywm.jpg) no-repeat center center fixed;
+  background: url(http://res.cloudinary.com/dq5wzf090/image/upload/q_100/v1500604965/doc_main_u8ggjl.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,8 +29,11 @@
 }
 
 .login-signup-forms {
-  width: 30vw;
-  height: 40vh;
-  margin: 30vh 35vw 30vh 35vw;
-  background-color: darkslategray;
+  display: flex;
+  flex-direction: column;
+  border: medium solid black;
+  margin: 20%;
+  opacity: .3;
+  color: black;
+  background-color: white;
 }
