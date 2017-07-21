@@ -24,10 +24,15 @@ class SessionForm extends React.Component {
     });
   }
 
+  
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm(user);
+    this.props.login(user);
   }
 
 
