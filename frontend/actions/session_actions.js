@@ -14,7 +14,7 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const clearErrors = (currentUser) => ({
+export const clearErrors = () => ({
   type: CLEAR_ERRORS,
 });
 
