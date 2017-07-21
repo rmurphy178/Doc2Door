@@ -14,9 +14,19 @@
  *= require_self
  */
 
- body {
-   background: url(http://res.cloudinary.com/dq5wzf090/image/upload/v1500589182/placeholder_ybsywm.jpg);
- }
+
+ .main-background {
+  background: url(http://res.cloudinary.com/dq5wzf090/image/upload/v1500589182/placeholder_ybsywm.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  position: fixed;
+  z-index: -1;
+}
 
 .login-signup-forms {
   width: 60vw;

@@ -17,6 +17,7 @@ import SignUpContainer from './sign_up/sign_up_container';
 
 const App = () => (
   <div>
+    <section className="main-background">
     <div className="login-signup-forms">
     <header>
       <Link to="/" className="header-link">
@@ -29,6 +30,7 @@ const App = () => (
       <AuthRoute path="/signup" component={SignUpContainer} />
     </Switch>
     </div>
+    </section>
   </div>
 );
 
