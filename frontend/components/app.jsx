@@ -11,7 +11,7 @@ import {
 
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute } from '../util/route_util';
 import SignUpContainer from './sign_up/sign_up_container';
 
 
