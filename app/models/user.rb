@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
 	validates :password, length: {minimum: 6}, allow_nil: :true
 
 	after_initialize :ensure_session_token
-	before_validation :ensure_session_token_uniqueness
 
 
 	def password= password
@@ -35,7 +34,7 @@ class User < ActiveRecord::Base
 	private
 
 	def ensure_session_token
-		self.session_token ||= new_session_token
+	ensure_session_token_uniqueness unless self.session_token
 	end
 
 	def new_session_token
@@ -43,9 +42,11 @@ class User < ActiveRecord::Base
 	end
 
 	def ensure_session_token_uniqueness
+		self.session_token = new_session_token
 		while User.find_by(session_token: self.session_token)
 			self.session_token = new_session_token
 		end
+		self.session_token
 	end
 
 end

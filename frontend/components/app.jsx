@@ -26,8 +26,8 @@ const App = () => (
       <GreetingContainer />
     </header>
     <Switch>
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SignUpContainer} />
+      <AuthRoute exact path="/login" component={SessionFormContainer} />
+      <AuthRoute exact path="/signup" component={SignUpContainer} />
     </Switch>
     </div>
     </section>
