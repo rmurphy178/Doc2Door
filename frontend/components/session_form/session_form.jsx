@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import GreetingContainer from '../greeting/greeting_container';
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,7 @@ class SessionForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      this.props.history.push('/greeting');
     }
   }
 
@@ -78,39 +80,45 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <section>
+      <header className='container'>
+        <Link to="/greeting" className="header-link">
+          <h1>Doc2Door</h1>
+        </Link>
+
+    <div className="login-page">
+      <div className="form">
+        <form onSubmit={this.handleSubmit} className="login-form">
           <br/>
           {this.renderErrors()}
-          <div className="login-form">
             <br/>
-            <label>
               <input type="text"
                 placeholder="Email"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input"
               />
-            </label>
-            <br/>
-            <label>
+
               <input type="password"
                 placeholder="Password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
               />
-            </label>
-            <br/>
             <input type="submit" value="Submit" />
-          </div>
              <button
-               className="login-items"
+               className="login-bttn-jelly bttn-md"
                onClick={this.handleDemo}>
                Guest Login
              </button>
+             <p className="message">Not registered?
+             <Link to="/signup">Sign Up</Link>
+             </p>
         </form>
       </div>
+    </div>
+    </header>
+    </section>
     );
   }
 }

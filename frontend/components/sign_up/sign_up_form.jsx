@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import GreetingContainer from '../greeting/greeting_container';
+
 class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,7 @@ class SignUpForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      this.props.history.push('/greeting');
     }
   }
 
@@ -51,11 +53,19 @@ class SignUpForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
+
+      <section>
+      <header className='container'>
+        <Link to="/greeting" className="header-link">
+          <h1>Doc2Door</h1>
+        </Link>
+
+    <div className="login-page">
+      <div className="form">
+        <form onSubmit={this.handleSubmit} className="register-form">
+          <br/>
           {this.renderErrors()}
-          <div className="signup-form">
-            <label>
+          <br/>
               <input
                 type="text"
                 placeholder="First Name"
@@ -63,9 +73,6 @@ class SignUpForm extends React.Component {
                 onChange={this.update("first_name")}
                 className="signup-input"
                 />
-            </label>
-            <br/>
-            <label>
               <input
                 type="text"
                 placeholder="Last Name"
@@ -73,9 +80,6 @@ class SignUpForm extends React.Component {
                 onChange={this.update("last_name")}
                 className="signup-input"
                 />
-            </label>
-            <br/>
-            <label>
               <input
                 type="text"
                 placeholder="Email"
@@ -83,9 +87,6 @@ class SignUpForm extends React.Component {
                 onChange={this.update("email")}
                 className="signup-input"
                 />
-            </label>
-            <br/>
-            <label>
               <input
                 type="password"
                 placeholder="Password"
@@ -93,9 +94,6 @@ class SignUpForm extends React.Component {
                 onChange={this.update("password")}
                 className="signup-input"
                 />
-            </label>
-            <br/>
-            <label>
               <input
                 type="text"
                 placeholder="Zip Code"
@@ -103,11 +101,15 @@ class SignUpForm extends React.Component {
                 onChange={this.update("zip")}
                 className="signup-input"
                 />
-            </label>
             <input type="submit" value="Submit" />
-          </div>
+              <p className="message">Already registered?
+                <Link to="/">Sign In</Link>
+              </p>
         </form>
       </div>
+      </div>
+      </header>
+      </section>
     );
   }
 }

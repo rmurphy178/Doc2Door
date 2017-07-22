@@ -1,0 +1,29 @@
+.header-button {
+  display: flex;
+  align-self: center;
+}
+
+.header-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(47, 142, 50);
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.header-name {
+  display: flex;
+  justify-content: center;
+}
+
+.login-signup {
+  display: flex;
+  justify-content: center;
+}
