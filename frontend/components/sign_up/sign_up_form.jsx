@@ -54,7 +54,7 @@ class SignUpForm extends React.Component {
   render() {
     return (
 
-      <section>
+      <section className="login-signup-background">
       <header className='container'>
         <Link to="/greeting" className="header-link">
           <h1>Doc2Door</h1>
