@@ -32,7 +32,7 @@ ActiveRecord::Base.transaction do
   user3 = User.create!(
     first_name: 'Guest',
     last_name: 'Guest',
-    email: 'Guest',
+    email: 'guest@doc2door.com',
     password: '123456',
     zip: 94105
   )
