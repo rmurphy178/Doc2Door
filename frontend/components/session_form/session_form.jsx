@@ -51,7 +51,9 @@ class SessionForm extends React.Component {
       email: 'Guest',
       password: '123456'
     };
-    setTimeout(() => this.props.login(user), 1500);
+    setTimeout(() => this.props.handleSubmit(user), 1500).then(() => {
+      this.props.history.push('/greeting');
+    });
   }
 
 
@@ -67,7 +69,7 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="login-error" key={`error-${i}`}>
             {error}
           </li>
         ))}
