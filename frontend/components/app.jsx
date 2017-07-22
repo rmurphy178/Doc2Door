@@ -8,29 +8,22 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+
 
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
-import { AuthRoute } from '../util/route_util';
 import SignUpContainer from './sign_up/sign_up_container';
+import LandingContainer from './landing/landing_container';
 
 
 const App = () => (
   <div>
-    <section className="main-background">
-    <div className="login-signup-forms">
-    <header>
-      <Link to="/" className="header-link">
-        <h1>Doc2Door</h1>
-      </Link>
-      <GreetingContainer />
-    </header>
     <Switch>
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
+      <Route path="/" component={LandingContainer} />
     </Switch>
-    </div>
-    </section>
   </div>
 );
 
