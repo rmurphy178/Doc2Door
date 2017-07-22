@@ -16,11 +16,6 @@ class SignUpForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/greeting');
-    }
-  }
 
   update(field) {
     return e => this.setState({
@@ -36,7 +31,9 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.signup(user);
+    this.props.signup(user).then(() => {
+      this.props.history.push('/greeting');
+    });
   }
 
   renderErrors() {

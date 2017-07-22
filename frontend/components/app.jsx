@@ -20,9 +20,8 @@ const App = () => (
   <div>
     <Switch>
       <Route path="/greeting" component={GreetingContainer} />
-      <AuthRoute exact path="/signup" component={SignUpContainer} />
       <AuthRoute exact path="/" component={SessionFormContainer} />
-      <Redirect to="/" />
+      <AuthRoute exact path="/signup" component={SignUpContainer} />
     </Switch>
   </div>
 );

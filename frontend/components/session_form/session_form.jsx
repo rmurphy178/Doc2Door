@@ -14,11 +14,6 @@ class SessionForm extends React.Component {
     this.handleDemo = this.handleDemo.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/greeting');
-    }
-  }
 
   update(field) {
     return e => this.setState({
@@ -34,7 +29,9 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.login(user);
+    this.props.login(user).then( ()=> {
+      this.props.history.push('/greeting');
+    });
   }
 
 
@@ -107,7 +104,6 @@ class SessionForm extends React.Component {
               />
             <input type="submit" value="Submit" />
              <button
-               className="login-bttn-jelly bttn-md"
                onClick={this.handleDemo}>
                Guest Login
              </button>
