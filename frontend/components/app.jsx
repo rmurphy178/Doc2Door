@@ -20,9 +20,14 @@ import LandingContainer from './landing/landing_container';
 const App = () => (
   <div>
     <Switch>
+<<<<<<< HEAD
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
       <Route path="/" component={LandingContainer} />
+=======
+      <AuthRoute path="/login" component={SessionFormContainer} />
+      <AuthRoute path="/signup" component={SignUpContainer} />
+>>>>>>> parent of 1d6f5cf... update user model to protect against mutations when validating
     </Switch>
   </div>
 );
