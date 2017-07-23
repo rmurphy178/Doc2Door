@@ -1,5 +1,8 @@
 import { connect } from 'react-redux';
 import { Link, withRouteer } from 'react-router-dom';
+import SessionForm from './session_form';
+import { login, clearErrors } from '../../actions/session_actions';
+
 
 
 const mapStateToProps = ({ session }) => {

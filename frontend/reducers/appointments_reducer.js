@@ -2,11 +2,11 @@ import merge from 'lodash/merge';
 
 import {
   RECEIVE_APPOINTMENTS
-} from '../reducers/appointments_appointment_actions';
+} from '../actions/appointment_actions';
 
 
 
-const AppointmentReducer = (state ={}, action) => {
+const AppointmentsReducer = (state ={}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_APPOINTMENTS:
@@ -23,4 +23,4 @@ const AppointmentReducer = (state ={}, action) => {
 
 
 
-export default AppointmentReducer;
+export default AppointmentsReducer;
