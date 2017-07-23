@@ -7,8 +7,8 @@ import {
   fetchAppointments,
   fetchAppointment,
   createAppointment
-}
-from './util/appointment_api_util';
+ }
+ from './actions/appointment_actions';
 
 
 
