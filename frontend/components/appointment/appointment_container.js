@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Link, withRouteer } from 'react-router-dom';
 
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = ({ appointments }) => {
   return {
     loggedIn: Boolean(session.currentUser),
     errors: session.errors
