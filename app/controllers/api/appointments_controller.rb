@@ -2,10 +2,17 @@ class Api::AppointmentsController < ApplicationController
 
   def index
     @appointments = Appointment.all
+    render :index
   end
+
 
   def create
     @appointment = Appointment.new(appointment_params)
+    if @appointment.save
+      render :show
+    else
+      render json: @appointment.errors.full_messages, status: 422
+    end
   end
 
   def show
