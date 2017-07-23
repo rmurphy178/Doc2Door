@@ -24,12 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   //begin testing
-  window.fetchAppointments = fetchAppointments;
-  window.fetchAppointment = fetchAppointment;
-  window.createAppointment = createAppointment;
+  window.store = store.getState;
+  window.dispatch = store.dispatch;
+  window.getState = store.dispatch;
   //end testing
 
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
+
+window.fetchAppointments = fetchAppointments;
+window.fetchAppointment = fetchAppointment;
+window.createAppointment = createAppointment;
