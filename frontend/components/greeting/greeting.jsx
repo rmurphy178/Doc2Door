@@ -9,10 +9,10 @@ const sessionLinks = () => (
       <h1>Doc2Door</h1>
     </Link>
     <br/>
-    <Link to="/">Login</Link>
+    <Link to="/login">Login</Link>
     &nbsp;or&nbsp;
     <Link to="/signup">Sign up!</Link>
-      <Link to="/landing">
+      <Link to="/">
         <h1>Landing</h1>
       </Link>
   </nav>

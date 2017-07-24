@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
       <div className="login-signup-form">
         <header className='login-container'>
           <Link to="/greeting" className="header-link">
-            <h1>Doc2Door</h1>
+            <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500890681/icon_improved_jzkoqz.png"/>
           </Link>
         </header>
         <form onSubmit={this.handleSubmit} className="login-form">
@@ -98,7 +98,7 @@ class SessionForm extends React.Component {
                 onChange={this.update('password')}
                 className="login-input"
               />
-            <input className="bttn-jelly bttn-md" type="submit" value="Submit" />
+            <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
              <button
                onClick={this.handleDemo}>
                Guest Login

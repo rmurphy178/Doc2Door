@@ -10,10 +10,10 @@ const Landing = () => (
     <span className="signup-flow">
       <span className="signup-flow-outer">
         <span className="signup-flow-inner">
-      <h1 className="landing-logo">Doc2Door
-      <img src="https://play.spotify.edgekey.net/client/e244a4f/images/logo.png"/>
+      <h1 className="landing-logo">
+      <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894311/d2d_transparent_gjbjgt.png"/>
       </h1>
-      <Link to="/">
+      <Link to="/login">
         <button className="landing-bttn">
           Sign In
         </button>
