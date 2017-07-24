@@ -52,13 +52,15 @@ class SignUpForm extends React.Component {
     return (
 
       <section className="login-signup-background">
-      <header className='container'>
-        <Link to="/greeting" className="header-link">
-          <h1>Doc2Door</h1>
-        </Link>
+
 
     <div className="login-page">
-      <div className="form">
+      <div className="login-signup-form">
+        <header className='login-container'>
+          <Link to="/greeting" className="header-link">
+            <h1>Doc2Door</h1>
+          </Link>
+        </header>
         <form onSubmit={this.handleSubmit} className="register-form">
           <br/>
           {this.renderErrors()}
@@ -98,14 +100,13 @@ class SignUpForm extends React.Component {
                 onChange={this.update("zip")}
                 className="signup-input"
                 />
-            <input type="submit" value="Submit" />
+            <input className="bttn-jelly bttn-md" type="submit" value="Submit" />
               <p className="message">Already registered?
                 <Link to="/">Sign In</Link>
               </p>
         </form>
       </div>
       </div>
-      </header>
       </section>
     );
   }
