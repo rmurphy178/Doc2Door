@@ -1,4 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import GreetingContainer from '../greeting/greeting_container';
+
+class Landing extends React.Component {
+  constructor(props) {
+    super(props);
+
+    }
+
+
+  render() {
+    return(
+      <div>
+        <h1>Welcome to Doc2Door, {this.props.currentUser.first_name}!</h1>
+      </div>
+    );
+  }
+}

@@ -4,10 +4,17 @@ import { Link } from 'react-router-dom';
 
 
 const sessionLinks = () => (
-  <nav className="login-signup">
+  <nav className="greeting-nav">
+    <Link to="/greeting">
+      <h1>Doc2Door</h1>
+    </Link>
+    <br/>
     <Link to="/">Login</Link>
     &nbsp;or&nbsp;
     <Link to="/signup">Sign up!</Link>
+      <Link to="/landing">
+        <h1>Landing</h1>
+      </Link>
   </nav>
 );
 
