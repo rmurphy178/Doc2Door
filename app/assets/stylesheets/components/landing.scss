@@ -15,6 +15,17 @@
   background-image: url("http://res.cloudinary.com/dq5wzf090/image/upload/v1500604965/doc_main_u8ggjl.jpg");
 }
 
+.background-wrapper:before {
+  background-color: rgba(0,0,0,0.5);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .landing-wrapper {
   margin: 0 auto;
   position: relative;
@@ -64,7 +75,6 @@ body .landing-wrapper {
     height: 100px;
     margin: 0 auto;
     width: 400px;
-
 }
 
 .landing-bttn {
@@ -90,8 +100,6 @@ body .landing-wrapper {
   border-color: #39579b;
 }
 
-.landing-screen .landing-bttn-2 {
-}
 
 .landing-bttn-2 {
   background-color: transparent;
@@ -118,11 +126,11 @@ body .landing-wrapper {
   display: table-cell;
   vertical-align: middle;
   color: #ffffff;
+  line-height: 34px;
 }
 
 .landing-overview h1 {
   color: white;
-  font-size: 35px;
   font-weight: bold;
   display: block;
   margin: .67em 0;
@@ -132,11 +140,13 @@ body .landing-wrapper {
   -webkit-margin-after: 0.67em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
+  line-height: 60px;
+  font-size: 50px;
 }
 
 .landing-overview h2 {
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   display: block;
   margin: .67em 0;
@@ -146,6 +156,7 @@ body .landing-wrapper {
   -webkit-margin-after: 0.67em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
+  line-height: 35px;
 }
 
 .landing-overview ul {
@@ -167,6 +178,8 @@ body .landing-wrapper {
   margin: 0;
   padding: .225em 0 .625em 2.250em;
   vertical-align: middle;
+  display: list-item;
+  list-style-type: disc;
 }
 
 .landing-overview:before {
@@ -178,4 +191,32 @@ body .landing-wrapper {
   position: absolute;
   top: 50%;
   width: 0;
+}
+
+
+.policy-terms {
+  color: #999;
+  padding: 0 20px 30px;
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.policy-terms:after {
+  border-bottom: solid 1.5px #FFF;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 50%;
+  margin: 0 -25px;
+  position: absolute;
+  width: 50px;
+}
+
+.signup-flow-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
 }
