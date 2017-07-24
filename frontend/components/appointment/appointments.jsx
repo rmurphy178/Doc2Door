@@ -1,20 +1,26 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import GreetingContainer from '../greeting/greeting_container';
 
-
-
-const Appointments = ({ appointments }) => (
+const Appointments = ({ currentUser }) => (
   <div>
-    <h1>Appointments: </h1>
-    {appointments.map(appointment => (
-      <Appointments
-        appointments={appointment}
-        key={appointment.id}
-      />
-    ))}
+    <h1>Welcome to Doc2Door, {currentUser.first_name}!</h1>
   </div>
+);
+
+const sessionLinks = () => (
+  <nav className="greeting-nav">
+    <Link to="/greeting">
+      <h1>Doc2Door</h1>
+    </Link>
+    <br/>
+    <Link to="/login">Login</Link>
+    &nbsp;or&nbsp;
+    <Link to="/signup">Sign up!</Link>
+      <Link to="/">
+        <h1>Landing</h1>
+      </Link>
+  </nav>
 );
 
 
