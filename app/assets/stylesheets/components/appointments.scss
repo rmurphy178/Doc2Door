@@ -1,0 +1,26 @@
+.navBar {
+  display: flex;
+  flex-direction: column;;
+  color: #ffffff;
+  justify-content: space-between;
+  width: 100vw;
+  vertical-align: baseline;
+}
+
+span .logo {
+  display: block;
+  height: 60px;
+  margin: 0 auto;
+  width: 180px;
+  align-self: flex-start;
+}
+
+.nav-logout {
+  display: block;
+  color: #39579b;
+}
+
+.dashboard {
+  display: block;
+  color: #39579b;
+}
