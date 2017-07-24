@@ -7,9 +7,9 @@ const Landing = () => (
   <div className="background-wrapper">
   <div className="landing-wrapper">
   <div className="landing-spread">
-    <span className="signup-flow">
-      <span className="signup-flow-outer">
-        <span className="signup-flow-inner">
+    <p className="signup-flow">
+      <p className="signup-flow-outer">
+        <p className="signup-flow-inner">
       <h1 className="landing-logo">
       <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
       </h1>
@@ -29,11 +29,11 @@ const Landing = () => (
       <p className="signup-flow-footer">
         Already have an account? Log in here.
       </p>
-        </span>
-      </span>
-    </span>
+    </p>
+  </p>
+</p>
 
-    <span className="landing-overview">
+    <p className="landing-overview">
       <h1>Find the right doctor, right now</h1>
       <h2>On-Demand Care in the Comfort of Your Home</h2>
       <ul>
@@ -41,7 +41,7 @@ const Landing = () => (
         <li>Get Matched</li>
         <li>Receive Care</li>
       </ul>
-    </span>
+    </p>
   </div>
   </div>
   </div>
