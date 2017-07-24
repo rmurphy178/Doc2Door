@@ -10,7 +10,7 @@ const Appointments = ({ currentUser, logout }) => (
     <div clasName="appointments-header-container">
     <div clasName="appointments-header-step">
     <div clasName="appointments-header-inner">
-      
+
     <span className="navBar">
       <br/>
       <img className="logo" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png" />
