@@ -21,8 +21,8 @@ import AppointmentsContainer from './appointments/appointments_container';
 const App = () => (
   <div>
     <Switch>
-      <Route exact path="/login" component={SessionFormContainer} />
-      <Route exact path="/signup" component={SignUpContainer} />
+      <AuthRoute exact path="/login" component={SessionFormContainer} />
+      <AuthRoute exact path="/signup" component={SignUpContainer} />
       <ProtectedRoute exact path="/appointments" component={AppointmentsContainer} />
       <Route path="/greeting" component={GreetingContainer} />
       <Route path="/" component={LandingContainer} />
