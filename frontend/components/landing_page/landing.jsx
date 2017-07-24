@@ -11,7 +11,7 @@ const Landing = () => (
       <span className="signup-flow-outer">
         <span className="signup-flow-inner">
       <h1 className="landing-logo">
-      <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894311/d2d_transparent_gjbjgt.png"/>
+      <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
       </h1>
       <Link to="/login">
         <button className="landing-bttn">

@@ -12,7 +12,7 @@
   background-size: cover;
   display: table-cell;
   vertical-align: middle;
-  background-image: url("http://res.cloudinary.com/dq5wzf090/image/upload/v1500894146/1234_j6w4iy.png");
+  background-image: url("http://res.cloudinary.com/dq5wzf090/image/upload/v1500604965/doc_main_u8ggjl.jpg");
 }
 
 .landing-wrapper {
@@ -56,14 +56,14 @@ body .landing-wrapper {
 }
 
 .landing-logo {
-  margin-bottom: 30px;
 }
 
 .landing-logo img {
     display: block;
-    height: 140px;
+    height: 120px;
     margin: 0 auto;
-    width: 420px;
+    width: 400px;
+
 }
 
 .landing-bttn {
@@ -87,6 +87,9 @@ body .landing-wrapper {
 .landing-screen .landing-bttn {
   background: #39579b;
   border-color: #39579b;
+}
+
+.landing-screen .landing-bttn-2 {
 }
 
 .landing-bttn-2 {
@@ -117,7 +120,7 @@ body .landing-wrapper {
 }
 
 .landing-overview h1 {
-  color: pink;
+  color: white;
   font-size: 35px;
   font-weight: bold;
   display: block;
@@ -131,7 +134,7 @@ body .landing-wrapper {
 }
 
 .landing-overview h2 {
-  color: pink;
+  color: white;
   font-size: 20px;
   font-weight: bold;
   display: block;
@@ -145,7 +148,7 @@ body .landing-wrapper {
 }
 
 .landing-overview ul {
-  color: pink;
+  color: white;
   margin-top: 0;
   margin-bottom: 9.5px;
   display: block;
