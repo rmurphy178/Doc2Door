@@ -5,9 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 const Appointments = ({ currentUser, logout }) => (
   <div>
     <div className="appointments-index-screen">
-    <div className="appointments-index-container">
     <div className="appointments-index-header">
-    <div className="appointments-header-container">
     <div className="appointments-header-step">
     <div className="appointments-header-inner">
 
@@ -25,9 +23,7 @@ const Appointments = ({ currentUser, logout }) => (
     </div>
     </div>
     </div>
-    </div>
     <h1 className="appointments-welcome-user">Welcome to Doc2Door, {currentUser.first_name}!</h1>
-    </div>
     </div>
   </div>
 );

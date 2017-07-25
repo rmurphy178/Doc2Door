@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 const Landing = () => (
@@ -7,9 +7,9 @@ const Landing = () => (
   <div className="background-wrapper">
   <div className="landing-wrapper">
   <div className="landing-spread">
-    <p className="signup-flow">
-      <p className="signup-flow-outer">
-        <p className="signup-flow-inner">
+    <div className="signup-flow">
+      <div className="signup-flow-outer">
+        <div className="signup-flow-inner">
       <h1 className="landing-logo">
       <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
       </h1>
@@ -23,17 +23,19 @@ const Landing = () => (
         SIGN UP WITH YOUR EMAIL ADDRESS
       </button>
       </Link>
-      <p className="policy-terms">
+      <div className="policy-terms">
         By signing up, you agree to Doc2Door's Terms and Conditions of Use and Privacy Policy
-      </p>
-      <p className="signup-flow-footer">
-        Already have an account? Log in here.
-      </p>
-    </p>
-  </p>
-</p>
+      </div>
+      <div className="signup-flow-footer">
+        <Link to="/login">
+          Already have an account? Log in here.
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <p className="landing-overview">
+    <div className="landing-overview">
       <h1>Find the right doctor, right now</h1>
       <h2>On-Demand Care in the Comfort of Your Home</h2>
       <ul>
@@ -41,11 +43,11 @@ const Landing = () => (
         <li>Get Matched</li>
         <li>Receive Care</li>
       </ul>
-    </p>
+    </div>
   </div>
   </div>
   </div>
   </div>
 );
 
-export default Landing;
+export default withRouter(Landing);
