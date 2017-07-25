@@ -9,7 +9,6 @@
   font-size: 100%;
   vertical-align: baseline;
   background-color: #dce0e6;
-
 }
 
 
@@ -74,8 +73,26 @@ div .logo {
 }
 
 .appointments-welcome-user {
-  font-size: 40px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   margin: 20px;
+}
+
+.appointments-overview {
+  display: flex;
+  flex-direction: column;;
+  align-items: center;
+}
+
+.specialties {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.appointments-main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }

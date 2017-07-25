@@ -1,5 +1,6 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouteer } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import SessionForm from './session_form';
 import { login, clearErrors } from '../../actions/session_actions';
 
@@ -17,7 +18,7 @@ const mapDispatchToProps = ( dispatch ) => ({
     clearErrors: () => dispatch(clearErrors())
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(SessionForm);
+)(SessionForm));

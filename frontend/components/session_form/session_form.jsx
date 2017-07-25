@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
       password: 'password'
     };
     setTimeout(() => this.props.handleSubmit(user), 1500).then(() => {
-      this.props.history.push('/greeting');
+      this.props.history.push('/appointments');
     });
   }
 
