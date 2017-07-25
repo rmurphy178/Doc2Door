@@ -6,14 +6,10 @@
 }
 
 .appointments-index-header {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
   vertical-align: baseline;
+  background-color: #dce0e6;
+
 }
 
 
@@ -23,17 +19,20 @@
 }
 
 .appointments-header-inner {
+  background-color: white;
 }
 
 
 .navBar {
-  background: white;
+  background-color: white;
   border-bottom: 1px solid #dce0e6;
   z-index: 10;
   display: flex;
   flex-direction: row;
   vertical-align: baseline;
   padding-top: 12px;
+  justify-content: space-around;
+  padding-right: 20px;
 }
 
 div .logo {
@@ -46,12 +45,20 @@ div .logo {
 .dash-right-corner {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 10px;
   vertical-align: baseline;
+  padding-top: 14px;
 }
 
 .dashboard {
+  color: #39579b;
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.offer {
   color: #39579b;
   margin-right: 10px;
   font-size: 25px;
@@ -63,6 +70,7 @@ div .logo {
   color: #39579b;
   font-size: 25px;
   font-weight: bold;
+  padding-right: 4px;
 }
 
 .appointments-welcome-user {

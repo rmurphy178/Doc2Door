@@ -37,8 +37,8 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    let email = "Guest";
-    let password = "123456";
+    let email = "elmo.jones@aol.com";
+    let password = "password";
     for (let i = 0; i < email.length; i++) {
       setTimeout(() => this.setState({
         email: email.slice(0, i + 1)}), (i * 80));
@@ -48,8 +48,8 @@ class SessionForm extends React.Component {
         password: password.slice(0, j + 1)}), ((j + 5) * 80));
     }
     const user = {
-      email: 'Guest',
-      password: '123456'
+      email: 'elmo.jones@aol.com',
+      password: 'password'
     };
     setTimeout(() => this.props.handleSubmit(user), 1500).then(() => {
       this.props.history.push('/greeting');
