@@ -16,6 +16,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import SignUpContainer from './sign_up/sign_up_container';
 import LandingContainer from './landing_page/landing_container';
 import AppointmentsContainer from './appointments/appointments_container';
+import AppointmentFormContainer from './appointment_form/appointment_form_container';
 
 
 const App = () => (
@@ -24,6 +25,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
       <ProtectedRoute exact path="/appointments" component={AppointmentsContainer} />
+      <Route path="/appointments/new" component={AppointmentFormContainer} />
       <Route path="/greeting" component={GreetingContainer} />
       <Route path="/" component={LandingContainer} />
     </Switch>

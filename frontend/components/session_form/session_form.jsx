@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import GreetingContainer from '../greeting/greeting_container';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -51,6 +50,7 @@ class SessionForm extends React.Component {
       email: 'elmo.jones@aol.com',
       password: 'password'
     };
+    // TODO: replace handleSubmit with login and adjust routes accordingly
     setTimeout(() => this.props.handleSubmit(demo_user), 1500).then(() => {
       this.props.history.push('/appointments');
     });

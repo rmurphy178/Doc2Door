@@ -1,8 +1,18 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+class Appointments extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      categories: []
+    };
+  }
 
-const Appointments = ({ currentUser, logout }) => (
+
+
+render() {
+return(
   <div>
     <div className="appointments-index-screen">
       <div className="appointments-index-header">
@@ -17,14 +27,14 @@ const Appointments = ({ currentUser, logout }) => (
                   <Link to="/appointments">
                   <div className="dashboard">Dashboard</div>
                   </Link>
-                <button className="nav-logout" onClick={logout}>Log Out</button>
+                <button className="nav-logout" onClick={this.props.logout}>Log Out</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="appointments-main-body">
-      <h1 className="appointments-welcome-user">Welcome to Doc2Door, {currentUser.first_name}!</h1>
+      <h1 className="appointments-welcome-user">Welcome to Doc2Door, {this.props.currentUser.first_name}!</h1>
         <h2>HOW TO GET STARTED</h2>
         <h4>We're Excited to Help! Here's how it Works:</h4>
       <ul className="appointments-overview">
@@ -35,7 +45,9 @@ const Appointments = ({ currentUser, logout }) => (
       <h3>How We Can Help</h3>
       <ul className="specialties">
         <ul className="specialties-top">
+          <Link to="/appointments/new">
           <li>General Practice</li>
+          </Link>
           <li>Pediatrics</li>
           <li>Allergy & Immunology</li>
         </ul>
@@ -48,7 +60,8 @@ const Appointments = ({ currentUser, logout }) => (
       </div>
     </div>
   </div>
-);
-
+  );
+  }
+}
 
 export default withRouter(Appointments);
