@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+    this.demo_user = {email: "elmo.jones@aol.com", password: "password"};
   }
 
 
@@ -51,7 +52,7 @@ class SessionForm extends React.Component {
       password: 'password'
     };
     // TODO: replace handleSubmit with login and adjust routes accordingly
-    setTimeout(() => this.props.handleSubmit(demo_user), 1500).then(() => {
+    setTimeout(this.props.handleSubmit(demo_user), 1500).then(() => {
       this.props.history.push('/appointments');
     });
   }
