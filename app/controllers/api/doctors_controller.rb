@@ -15,6 +15,7 @@ class Api::DoctorsController < ApplicationController
     params.require(:doctor).permit(
     :name,
     :rating,
+    :image_url,
     :specialty
     )
   end

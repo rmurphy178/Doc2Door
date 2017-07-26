@@ -37,7 +37,7 @@ ActiveRecord::Base.transaction do
     zip: 94105
   )
 
-  Guest = User.create!(
+  user4 = User.create!(
     first_name: 'Guest',
     last_name: 'Demo',
     email: 'elmo.jones@aol.com',
@@ -46,22 +46,44 @@ ActiveRecord::Base.transaction do
   )
 
   specialty1 = Specialty.create!(
-  name: 'general_practice',
+  name: 'general_practice'
   )
   specialty2 = Specialty.create!(
-  name: 'pediatrics',
+  name: 'pediatrics'
   )
   specialty3 = Specialty.create!(
-  name: 'allergy',
+  name: 'allergy'
   )
   specialty3 = Specialty.create!(
-  name: 'endocrinology',
+  name: 'endocrinology'
   )
   specialty5 = Specialty.create!(
-  name: 'geriatrics',
+  name: 'geriatrics'
   )
   specialty6 = Specialty.create!(
-  name: 'dermatology',
+  name: 'dermatology'
+  )
+
+
+  doctor1 = Doctor.create!(
+    name: 'Dr. Thomas',
+    image_url: 'password123',
+    rating: 90,
+    specialty: 'pediatrics'
+
+  )
+  doctor2 = Doctor.create!(
+    name: 'Dr. Warner',
+    image_url: 'password123',
+    rating: 90,
+    specialty: 'allergy'
+  )
+
+  doctor3 = Doctor.create!(
+    name: 'Dr. Jones',
+    image_url: '123456',
+    rating: 90,
+    specialty: 'dermatology'
   )
 
 

@@ -4,7 +4,6 @@ import { Link, withRouter } from 'react-router-dom';
 class Appointments extends React.Component {
   constructor(props){
     super(props);
-    console.log(props);
     this.state = {
       categories: [1, 2, 3, 4, 5, 6]
     };
