@@ -10,6 +10,7 @@ import {
  }
  from './actions/appointment_actions';
 
+import { fetchSpecialties, fetchSpecialty} from './actions/specialty_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,3 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 window.fetchAppointments = fetchAppointments;
 window.fetchAppointment = fetchAppointment;
 window.createAppointment = createAppointment;
+window.fetchSpecialties = fetchSpecialties;
+window.fetchSpecialty = fetchSpecialty;
+window.rececive_Specialties = fetchSpecialties;

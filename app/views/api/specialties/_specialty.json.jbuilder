@@ -1,1 +1,1 @@
-json.extract! specialty, :id, :name, :doctor_id
+json.extract! specialty, :id, :name

@@ -36,4 +36,24 @@ ActiveRecord::Base.transaction do
     password: '123456',
     zip: 94105
   )
+
+  specialty1 = Specialty.create!(
+  name: 'general_practice',
+  )
+  specialty2 = Specialty.create!(
+  name: 'pediatrics',
+  )
+  specialty3 = Specialty.create!(
+  name: 'allergy',
+  )
+  specialty3 = Specialty.create!(
+  name: 'endocrinology',
+  )
+  specialty5 = Specialty.create!(
+  name: 'geriatrics',
+  )
+  specialty6 = Specialty.create!(
+  name: 'dermatology',
+  )
+
 end

@@ -5,7 +5,7 @@ class Api::SpecialtiesController < ApplicationController
   end
 
   def show
-    @specialty = Specialy.find(params[:id])
+    @specialty = Specialty.find(params[:id])
   end
 
 
@@ -14,7 +14,6 @@ class Api::SpecialtiesController < ApplicationController
   def specialty_params
     params.require(:specialty).permit(
     :name,
-    :doctor_id
     )
   end
 end
