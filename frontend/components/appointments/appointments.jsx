@@ -47,14 +47,16 @@ return(
         <ul className="specialties-top">
           <Link to="/appointments/new">
           <li>General Practice</li>
-          </Link>
           <li>Pediatrics</li>
           <li>Allergy & Immunology</li>
+          </Link>
         </ul>
         <ul className="specialties-bottom">
+          <Link to="/appointments/new">
           <li>Endocrinology</li>
           <li>Geriatrics</li>
           <li>Dermatology</li>
+        </Link>
         </ul>
       </ul>
       </div>

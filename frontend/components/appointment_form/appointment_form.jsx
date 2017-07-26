@@ -19,36 +19,20 @@ class AppointmentForm extends React.Component {
     }
 
 
-    componentWillUnmount() {
-      this.props.clearErrors();
-    }
 
-
-    renderErrors() {
-      return(
-        <ul>
-          {this.props.errors.map((error, i) => (
-            <li className="login-error" key={`error-${i}`}>
-              {error}
-            </li>
-          ))}
-        </ul>
-      );
-    }
 
   render() {
     return (
     <div>
       <h1>MD Specialty</h1>
       <form className="appointments-form">
-        <br/>
-        {this.renderErrors()}
-        <br/>
+        Enter Address Here:
         <input type="text"
           placeholder="Address"
           value={this.state.location}
           onChange={this.update('location')}
           />
+        Provide Details Here:
         <input type="text"
           placeholder="Details"
           value={this.state.details}
