@@ -11,9 +11,10 @@ const SpecialtiesReducer = (state ={}, action) => {
   switch(action.type) {
     case RECEIVE_SPECIALTIES:
       const specialties = action.specialties;
-      return action.specialties;
+      return merge({}, null, specialties);
     case RECEIVE_SPECIALTY:
-      return action.specialty;
+      const specialty = action.specialty;
+      return merge({}, null, action.specialty);
     default:
       return state;
     }

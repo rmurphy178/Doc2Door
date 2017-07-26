@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :appointments, only: [:index, :create, :show]
     resources :specialties, only: [:index, :show]
+    resources :doctors, only: [:index, :show]
+
   end
   root "static_pages#root"
 end

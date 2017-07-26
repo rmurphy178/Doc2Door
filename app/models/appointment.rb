@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: appointments
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  doctor_id  :integer          not null
+#  location   :string           not null
+#  time       :string           not null
+#  confirmed  :boolean          not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Appointment < ActiveRecord::Base
 
   validates :user_id, :doctor_id, :location, :time, :confirmed, presence: true

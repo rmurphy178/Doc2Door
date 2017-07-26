@@ -10,7 +10,7 @@ import {
  }
  from './actions/appointment_actions';
 
-import { fetchSpecialties, fetchSpecialty} from './actions/specialty_actions';
+import { fetchDoctors, fetchDoctor} from './actions/doctor_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,9 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
 });
 
+window.fetchDoctors = fetchDoctors;
+window.fetchDoctor = fetchDoctor;
 window.fetchAppointments = fetchAppointments;
 window.fetchAppointment = fetchAppointment;
 window.createAppointment = createAppointment;
-window.fetchSpecialties = fetchSpecialties;
-window.fetchSpecialty = fetchSpecialty;
-window.rececive_Specialties = fetchSpecialties;

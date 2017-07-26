@@ -30,10 +30,18 @@ ActiveRecord::Base.transaction do
   )
 
   user3 = User.create!(
-    first_name: 'Guest',
+    first_name: 'Guest1',
     last_name: 'Guest',
     email: 'guest@doc2door.com',
     password: '123456',
+    zip: 94105
+  )
+
+  Guest = User.create!(
+    first_name: 'Guest',
+    last_name: 'Demo',
+    email: 'elmo.jones@aol.com',
+    password: 'password',
     zip: 94105
   )
 
@@ -55,5 +63,6 @@ ActiveRecord::Base.transaction do
   specialty6 = Specialty.create!(
   name: 'dermatology',
   )
+
 
 end

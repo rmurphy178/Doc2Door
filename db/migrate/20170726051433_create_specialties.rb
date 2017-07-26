@@ -6,5 +6,5 @@ class CreateSpecialties < ActiveRecord::Migration
       t.timestamps null: false
     end
     add_index :specialties, :name
-    end
   end
+end
