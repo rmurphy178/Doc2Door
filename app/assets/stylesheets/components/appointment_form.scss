@@ -1,15 +1,48 @@
 .appointments-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 20px;
+  width: 100vw;
 }
 
-.appointments-form-fields {
+.appointments-form .bttn-simple.bttn-default {
+  background: #39579b;
+  border-color: #39579b;
+  width: 150px;
+  text-align: center;
+}
+
+.dropdown-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
+  width: 1000px;
+  margin: 30px;
+}
+.dropdown-container h1 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.dropdown-container h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.details-field {
+  display: flex;
+  flex-direction: column;
+  border: solid black 1px;
+  height: 130px;
+  width: 800px;
+
 }

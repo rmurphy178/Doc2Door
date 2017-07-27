@@ -82,7 +82,7 @@ return(
       <div className="btt-container">
       <button className="landing-bttn"
         onClick={this.handleSubmit}>
-        Request a Doctor
+        Find a Doctor
       </button>
       </div>
       </div>

@@ -8,12 +8,24 @@ class AppointmentForm extends React.Component {
     this.state = {
       value: ''
     };
+    this.handleSubmit.bind(this);
+    this.handleChange.bind(this);
   }
 
 
 componentDidMount(){
   const docs = this.props.fetchDoctors();
   const specs = this.props.fetchSpecialties();
+}
+
+
+handleSubmit(e) {
+  e.preventDefault();
+}
+
+
+handleChange(event) {
+  this.setState({value: event.target.value});
 }
 
 
@@ -28,55 +40,32 @@ componentDidMount(){
   render() {
     return (
     <div className="appointments-form">
-      <h1>MD Specialty</h1>
-      <h2>{this.state.doctors}</h2>
-      <form className="appointments-form-fields">
-        Enter Address Here:
-        <input type="text"
-          placeholder="Address"
-          value={this.state.location}
-          onChange={this.update('location')}
-          />
-        Provide Details Here:
-        <input type="text"
-          placeholder="Details"
-          value={this.state.details}
-          onChange={this.update('details')}
-          />
-        <button>
-          Save
-        </button>
-
-        <form onSubmit={this.handleSubmit}>
-     <label>
-       Pick select a Specialty:
-       <select value={this.state.value} onChange={this.handleChange}>
-         <option value="general">Grapefruit</option>
-         <option value="pediatrics">Lime</option>
-         <option value="allergy">Coconut</option>
-         <option value="geriatrics">Mango</option>
-         <option value="endocrinology">Mango</option>
-         <option value="dermatology">Mango</option>
-       </select>
-     </label>
-     <input type="submit" value="Submit" />
-   </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </form>
+      <div className="dropdown-container">
+      <h1>How can we Help?</h1>
+     <h2>Provide Details for Your Physician Here</h2>
+     <input
+       className="details-field"
+       type="text"
+       placeholder="Details"
+       value={this.state.details}
+       onChange={this.update('details')}
+       />
+       <form onSubmit={this.handleSubmit}>
+    <label className="dropdown">
+      Choose a Specialty:
+      <select value={this.state.value} onChange={this.handleChange}>
+        <option disabled>Select</option>
+        <option value="general">General</option>
+        <option value="pediatrics">Pediatrics</option>
+        <option value="allergy">Allergy & Immunology</option>
+        <option value="geriatrics">Geriatrics</option>
+        <option value="endocrinology">Endocrinology</option>
+        <option value="dermatology">Dermatology</option>
+      </select>
+        </label>
+      <input className='bttn-simple bttn-default' type="submit" value="See Doctors" />
+     </form>
+     </div>
     </div>
     );
   }
