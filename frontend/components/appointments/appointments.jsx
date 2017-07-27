@@ -5,8 +5,10 @@ import { values } from 'lodash';
 class Appointments extends React.Component {
   constructor(props){
     super(props);
+    console.log(props);
     this.state = {
-      specialty: ''
+      specialty: '',
+      doctors: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -21,6 +23,7 @@ update(field) {
 
 handleSubmit(e) {
   e.preventDefault();
+  this.props.fetchSpecialties();
   this.props.fetchDoctors().then( () => {
     this.props.history.push('/appointments');
   });

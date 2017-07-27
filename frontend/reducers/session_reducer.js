@@ -9,6 +9,8 @@ import {
 const nullUser = Object.freeze({
   currentUser: null,
   email: null,
+  appointments: [],
+  reviews: [],
   errors: []
 });
 

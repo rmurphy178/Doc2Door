@@ -4,7 +4,7 @@ import { logout } from '../../actions/session_actions';
 import { fetchDoctors } from '../../actions/doctor_actions';
 import Appointments from './appointments';
 import { getFilteredDoctors } from '../../reducers/selectors';
-import { fetchSpecialty } from '../../actions/specialty_actions';
+import { fetchSpecialty, fetchSpecialties } from '../../actions/specialty_actions';
 
 const mapStateToProps = ({session, specialties}) => ({
   currentUser: session.currentUser,
@@ -14,7 +14,7 @@ const mapStateToProps = ({session, specialties}) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchDoctors: () => dispatch(fetchDoctors()),
-  fetchSpecialty: () => dispatch(fetchSpecialty())
+  fetchSpecialties: () => dispatch(fetchSpecialties())
 });
 
 export default connect(

@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
 
 import {
-  RECEIVE_DOCTORS, RECEIVE_DOCTOR
+  RECEIVE_DOCTORS, RECEIVE_DOCTOR, RECEIVE_SPECIALISTS
 } from '../actions/doctor_actions';
 
 const nullDoctor = Object.freeze({

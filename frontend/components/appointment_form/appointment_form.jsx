@@ -8,25 +8,31 @@ class AppointmentForm extends React.Component {
     this.state = {
       location: '',
       details: '',
-      specialty: '',
+      specialties: '',
     };
   }
 
 
-    update(field) {
-      return e => this.setState({
-        [field]: e.currentTarget.value
-      });
-    }
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
 
+  componentDidMount() {
+    this.props.fetchDoctors();
+    this.props.fetchSpecialties();
+    this.props.fetchAppointments();
+  }
 
 
 
   render() {
     return (
-    <div>
+    <div className="appointments-form">
       <h1>MD Specialty</h1>
-      <form className="appointments-form">
+      <h2>{this.state.doctors}</h2>
+      <form className="appointments-form-fields">
         Enter Address Here:
         <input type="text"
           placeholder="Address"
