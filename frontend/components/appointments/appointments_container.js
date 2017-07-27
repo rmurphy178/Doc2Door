@@ -6,9 +6,8 @@ import Appointments from './appointments';
 import { getFilteredDoctors } from '../../reducers/selectors';
 import { fetchSpecialty, fetchSpecialties } from '../../actions/specialty_actions';
 
-const mapStateToProps = ({session, specialties}) => ({
+const mapStateToProps = ({session}) => ({
   currentUser: session.currentUser,
-  specialties
 });
 
 const mapDispatchToProps = dispatch => ({

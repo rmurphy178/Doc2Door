@@ -6,8 +6,10 @@ import { fetchDoctors } from '../../actions/doctor_actions';
 import { fetchSpecialties } from  '../../actions/specialty_actions';
 import { fetchAppointments } from '../../actions/appointment_actions';
 
-const mapStateToProps = (state) => ({
-  state
+const mapStateToProps = ({session, specialties, doctors }) => ({
+  session,
+  specialties,
+  doctors,
 });
 
 const mapDispatchToProps = dispatch => ({

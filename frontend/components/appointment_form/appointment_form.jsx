@@ -6,23 +6,21 @@ class AppointmentForm extends React.Component {
     super(props);
     console.log(props);
     this.state = {
-      location: '',
-      details: '',
-      specialties: '',
+      value: ''
     };
   }
+
+
+componentDidMount(){
+  const docs = this.props.fetchDoctors();
+  const specs = this.props.fetchSpecialties();
+}
 
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
-  }
-
-  componentDidMount() {
-    this.props.fetchDoctors();
-    this.props.fetchSpecialties();
-    this.props.fetchAppointments();
   }
 
 
@@ -48,6 +46,36 @@ class AppointmentForm extends React.Component {
         <button>
           Save
         </button>
+
+        <form onSubmit={this.handleSubmit}>
+     <label>
+       Pick select a Specialty:
+       <select value={this.state.value} onChange={this.handleChange}>
+         <option value="general">Grapefruit</option>
+         <option value="pediatrics">Lime</option>
+         <option value="allergy">Coconut</option>
+         <option value="geriatrics">Mango</option>
+         <option value="endocrinology">Mango</option>
+         <option value="dermatology">Mango</option>
+       </select>
+     </label>
+     <input type="submit" value="Submit" />
+   </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </form>
     </div>
     );

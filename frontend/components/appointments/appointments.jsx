@@ -5,11 +5,7 @@ import { values } from 'lodash';
 class Appointments extends React.Component {
   constructor(props){
     super(props);
-    console.log(props);
-    this.state = {
-      specialty: '',
-      doctors: ''
-    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
@@ -23,10 +19,7 @@ update(field) {
 
 handleSubmit(e) {
   e.preventDefault();
-  this.props.fetchSpecialties();
-  this.props.fetchDoctors().then( () => {
-    this.props.history.push('/appointments');
-  });
+  this.props.history.push('/appointments');
 }
 
 render() {
@@ -89,7 +82,7 @@ return(
       <div className="btt-container">
       <button className="landing-bttn"
         onClick={this.handleSubmit}>
-        Find a Doctor
+        Request a Doctor
       </button>
       </div>
       </div>
