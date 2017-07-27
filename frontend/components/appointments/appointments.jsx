@@ -4,7 +4,6 @@ import { Link, withRouter } from 'react-router-dom';
 class Appointments extends React.Component {
   constructor(props){
     super(props);
-    console.log(props);
     this.state = {
       specialty: ''
     };
