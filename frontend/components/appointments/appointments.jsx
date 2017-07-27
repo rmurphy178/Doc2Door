@@ -13,8 +13,6 @@ class Appointments extends React.Component {
   }
 
 
-
-
 update(field) {
   return e => this.setState({
     [field]: e.currentTarget.value
@@ -23,8 +21,8 @@ update(field) {
 
 handleSubmit(e) {
   e.preventDefault();
-  this.props.fetchSpecialties().then( () => {
-    this.props.history.push('/specialties/specialty');
+  this.props.fetchDoctors().then( () => {
+    this.props.history.push('/appointments');
   });
 }
 
@@ -62,24 +60,23 @@ return(
       <h3>How We Can Help</h3>
       <ul className="specialties">
         <ul className="specialties-top">
-          <Link to="/specialties/specialty">
-            <li>General Practice</li>
-          </Link>
+          <li>General Practice</li>
           <li>Pediatrics</li>
           <li>Allergy & Immunology</li>
 
         </ul>
         <ul className="specialties-bottom">
-          <Link to="/specialties">
           <li>Endocrinology</li>
           <li>Geriatrics</li>
           <li>Dermatology</li>
-          <button onClick={this.handleSubmit}>
-            click
-          </button>
-        </Link>
         </ul>
       </ul>
+      <div className="btt-container">
+      <button className="landing-bttn"
+        onClick={this.handleSubmit}>
+        Find a Doctor
+      </button>
+      </div>
       </div>
     </div>
   </div>

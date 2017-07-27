@@ -7,7 +7,7 @@ class Api::SpecialtiesController < ApplicationController
 
   def show
     @specialty = Specialty.find(params[:id])
-    render 'api/specialties/specialties'
+    render 'api/specialties/specialty'
   end
 
   private
