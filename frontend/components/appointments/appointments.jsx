@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { values } from 'lodash';
 
 class Appointments extends React.Component {
   constructor(props){
@@ -22,9 +23,8 @@ update(field) {
 
 handleSubmit(e) {
   e.preventDefault();
-  const specialty = this.state.specialty;
-  this.props.fetchSpecialty(specialty).then( () => {
-    this.props.history.push('/appointments/new');
+  this.props.fetchSpecialties().then( () => {
+    this.props.history.push('/specialties/specialty');
   });
 }
 
@@ -38,9 +38,9 @@ return(
             <div className="navBar">
               <br/>
               <img className="logo" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png" />
-                <br/>
-                  <div className="dash-right-corner">
-                  <div className="offer">Get $20</div>
+              <br/>
+              <div className="dash-right-corner">
+                <div className="offer">Get $20</div>
                   <Link to="/appointments">
                   <div className="dashboard">Dashboard</div>
                   </Link>
@@ -59,48 +59,27 @@ return(
         <li>Get Matched</li>
         <li>Receive Care</li>
       </ul>
+      <h3>How We Can Help</h3>
+      <ul className="specialties">
+        <ul className="specialties-top">
+          <Link to="/specialties/specialty">
+            <li>General Practice</li>
+          </Link>
+          <li>Pediatrics</li>
+          <li>Allergy & Immunology</li>
 
-      <div className='specialty-form-container'>
-  <div className='specialty-form'>
-    <h2>How We Can Help</h2>
-
-    <div className='specialty-input-field'>
-      <button>General Practice</button>
-      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('general')}/>
-    </div>
-
-    <div className='specialty-input-field'>
-      <button>Pediatrics</button>
-      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('pediatrics')}/>
-    </div>
-
-    <div className='specialty-input-field'>
-      <button>Allergy & Immunology</button>
-      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('allergy')}/>
-    </div>
-
-    <div className='specialty-input-field'>
-      <button>Endocrinology</button>
-      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('endocrinology')}/>
-    </div>
-    <div className='specialty-input-field'>
-      <button>Geriatrics</button>
-      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('geriatrics')}/>
-    </div>
-
-    <div className='specialty-input-field'>
-      <button>Dermatology</button>
-      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('dermatology')}/>
-    </div>
-
-    <div>
-      <span>{this.state.specialty}</span>
-      <button className='contest-button' onClick={this.handleSubmit}>Submit</button>
-    </div>
-
-
-          </div>
-        </div>
+        </ul>
+        <ul className="specialties-bottom">
+          <Link to="/specialties">
+          <li>Endocrinology</li>
+          <li>Geriatrics</li>
+          <li>Dermatology</li>
+          <button onClick={this.handleSubmit}>
+            click
+          </button>
+        </Link>
+        </ul>
+      </ul>
       </div>
     </div>
   </div>

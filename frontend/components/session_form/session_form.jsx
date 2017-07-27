@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.login(user).then( ()=> {
-      this.props.history.push('/appointments');
+      this.props.history.push('/specialties');
     });
   }
 
