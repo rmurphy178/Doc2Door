@@ -4,12 +4,29 @@ import { Link, withRouter } from 'react-router-dom';
 class Appointments extends React.Component {
   constructor(props){
     super(props);
+    console.log(props);
     this.state = {
-      categories: [1, 2, 3, 4, 5, 6]
+      
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
 
+
+
+update(field) {
+  return e => this.setState({
+    [field]: e.currentTarget.value
+  });
+}
+
+handleSubmit(e) {
+  e.preventDefault();
+  const doctors = this.props.fetchDoctors().then( () => {
+    this.props.history.push('/appointments/new');
+  });
+}
 
 render() {
 return(
@@ -21,9 +38,9 @@ return(
             <div className="navBar">
               <br/>
               <img className="logo" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png" />
-              <br/>
-              <div className="dash-right-corner">
-                <div className="offer">Get $20</div>
+                <br/>
+                  <div className="dash-right-corner">
+                  <div className="offer">Get $20</div>
                   <Link to="/appointments">
                   <div className="dashboard">Dashboard</div>
                   </Link>
@@ -42,23 +59,42 @@ return(
         <li>Get Matched</li>
         <li>Receive Care</li>
       </ul>
-      <h3>How We Can Help</h3>
-      <ul className="specialties">
-        <ul className="specialties-top">
-          <Link to="/appointments/new">
-          <li>General Practice</li>
-          <li>Pediatrics</li>
-          <li>Allergy & Immunology</li>
-          </Link>
-        </ul>
-        <ul className="specialties-bottom">
-          <Link to="/appointments/new">
-          <li>Endocrinology</li>
-          <li>Geriatrics</li>
-          <li>Dermatology</li>
-        </Link>
-        </ul>
-      </ul>
+
+      <div className='specialty-form-container'>
+  <div className='specialty-form'>
+    <h2>How We Can Help</h2>
+
+    <div className='specialty-input-field'>
+      <span>General Practice</span>
+      <input className='specialty-input' type='text' value={this.state.name} onClick={this.update('name')}/>
+    </div>
+
+    <div className='specialty-input-field'>
+      <span>Pediatrics</span>
+      <input className='specialty-input' type='text' value={this.state.point_value} onClick={this.update('point_value')}/>
+    </div>
+
+    <div className='specialty-input-field'>
+      <span>Allergy & Immunology</span>
+      <input className='specialty-input' type='text' value={this.state.max_contestants} onClick={this.update('max_contestants')}/>
+    </div>
+
+    <div className='specialty-input-field'>
+      <span>Endocrinology</span>
+      <input className='specialty-input' type='text' value={this.state.contest_date} onClick={this.update('contest_date')}/>
+    </div>
+    <div className='specialty-input-field'>
+      <span>Geriatrics</span>
+      <input className='specialty-input' type='text' value={this.state.max_contestants} onClick={this.update('max_contestants')}/>
+    </div>
+
+    <div className='specialty-input-field'>
+      <span>Dermatology</span>
+      <input className='specialty-input' type='text' value={this.state.contest_date} onClick={this.update('contest_date')}/>
+    </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

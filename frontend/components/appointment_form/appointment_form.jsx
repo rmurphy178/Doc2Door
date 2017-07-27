@@ -8,7 +8,7 @@ class AppointmentForm extends React.Component {
     this.state = {
       location: '',
       details: '',
-      specialty: ''
+      specialty: '',
     };
   }
 

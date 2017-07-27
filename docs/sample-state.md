@@ -33,7 +33,8 @@
         image_url: 'image_url',
         reviews: [2, 3],
         appointments: [2, 3, 8],
-        reviewRating: 88%
+        reviewRating: 88%,
+        specialty: 'Pediatrics'
       }
       doctorDetail: 2
     }

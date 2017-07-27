@@ -1,12 +1,12 @@
 import merge from 'lodash/merge';
 
-import {
-  RECEIVE_SPECIALTIES, RECEIVE_SPECIALTY
-} from '../actions/appointment_actions';
+import { RECEIVE_SPECIALTY, RECEIVE_SPECIALTIES } from '../actions/specialty_actions';
 
+const _defaultState = {
+  name: null
+};
 
-
-const SpecialtiesReducer = (state ={}, action) => {
+const SpecialtiesReducer = (state = _defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SPECIALTIES:
@@ -14,15 +14,11 @@ const SpecialtiesReducer = (state ={}, action) => {
       return merge({}, null, specialties);
     case RECEIVE_SPECIALTY:
       const specialty = action.specialty;
-      return merge({}, null, action.specialty);
+      return merge({}, null, specialty);
     default:
       return state;
-    }
+  }
 };
-
-
-
-
 
 
 

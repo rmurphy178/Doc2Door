@@ -45,25 +45,6 @@ ActiveRecord::Base.transaction do
     zip: 94105
   )
 
-  specialty1 = Specialty.create!(
-  name: 'general_practice'
-  )
-  specialty2 = Specialty.create!(
-  name: 'pediatrics'
-  )
-  specialty3 = Specialty.create!(
-  name: 'allergy'
-  )
-  specialty3 = Specialty.create!(
-  name: 'endocrinology'
-  )
-  specialty5 = Specialty.create!(
-  name: 'geriatrics'
-  )
-  specialty6 = Specialty.create!(
-  name: 'dermatology'
-  )
-
 
   doctor1 = Doctor.create!(
     name: 'Dr. Thomas',
@@ -84,6 +65,57 @@ ActiveRecord::Base.transaction do
     image_url: '123456',
     rating: 90,
     specialty: 'dermatology'
+  )
+
+  appointment1 = Appointment.create!(
+    user_id: 2,
+    doctor_id: 1,
+    location: '160 Spear street',
+    time: 'morning',
+    confirmed: true
+  )
+
+  appointment2 = Appointment.create!(
+    user_id: 1,
+    doctor_id: 3,
+    location: '160 Spear street',
+    time: 'afternoon',
+    confirmed: true
+  )
+
+    appointment3 = Appointment.create!(
+    user_id: 3,
+    doctor_id: 1,
+    location: '160 Spear street',
+    time: 'evening',
+    confirmed: true
+  )
+
+  appointment4 = Appointment.create!(
+    user_id: 2,
+    doctor_id: 2,
+    location: '160 Spear street',
+    time: 'afternoon',
+    confirmed: true
+  )
+
+  specialty1 = Specialty.create!(
+    name: 'pediatrics'
+  )
+  specialty2 = Specialty.create!(
+    name: 'allergy'
+  )
+  specialty3 = Specialty.create!(
+    name: 'general'
+  )
+  specialty4 = Specialty.create!(
+    name: 'geriatrics'
+  )
+  specialty5 = Specialty.create!(
+    name: 'endocrinology'
+  )
+  specialty6 = Specialty.create!(
+    name: 'dermatology'
   )
 
 

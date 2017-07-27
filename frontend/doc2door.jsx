@@ -12,6 +12,8 @@ import {
 
 import { fetchDoctors, fetchDoctor} from './actions/doctor_actions';
 
+import {fetchSpecialties, fetchSpecialty} from './actions/specialty_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -40,3 +42,5 @@ window.fetchDoctor = fetchDoctor;
 window.fetchAppointments = fetchAppointments;
 window.fetchAppointment = fetchAppointment;
 window.createAppointment = createAppointment;
+window.fetchSpecialty = fetchSpecialty;
+window.fetchSpecialties = fetchSpecialties;

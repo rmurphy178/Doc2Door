@@ -16,7 +16,6 @@ class Doctor < ActiveRecord::Base
 
   has_many :users
   has_many :appointments
-  belongs_to :specialty
   has_many :reviews
-  
+
 end
