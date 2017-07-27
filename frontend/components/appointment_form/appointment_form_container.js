@@ -15,7 +15,6 @@ const mapStateToProps = ({session, specialties, doctors }) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchDoctors: () => dispatch(fetchDoctors()),
-  fetchSpecialties: () => dispatch(fetchSpecialties()),
   fetchAppointments: () => dispatch(fetchAppointments())
 });
 

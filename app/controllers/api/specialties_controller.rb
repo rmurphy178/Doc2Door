@@ -2,13 +2,9 @@ class Api::SpecialtiesController < ApplicationController
 
   def index
     @specialties = Specialty.all
-    render :index
+    render "api/specialties/index"
   end
 
-  def show
-    @specialty = Specialty.find(params[:id])
-    render :show
-  end
 
   private
 

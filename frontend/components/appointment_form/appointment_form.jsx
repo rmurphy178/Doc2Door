@@ -6,26 +6,25 @@ class AppointmentForm extends React.Component {
     super(props);
     console.log(props);
     this.state = {
+      details: '',
       value: ''
     };
-    this.handleSubmit.bind(this);
-    this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-
-
-componentDidMount(){
-  const docs = this.props.fetchDoctors();
-  const specs = this.props.fetchSpecialties();
-}
 
 
 handleSubmit(e) {
   e.preventDefault();
+  this.props.fetchDoctors().then( () => {
+  this.props.history.push('/doctors');
+  });
 }
 
 
-handleChange(event) {
-  this.setState({value: event.target.value});
+handleChange(e) {
+  e.preventDefault();
+  this.setState({value: e.target.value});
 }
 
 
@@ -62,7 +61,7 @@ handleChange(event) {
         <option value="endocrinology">Endocrinology</option>
         <option value="dermatology">Dermatology</option>
       </select>
-        </label>
+    </label>
       <input className='bttn-simple bttn-default' type="submit" value="See Doctors" />
      </form>
      </div>

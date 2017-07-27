@@ -13,7 +13,6 @@ const mapStateToProps = ({session}) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchDoctors: () => dispatch(fetchDoctors()),
-  fetchSpecialties: () => dispatch(fetchSpecialties())
 });
 
 export default connect(
