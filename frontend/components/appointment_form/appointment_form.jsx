@@ -7,7 +7,7 @@ class AppointmentForm extends React.Component {
     console.log(props);
     this.state = {
       details: '',
-      value: ''
+      specialty: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -16,7 +16,7 @@ class AppointmentForm extends React.Component {
 
 handleSubmit(e) {
   e.preventDefault();
-  this.props.fetchDoctors().then( () => {
+  this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
   this.props.history.push('/doctors');
   });
 }
@@ -24,7 +24,7 @@ handleSubmit(e) {
 
 handleChange(e) {
   e.preventDefault();
-  this.setState({value: e.target.value});
+  this.setState({specialty: e.target.value});
 }
 
 
@@ -52,7 +52,7 @@ handleChange(e) {
        <form onSubmit={this.handleSubmit}>
     <label className="dropdown">
       Choose a Specialty:
-      <select value={this.state.value} onChange={this.handleChange}>
+      <select value={this.state.specialty} onChange={this.handleChange}>
         <option disabled>Select</option>
         <option value="general">General</option>
         <option value="pediatrics">Pediatrics</option>

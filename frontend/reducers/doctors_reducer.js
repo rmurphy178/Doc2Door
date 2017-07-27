@@ -14,7 +14,10 @@ const nullDoctor = Object.freeze({
   reviews: []
 });
 
-const DoctorsReducer = (state = nullDoctor, action) => {
+
+const nullDoctors = {0: nullDoctor};
+
+const DoctorsReducer = (state = nullDoctors, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_DOCTORS:

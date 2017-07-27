@@ -2,7 +2,7 @@ class Api::DoctorsController < ApplicationController
 
   def index
     @doctors = Doctor.where(specialty: doctor_params[:specialty])
-    render 'api/doctors'
+    render :index
   end
 
   def show

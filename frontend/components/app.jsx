@@ -17,7 +17,7 @@ import SignUpContainer from './sign_up/sign_up_container';
 import LandingContainer from './landing_page/landing_container';
 import AppointmentsContainer from './appointments/appointments_container';
 import AppointmentFormContainer from './appointment_form/appointment_form_container';
-
+import DoctorIndexContainer from './doctors/doctor_index_container';
 
 const App = () => (
   <div>
@@ -26,6 +26,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpContainer} />
       <ProtectedRoute exact path="/appointments" component={AppointmentFormContainer} />
       <ProtectedRoute exact path="/specialties" component={AppointmentsContainer} />
+      <ProtectedRoute exact path="/doctors" component={DoctorIndexContainer} />
       <Route path="/greeting" component={GreetingContainer} />
       <Route path="/" component={LandingContainer} />
     </Switch>
