@@ -6,7 +6,7 @@ class Appointments extends React.Component {
     super(props);
     console.log(props);
     this.state = {
-      
+      specialty: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -23,7 +23,8 @@ update(field) {
 
 handleSubmit(e) {
   e.preventDefault();
-  const doctors = this.props.fetchDoctors().then( () => {
+  const specialty = this.state.specialty;
+  this.props.fetchSpecialty(specialty).then( () => {
     this.props.history.push('/appointments/new');
   });
 }
@@ -65,33 +66,39 @@ return(
     <h2>How We Can Help</h2>
 
     <div className='specialty-input-field'>
-      <span>General Practice</span>
-      <input className='specialty-input' type='text' value={this.state.name} onClick={this.update('name')}/>
+      <button>General Practice</button>
+      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('general')}/>
     </div>
 
     <div className='specialty-input-field'>
-      <span>Pediatrics</span>
-      <input className='specialty-input' type='text' value={this.state.point_value} onClick={this.update('point_value')}/>
+      <button>Pediatrics</button>
+      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('pediatrics')}/>
     </div>
 
     <div className='specialty-input-field'>
-      <span>Allergy & Immunology</span>
-      <input className='specialty-input' type='text' value={this.state.max_contestants} onClick={this.update('max_contestants')}/>
+      <button>Allergy & Immunology</button>
+      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('allergy')}/>
     </div>
 
     <div className='specialty-input-field'>
-      <span>Endocrinology</span>
-      <input className='specialty-input' type='text' value={this.state.contest_date} onClick={this.update('contest_date')}/>
+      <button>Endocrinology</button>
+      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('endocrinology')}/>
     </div>
     <div className='specialty-input-field'>
-      <span>Geriatrics</span>
-      <input className='specialty-input' type='text' value={this.state.max_contestants} onClick={this.update('max_contestants')}/>
+      <button>Geriatrics</button>
+      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('geriatrics')}/>
     </div>
 
     <div className='specialty-input-field'>
-      <span>Dermatology</span>
-      <input className='specialty-input' type='text' value={this.state.contest_date} onClick={this.update('contest_date')}/>
+      <button>Dermatology</button>
+      <input className='specialty-input' type='text' value={this.state.specialty} onClick={this.update('dermatology')}/>
     </div>
+
+    <div>
+      <span>{this.state.specialty}</span>
+      <button className='contest-button' onClick={this.handleSubmit}>Submit</button>
+    </div>
+
 
           </div>
         </div>
