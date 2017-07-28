@@ -47,24 +47,84 @@ ActiveRecord::Base.transaction do
 
 
   doctor1 = Doctor.create!(
-    name: 'Dr. Thomas',
-    image_url: 'password123',
+    name: 'Dr. O',
+    image_url: '-',
     rating: 90,
     specialty: 'pediatrics'
 
   )
   doctor2 = Doctor.create!(
-    name: 'Dr. Warner',
-    image_url: 'password123',
+    name: 'Dr. Lurch',
+    image_url: '-',
     rating: 90,
     specialty: 'allergy'
   )
 
   doctor3 = Doctor.create!(
-    name: 'Dr. Jones',
-    image_url: '123456',
+    name: 'Dr. Peck',
+    image_url: '-',
     rating: 90,
     specialty: 'dermatology'
+  )
+  doctor4 = Doctor.create!(
+    name: 'Dr. Brown',
+    image_url: '-',
+    rating: 90,
+    specialty: 'general'
+
+  )
+  doctor5 = Doctor.create!(
+    name: 'Dr. Troy',
+    image_url: '-',
+    rating: 90,
+    specialty: 'geriatrics'
+  )
+
+  doctor6 = Doctor.create!(
+    name: 'Dr. Johnson',
+    image_url: '-',
+    rating: 90,
+    specialty: 'endocrinology'
+  )
+  doctor7 = Doctor.create!(
+    name: 'Dr. F',
+    image_url: '-',
+    rating: 90,
+    specialty: 'pediatrics'
+
+  )
+  doctor8 = Doctor.create!(
+    name: 'Dr. X',
+    image_url: '-',
+    rating: 90,
+    specialty: 'allergy'
+  )
+
+  doctor9 = Doctor.create!(
+    name: 'Dr. Z',
+    image_url: '-',
+    rating: 90,
+    specialty: 'dermatology'
+  )
+  doctor10 = Doctor.create!(
+    name: 'Dr. L',
+    image_url: '-',
+    rating: 90,
+    specialty: 'geriatrics'
+
+  )
+  doctor11 = Doctor.create!(
+    name: 'Dr. Q',
+    image_url: '-',
+    rating: 90,
+    specialty: 'allergy'
+  )
+
+  doctor12 = Doctor.create!(
+    name: 'Dr. P',
+    image_url: '-',
+    rating: 90,
+    specialty: 'general'
   )
 
   appointment1 = Appointment.create!(
@@ -98,25 +158,4 @@ ActiveRecord::Base.transaction do
     time: 'afternoon',
     confirmed: true
   )
-
-  specialty1 = Specialty.create!(
-    name: 'pediatrics'
-  )
-  specialty2 = Specialty.create!(
-    name: 'allergy'
-  )
-  specialty3 = Specialty.create!(
-    name: 'general'
-  )
-  specialty4 = Specialty.create!(
-    name: 'geriatrics'
-  )
-  specialty5 = Specialty.create!(
-    name: 'endocrinology'
-  )
-  specialty6 = Specialty.create!(
-    name: 'dermatology'
-  )
-
-
 end

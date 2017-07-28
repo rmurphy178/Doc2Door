@@ -9,7 +9,7 @@ import { fetchAppointments } from '../../actions/appointment_actions';
 const mapStateToProps = ({session, specialties, doctors }) => ({
   session,
   specialties,
-  doctors,
+  doctors
 });
 
 const mapDispatchToProps = dispatch => ({

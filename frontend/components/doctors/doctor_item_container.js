@@ -2,11 +2,10 @@ import { connect } from 'react-redux';
 import DoctorItem from './doctor_item';
 import { fetchDoctor, fetchDoctors } from '../../actions/doctor_actions';
 import { values } from 'lodash';
-import DoctorIndex from './doctor_index';
 
-const convertDoctors= ({doctor}) => values(doctor);
 
 const mapStateToProps = (state, ownProps) => ({
+  doctor: values(state.doctor),
   doctorId: ownProps.doctorId,
   updateDoctor: ownProps.updateDoctor
 });

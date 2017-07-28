@@ -2,7 +2,7 @@ class Api::AppointmentsController < ApplicationController
 
   def index
     @appointments = Appointment.all
-    render "api/appointments/index"
+    render :index
   end
 
 
