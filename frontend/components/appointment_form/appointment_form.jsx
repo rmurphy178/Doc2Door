@@ -62,7 +62,7 @@ handleChange(e) {
         <option value="dermatology">Dermatology</option>
       </select>
     </label>
-      <input className='bttn-simple bttn-default' type="submit" value="See Doctors" />
+      <input className='bttn-simple bttn-md' type="submit" value="See Doctors" />
      </form>
      </div>
     </div>
@@ -70,4 +70,4 @@ handleChange(e) {
   }
 }
 
-export default AppointmentForm;
+export default withRouter(AppointmentForm);

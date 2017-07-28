@@ -19,6 +19,7 @@ import AppointmentsContainer from './appointments/appointments_container';
 import AppointmentFormContainer from './appointment_form/appointment_form_container';
 import DoctorIndexContainer from './doctors/doctor_index_container';
 import DoctorItemContainer from './doctors/doctor_item_container';
+import BookingFormContainer from './booking/booking_form_container';
 
 const App = () => (
   <div>
@@ -27,8 +28,9 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpContainer} />
       <ProtectedRoute exact path="/appointments" component={AppointmentFormContainer} />
       <ProtectedRoute exact path="/specialties" component={AppointmentsContainer} />
-      <Route path="/doctors/:doctorId" component={DoctorItemContainer} />
+      <ProtectedRoute exact path="/doctors/:doctorId" component={DoctorItemContainer} />
       <ProtectedRoute exact path="/doctors" component={DoctorIndexContainer} />
+      <ProtectedRoute exact path="/appointments/new" component={BookingFormContainer} />
       <Route path="/greeting" component={GreetingContainer} />
       <Route path="/" component={LandingContainer} />
     </Switch>

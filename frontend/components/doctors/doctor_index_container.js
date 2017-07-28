@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import DoctorIndex from './doctor_index';
-import { fetchDoctors } from '../../actions/doctor_actions';
 import { values } from 'lodash';
 
 

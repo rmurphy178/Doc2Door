@@ -6,8 +6,6 @@ import { values } from 'lodash';
 
 const mapStateToProps = (state, ownProps) => ({
   doctor: values(state.doctor),
-  doctorId: ownProps.doctorId,
-  updateDoctor: ownProps.updateDoctor
 });
 
 const mapDispatchToProps = dispatch => ({
