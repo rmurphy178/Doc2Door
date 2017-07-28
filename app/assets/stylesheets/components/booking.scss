@@ -21,10 +21,21 @@
   margin: 10px;
 }
 
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+}
 
 .booking-form .bttn-simple.bttn-md {
-  border-top: 10px;
-  color: red;
-  background-color: blue;
+  background: #39579b;
+  border-color: #39579b;
+  align-self: center;
+  width: 600px;
+  margin-top: 10px;
+  font-size: 18px;
+
+}
+
+.booking-form .select {
 
 }

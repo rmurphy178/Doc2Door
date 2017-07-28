@@ -1,7 +1,11 @@
 
+.navBar-wrapper {
+  width: 100vw;
+}
+
 .appointments-index-screen {
   height: 100vw;
-  width: 100%;
+  width: 100vw;
   background-color: #dce0e6;
 }
 
@@ -27,7 +31,6 @@
   align-self: center;
   width: 600px;
   padding-bottom: 10px;
-  padding-top: 10px;
   font-size: 18px;
 }
 .navBar {
@@ -40,6 +43,7 @@
   padding-top: 12px;
   justify-content: space-around;
   padding-right: 20px;
+  line-height: 24px;
 }
 
 div .logo {

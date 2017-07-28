@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170727012743) do
     t.integer  "doctor_id",  null: false
     t.string   "location",   null: false
     t.string   "time",       null: false
-    t.boolean  "confirmed",  null: false
+    t.string   "day",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

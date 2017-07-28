@@ -4,8 +4,11 @@
   justify-content: flex-start;
   align-items: center;
   margin: 20px;
-  width: 100vw;
+  width: 100%;
+  height: 100vh;
+  background-color: #dce0e6
 }
+
 
 .appointments-form .bttn-simple.bttn-md {
   background: #39579b;
@@ -30,6 +33,9 @@
   margin-bottom: 15px;
 }
 
+label.dropdown select {
+  height: 30px;
+}
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -39,11 +45,24 @@
 }
 
 
-.details-field {
-  display: flex;
-  flex-direction: column;
+.location-field {
+  height: 30px;
+  margin-top: 25px;
   border: solid black 1px;
-  height: 130px;
   width: 800px;
+  margin-top: 40px;
+}
+
+
+
+
+.details-field {
+  border: solid black 1px;
+  height: 180px;
+  width: 800px;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
 
 }

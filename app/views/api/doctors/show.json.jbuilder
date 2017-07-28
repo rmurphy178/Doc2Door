@@ -1,1 +1,1 @@
-json.parial! 'api/doctors/doctor', doctor: @doctor
+json.partial! 'api/doctors/doctor', doctor: @doctor

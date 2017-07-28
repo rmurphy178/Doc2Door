@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import NavBarContainer from '../navBar/navBar_container';
+
 class AppointmentForm extends React.Component {
   constructor(props) {
     super(props);
     console.log(props);
     this.state = {
       details: '',
+      location: '',
       specialty: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -39,9 +42,10 @@ handleChange(e) {
   render() {
     return (
     <div className="appointments-form">
+      <NavBarContainer/>
       <div className="dropdown-container">
       <h1>How can we Help?</h1>
-     <h2>Provide Details for Your Physician Here</h2>
+     <h2>Provide Your Address and Any Important Details for Your Physician Here:</h2>
      <input
        className="details-field"
        type="text"
@@ -49,6 +53,13 @@ handleChange(e) {
        value={this.state.details}
        onChange={this.update('details')}
        />
+       <input
+         className="location-field"
+         type="text"
+         placeholder="Address"
+         value={this.state.location}
+         onChange={this.update('location')}
+         />
        <form onSubmit={this.handleSubmit}>
     <label className="dropdown">
       Choose a Specialty:

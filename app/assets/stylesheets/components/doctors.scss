@@ -4,10 +4,17 @@
   justify-content: center;
   font-size: 25px;
   margin: 10px;
+
 }
 
-.doc-list-item {
+.doc-list li {
   display: flex;
   flex-direction: column;
   color: blue;
+  border: solid black 1px;
+}
+
+.doc-list-bg {
+  height: 100vh;
+  background-color: #dce0e6;
 }

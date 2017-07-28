@@ -132,7 +132,7 @@ ActiveRecord::Base.transaction do
     doctor_id: 1,
     location: '160 Spear street',
     time: 'morning',
-    confirmed: true
+    day: 'monday'
   )
 
   appointment2 = Appointment.create!(
@@ -140,7 +140,7 @@ ActiveRecord::Base.transaction do
     doctor_id: 3,
     location: '160 Spear street',
     time: 'afternoon',
-    confirmed: true
+    day: 'monday'
   )
 
     appointment3 = Appointment.create!(
@@ -148,7 +148,7 @@ ActiveRecord::Base.transaction do
     doctor_id: 1,
     location: '160 Spear street',
     time: 'evening',
-    confirmed: true
+    day: 'monday'
   )
 
   appointment4 = Appointment.create!(
@@ -156,6 +156,6 @@ ActiveRecord::Base.transaction do
     doctor_id: 2,
     location: '160 Spear street',
     time: 'afternoon',
-    confirmed: true
+    day: 'monday'
   )
 end

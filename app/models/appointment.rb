@@ -14,7 +14,7 @@
 
 class Appointment < ActiveRecord::Base
 
-  validates :user_id, :doctor_id, :location, :time, :confirmed, presence: true
+  validates :user_id, :doctor_id, :location, :time, :day, presence: true
 
   belongs_to :user,
     primary_key: :id,

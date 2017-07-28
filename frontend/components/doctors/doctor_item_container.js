@@ -1,12 +1,23 @@
+
 import { connect } from 'react-redux';
 import DoctorItem from './doctor_item';
 import { fetchDoctor, fetchDoctors } from '../../actions/doctor_actions';
 import { values } from 'lodash';
 
 
-const mapStateToProps = (state, ownProps) => ({
-  doctor: values(state.doctor),
-});
+const mapStateToProps = (state, ownProps) => {
+
+  function grabDoctor(doctor){
+    return doctor.id === parseInt(ownProps.match.params.doctorId);
+  }
+
+
+  const doctor = values(state.doctors).filter;
+  return{
+    doctor,
+    doctors: state.doctors
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: (doctorId) => dispatch(fetchDoctor(doctorId)),

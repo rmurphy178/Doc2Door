@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { values } from 'lodash';
 
+
+import NavBarContainer from '../navBar/navBar_container';
+
 class Appointments extends React.Component {
   constructor(props){
     super(props);

@@ -6,11 +6,9 @@ import GreetingContainer from '../greeting/greeting_container';
 class AccountForm extends React.Component {
   constructor(props){
     super(props);
-    console.log(props);
 
     let user = this.props.currentUser;
     let doctor = this.props.doctor;
-    debugger;
     this.state  = {
       email: user.email,
       zip: user.zip,
@@ -22,19 +20,6 @@ class AccountForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.update = this.update.bind(this);
-  }
-
-  handleChange(field) {
-    return e => this.setState({[field]: e.target.value });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    let user = this.state;
-    this.props.update(user);
-    this.state.edited = "Edit submitted";
-    this.props.history.push("/user");
-    // location.href = '/'
   }
 
 
@@ -69,6 +54,7 @@ return e => this.setState({
     }
     return (
       <div className="user-profile-container">
+        <NavBarContainer/>
         <form onSubmit={this.handleSubmit} className="user-profile">
           <p className="account-header"> Edit Account Information</p>
           <img src={this.props.currentUser.image_url} alt="User profile pic" className="user-profile-pic"/>
@@ -119,7 +105,7 @@ return e => this.setState({
                 <label> <p className="account-info">Zip Code : &nbsp; &nbsp;</p>
                   <input type="text"
                     value={this.state.zip}
-                    onChange={this.handleChange("zip_code")}
+                    onChange={this.handleChange("zip")}
                     className="user-info-input" />
                 </label>
               </li>
@@ -128,7 +114,7 @@ return e => this.setState({
                 <label> <p className="account-info">Image Url : &nbsp; &nbsp;</p>
                   <input type="text"
                     value={this.state.image_url}
-                    onChange={this.handleChange("imageurl")}
+                    onChange={this.handleChange("image_url")}
                     className="user-info-input" />
                 </label>
               </li>

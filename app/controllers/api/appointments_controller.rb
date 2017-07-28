@@ -30,7 +30,7 @@ class Api::AppointmentsController < ApplicationController
       :doctor_id,
       :location,
       :time,
-      :confirmed
+      :day
     )
   end
 end

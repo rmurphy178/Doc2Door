@@ -1,13 +1,17 @@
 import React from 'react';
 import {Link, withRouter } from 'react-router-dom';
 
+import NavBarContainer from '../navBar/navBar_container';
+
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     console.log(props);
     this.state = {
-      day: '',
-      time: ''
+      appointment: {
+        day: '',
+        time: ''
+      }
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -21,7 +25,8 @@ componentDidMount(){
 
 handleSubmit(e) {
   e.preventDefault();
-  this.props.createAppointment({specialty: this.state.specialty}).then( () => {
+  let appointment = this.state;
+  this.props.createAppointment(appointment).then( () => {
   this.props.history.push('/account');
   });
 }
@@ -37,6 +42,7 @@ update(field) {
   render(){
     return (
       <div className="booking-form">
+        <NavBarContainer/>
         <h1>Booking & Confirmation</h1>
         <form onSubmit={this.handleSubmit}>
           <label>

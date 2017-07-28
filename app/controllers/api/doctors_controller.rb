@@ -7,7 +7,7 @@ class Api::DoctorsController < ApplicationController
 
   def show
     @doctor = Doctor.find(params[:id])
-    render `/api/doctors/${id}`
+    render `api/doctors/show`
   end
 
   private
