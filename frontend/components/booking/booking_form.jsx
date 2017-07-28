@@ -6,25 +6,31 @@ class BookingForm extends React.Component {
     super(props);
     console.log(props);
     this.state = {
-
+      day: '',
+      time: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.update = this.update.bind(this);
   }
+
+componentDidMount(){
+  this.props.currentUser;
+}
 
 
 
 handleSubmit(e) {
   e.preventDefault();
-  this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
-  this.props.history.push('/doctors');
+  this.props.createAppointment({specialty: this.state.specialty}).then( () => {
+  this.props.history.push('/account');
   });
 }
 
 
-handleChange(e) {
-  e.preventDefault();
-  this.setState({specialty: e.target.value});
+update(field) {
+  return e => this.setState({
+    [field]: e.currentTarget.value
+  });
 }
 
 
@@ -32,10 +38,10 @@ handleChange(e) {
     return (
       <div className="booking-form">
         <h1>Booking & Confirmation</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
-            <select>
-              Choose a day:
+            Choose a day for your appointment:
+            <select value={this.state.day} onChange={this.update}>
               <option disabled>Select</option>
               <option value="Monday">Monday</option>
               <option value="Tuesday">Tuesday</option>
@@ -46,9 +52,8 @@ handleChange(e) {
               <option value="Sunday">Sunday</option>
             </select>
 
-
-            <select>
-              Choose a time:
+            Choose a preferred appointment time:
+            <select value={this.state.time} onChange={this.update}>
               <option disabled>Select</option>
               <option value="Morning">Morning</option>
               <option value="Afternoon">Afternoon</option>

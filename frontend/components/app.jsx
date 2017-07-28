@@ -20,6 +20,7 @@ import AppointmentFormContainer from './appointment_form/appointment_form_contai
 import DoctorIndexContainer from './doctors/doctor_index_container';
 import DoctorItemContainer from './doctors/doctor_item_container';
 import BookingFormContainer from './booking/booking_form_container';
+import AccountFormContainer from './account/account_form_container';
 
 const App = () => (
   <div>
@@ -31,6 +32,7 @@ const App = () => (
       <ProtectedRoute exact path="/doctors/:doctorId" component={DoctorItemContainer} />
       <ProtectedRoute exact path="/doctors" component={DoctorIndexContainer} />
       <ProtectedRoute exact path="/appointments/new" component={BookingFormContainer} />
+      <ProtectedRoute exact path="/account" component={AccountFormContainer} />
       <Route path="/greeting" component={GreetingContainer} />
       <Route path="/" component={LandingContainer} />
     </Switch>

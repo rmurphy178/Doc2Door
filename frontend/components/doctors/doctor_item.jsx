@@ -17,6 +17,7 @@ class DoctorItem extends React.Component {
 handleClick(e) {
   e.preventDefault();
   this.setState({selectedDoctor: e.target.value});
+  this.props.fetchDoctor(e.target.value);
     this.props.history.push('/appointments/new');
 }
 

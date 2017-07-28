@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import BookingForm from './booking_form';
+import AccountForm from './account_form';
 import { fetchDoctors } from '../../actions/doctor_actions';
 import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
 
-const mapStateToProps = ({session, doctor}) => ({
-  currentUser: session.currentUser,
+const mapStateToProps = ({currentUser, doctor}) => ({
+  currentUser,
   doctor
 });
 
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(BookingForm));
+)(AccountForm));
