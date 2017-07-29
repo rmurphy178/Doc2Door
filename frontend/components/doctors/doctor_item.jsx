@@ -2,18 +2,24 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import NavBarContainer from '../navBar/navBar_container';
 
+import values from 'lodash/values';
+
 class DoctorItem extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      doctor: values(props.doctors).filter(doctor => doctor.id === this.props.match.params.doctorId)
     };
     this.handleClick = this.handleClick.bind(this);
+    console.log(this.state);
   }
 
+componentWillReceiveProps() {
+
+}
 
 componentDidMount() {
-  this.props.fetchDoctor(this.state.props.match.params.doctorId);
+  this.props.fetchDoctor(this.props.match.params.doctorId);
 }
 
 handleClick(e) {
@@ -23,18 +29,18 @@ handleClick(e) {
 }
 
 render() {
-  console.log(this.props);
+
   return (
 <div>
   <NavBarContainer/>
-    <div className="doctor-item" key={this.props.doctor.id}>
+    <div className="doctor-item" key={this.props.doctors.id}>
       <div className="doctor-bio">
-        <img src={this.props.doctor.image_url} alt="Doctor Photo" className="doctor-image"/>
+        <img src={this.props.doctors.image_url} alt="Doctor Photo" className="doctor-image"/>
         <br/>
-        <p className="doctor-detail-1">Name: {this.props.doctor.name}</p>
-        <p className="doctor-detail">Specialty: {this.props.doctor.specialty}</p>
-        <p className="doctor-detail">Rating: {this.props.doctor.rating}</p>
-        <button className="bttn-fill bttn-success" value={this.props.doctor.id} onClick={this.handleClick}>
+        <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
+        <p className="doctor-detail">Specialty: {this.props.doctors.specialty}</p>
+        <p className="doctors-detail">Rating: {this.props.doctors.rating}</p>
+        <button className="bttn-fill bttn-success" value={this.props.doctors.id} onClick={this.handleClick}>
           Select & Continue
         </button>
       </div>

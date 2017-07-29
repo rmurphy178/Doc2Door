@@ -5,19 +5,11 @@ import { fetchDoctor, fetchDoctors } from '../../actions/doctor_actions';
 import { values } from 'lodash';
 
 
-const mapStateToProps = (state, ownProps) => {
-
-  function grabDoctor(doctor){
-    return doctor.id === parseInt(ownProps.match.params.doctorId);
-  }
 
 
-  const doctor = values(state.doctors).filter;
-  return{
-    doctor,
-    doctors: state.doctors
-  };
-};
+const mapStateToProps = ({ doctors }) => ({
+  doctors
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: (doctorId) => dispatch(fetchDoctor(doctorId)),
