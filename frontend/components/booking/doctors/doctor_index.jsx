@@ -30,11 +30,11 @@ render() {
         <section className="doctors-list">
           <ul className="doctor-list-step">
             {doctors.map( (doctor, idx) => (
-              <Link to={`/doctors/${doctor.id}/`} key={idx}>
-               <li className="doc-list-item">Select this doctor</li>
-               <li>{doctor.name}</li>
+              <Link to={`/doctors/${doctor.id}/`} key={idx} className="doc-info">
                <li>{doctor.image_url}</li>
-               <li>{doctor.rating}</li>
+               <li>Name: {doctor.name}</li>
+               <li>Specialty: {doctor.specialty}</li>
+               <li>Rating: {doctor.rating}</li>
                  </Link>
               ))}
           </ul>

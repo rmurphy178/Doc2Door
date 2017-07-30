@@ -3,9 +3,11 @@
   justify-content: center;
   font-size: 30px;
   margin: 20px;
+  border: solid black 1px;
 }
 
-.doc-show {
+.doc-show-bg {
   height: 100vh;
+  width: 100vw;
   background-color: #dce0e6;
 }
