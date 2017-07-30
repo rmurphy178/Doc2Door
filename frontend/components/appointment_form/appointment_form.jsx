@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import PlacesAutoComplete, { geocodeByAddress } from 'react-places-autocomplete';
 
 import NavBarContainer from '../navBar/navBar_container';
 
@@ -46,13 +47,10 @@ handleChange(e) {
       <div className="dropdown-container">
       <h1>How can we Help?</h1>
      <h2>Provide Your Address and Any Important Details for Your Physician Here:</h2>
-     <input
-       className="details-field"
-       type="text"
-       placeholder="Details"
-       value={this.state.details}
-       onChange={this.update('details')}
-       />
+       <label>Describe your problem<br/>
+         <textarea value={this.state.details} rows='10' cols='40' placeholder="Provide information for your physician"
+         onChange={this.update("details")} className="details-field"/>
+         </label>
        <input
          className="location-field"
          type="text"
