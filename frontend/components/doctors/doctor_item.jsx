@@ -29,25 +29,24 @@ handleClick(e) {
 }
 
 render() {
-
   return (
-<div clasName="doc-show-bg">
-  <NavBarContainer/>
-    <div className="doctor-item" key={this.props.doctors.id}>
-      <div className="doctor-bio">
-        <img src={this.props.doctors.image_url} alt="Doctor Photo" className="doctor-image"/>
-        <br/>
-        <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
-        <p className="doctor-detail">Specialty: {this.props.doctors.specialty}</p>
-        <p className="doctors-detail">Rating: {this.props.doctors.rating}</p>
-        <button className="bttn-fill bttn-success" value={this.props.doctors.id} onClick={this.handleClick}>
-          Select & Continue
-        </button>
-      </div>
-    </div>
-  </div>
-  );
-}
+      <div clasName="doc-show-bg">
+        <NavBarContainer/>
+          <div className="doctor-item" key={this.props.doctors.id}>
+            <div className="doctor-bio">
+              <img src={this.props.doctors.image_url} alt="Doctor Photo" className="doctor-image"/>
+              <br/>
+              <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
+              <p className="doctor-detail">Specialty: {this.props.doctors.specialty}</p>
+              <p className="doctors-detail">Rating: {this.props.doctors.rating}</p>
+              <button className="bttn-fill bttn-success" value={this.props.doctors.id} onClick={this.handleClick}>
+                Select & Continue
+              </button>
+            </div>
+          </div>
+        </div>
+    );
+  }
 }
 
 
