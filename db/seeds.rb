@@ -127,5 +127,35 @@ ActiveRecord::Base.transaction do
     specialty: 'general'
   )
 
-  
+  appointment1 = Appointment.create!(
+    user_id: 2,
+    doctor_id: 1,
+    location: '160 Spear street',
+    time: 'morning',
+    day: 'monday'
+  )
+
+  appointment2 = Appointment.create!(
+    user_id: 1,
+    doctor_id: 3,
+    location: '160 Spear street',
+    time: 'afternoon',
+    day: 'monday'
+  )
+
+    appointment3 = Appointment.create!(
+    user_id: 3,
+    doctor_id: 1,
+    location: '160 Spear street',
+    time: 'evening',
+    day: 'monday'
+  )
+
+  appointment4 = Appointment.create!(
+    user_id: 2,
+    doctor_id: 2,
+    location: '160 Spear street',
+    time: 'afternoon',
+    day: 'monday'
+  )
 end
