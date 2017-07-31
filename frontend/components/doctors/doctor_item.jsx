@@ -30,7 +30,7 @@ handleClick(e) {
 
 render() {
   return (
-      <div clasName="doc-show-bg">
+      <div className="doc-show-bg">
         <NavBarContainer/>
           <div className="doctor-item" key={this.props.doctors.id}>
             <div className="doctor-bio">
