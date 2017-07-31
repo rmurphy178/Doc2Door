@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import PlacesAutoComplete, { geocodeByAddress } from 'react-places-autocomplete';
+import PlacesAutoComplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 import NavBarContainer from '../navBar/navBar_container';
 
@@ -10,16 +10,20 @@ class AppointmentForm extends React.Component {
     console.log(props);
     this.state = {
       details: '',
-      location: '',
+      address: '',
       specialty: ''
     };
+    this.onChange = (address) => this.setState({ address });
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+
   }
 
 
 handleSubmit(e) {
   e.preventDefault();
+  console.log(this.props);
+  geocodeByAddress(this.state.address).then(results => getLatLng(results[0]));
   this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
   this.props.history.push('/doctors');
   });
@@ -32,15 +36,18 @@ handleChange(e) {
 }
 
 
-  update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
-  }
+update(field) {
+  return e => this.setState({
+    [field]: e.currentTarget.value
+  });
+}
 
 
 
   render() {
+
+    const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
+
     return (
     <div className="appointments-form">
       <NavBarContainer/>
@@ -52,11 +59,11 @@ handleChange(e) {
          onChange={this.update("details")} className="details-field"/>
          </label>
        <input
-         className="location-field"
+         className="address-field"
          type="text"
          placeholder="Address"
-         value={this.state.location}
-         onChange={this.update('location')}
+         value={this.state.address}
+         onChange={this.update('address')}
          />
        <form onSubmit={this.handleSubmit}>
     <label className="dropdown">
