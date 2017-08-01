@@ -8,10 +8,11 @@ import NavBarContainer from '../navBar/navBar_container';
 class AppointmentForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       details: '',
       address: '',
-      specialty: ''
+      specialty: '',
     };
     this.onChange = (address) => this.setState({ address });
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,9 +49,7 @@ changeDate(date) {
 
     const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
     const inputProps = { value: this.state.address, onChange: this.onChange };
-    const cssClasses = {
-                autocompleteContainer: 'my-autocomplete-container'
-};
+
 
     return (
     <div className="appointments-form">

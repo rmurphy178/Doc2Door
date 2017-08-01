@@ -4,9 +4,8 @@ import AccountForm from './account_form';
 import { fetchDoctors } from '../../actions/doctor_actions';
 import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
 
-const mapStateToProps = ({currentUser, doctor}) => ({
-  currentUser,
-  doctor
+const mapStateToProps = ({session}) => ({
+  currentUser: session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

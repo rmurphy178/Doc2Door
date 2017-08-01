@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
 
@@ -31,20 +30,6 @@ return e => this.setState({
 }
 
 
-  // renderErrors() {
-  //   if (this.props.errors === undefined) {
-  //     return null;
-  //   }
-  //   return(
-  //     <ul className="errors">
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
 
   render() {
     if (!this.props.currentUser) {
@@ -61,7 +46,7 @@ return e => this.setState({
           <br/>
           {this.state.edited}
         {  // this.renderErrors()
-        }
+          }
 
           <div className="user-info">
             {//<p className="account-info"> Email : &nbsp; &nbsp; {this.state.email}  </p>
