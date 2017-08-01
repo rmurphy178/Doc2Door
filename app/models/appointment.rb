@@ -7,14 +7,14 @@
 #  doctor_id  :integer          not null
 #  location   :string           not null
 #  time       :string           not null
-#  confirmed  :boolean          not null
+#  day        :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 class Appointment < ActiveRecord::Base
 
-  validates :user_id, :doctor_id, :location, :time, :day, presence: true
+  validates :user_id, :doctor_id, :address, :date, presence: true
 
   belongs_to :user,
     primary_key: :id,
