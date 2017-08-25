@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import NavBarContainer from '../navBar/navBar_container';
 import AppointmentForm from '../appointment_form/appointment_form';
 import BookingForm from '../booking/booking_form';
 
@@ -7,9 +8,19 @@ class AppointmentRequestForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      form: 1,
+      step: 1,
 
-    };
+      form: {
+       details: null,
+       address: null
+      },
+
+      form2: {
+       date: moment(),
+
+    },
+      errors: null
+  };
 
     this.onChange = (address) => this.setState({ address });
     this.changeDate = this.changeDate.bind(this);
@@ -19,11 +30,22 @@ class AppointmentRequestForm extends React.Component {
     this.nextForm = this.nextFrom.bind(this);
   }
 
-  formComplete() {
+  verifyFirstForm() {
+   this.missingFields = [];
+   if (!this.state.form.details) {
+     this.missingFields.push("Please complete field");
+   }
+   if (!this.state.form.specialty_id) {
+     this.missingFields.push("Specialty is a required field");
+   }
+   if (!this.state.form.address) {
+     this.missingFields.push("Address is a required field");
+   }
 
-  }
+   return (this.state.form.details && this.state.form.specialty_id && this.state.form.address);
+ }
 
-  secondFormComplete() {
+  verifySecondForm() {
 
   }
 
@@ -47,6 +69,14 @@ class AppointmentRequestForm extends React.Component {
     this.setState({doctor_id: doctor_id});
   }
 
+  updateForm(data) {
+    this.setState({form: data});
+  }
+
+  updateForm2(data) {
+    this.setState({form2: data});
+  }
+
 
 
   handleSubmit(e) {
@@ -60,6 +90,16 @@ class AppointmentRequestForm extends React.Component {
     appointmentRequest.rate = this.state.doctor;
     this.props.createAppointmentRequest(appointmentRequest);
   }
+
+  nextStep(e) {
+  e.preventDefault();
+
+}
+
+componentDidMount() {
+  this.props.fetchSpecialties();
+  this.props.fetchDoctors();
+}
 
 
 
