@@ -23,24 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     delete window.currentUser;
   } else {
     store = configureStore();
+
   }
-
-
-  //begin testing
-  window.store = store.getState;
-  window.dispatch = store.dispatch;
-  window.getState = store.dispatch;
-  //end testing
-
-
-  const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
-
-window.fetchDoctors = fetchDoctors;
-window.fetchDoctor = fetchDoctor;
-window.fetchAppointments = fetchAppointments;
-window.fetchAppointment = fetchAppointment;
-window.createAppointment = createAppointment;
-window.fetchSpecialty = fetchSpecialty;
-window.fetchSpecialties = fetchSpecialties;
