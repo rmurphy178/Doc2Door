@@ -37,31 +37,31 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    let email = "elmo.jones@aol.com";
-    let password = "password";
-    for (let i = 0; i < email.length; i++) {
-      setTimeout(() => this.setState({
-        email: email.slice(0, i + 1)}), (i * 80));
-    }
-    for (let j = 0; j < password.length; j++) {
-      setTimeout(() => this.setState({
-        password: password.slice(0, j + 1)}), ((j + 5) * 80));
-    }
+    // let email = "elmo.jones@aol.com";
+    // let password = "password";
+    // for (let i = 0; i < email.length; i++) {
+    //   setTimeout(() => this.setState({
+    //     email: email.slice(0, i + 1)}), (i * 80));
+    // }
+    // for (let j = 0; j < password.length; j++) {
+    //   setTimeout(() => this.setState({
+    //     password: password.slice(0, j + 1)}), ((j + 5) * 80));
+    // }
     const demo_user = {
       email: 'elmo.jones@aol.com',
       password: 'password'
     };
     // TODO: replace handleSubmit with login and adjust routes accordingly
-    setTimeout(this.props.handleSubmit(demo_user), 1500).then(() => {
-      this.props.history.push('/specialties');
-    });
+      this.props.login(demo_user).then( ()=> {
+        this.props.history.push('/specialties');
+      });
   }
 
-
+      //
       // handleDemo(e){
       //   e.preventDefault();
       //
-      //   let user = {};
+      //   let user = this.state;
       //
       //   let currentPassword = this.state.password;
       //   let currentEmail = this.state.email;
@@ -73,7 +73,7 @@ class SessionForm extends React.Component {
       //       const setPassword = setInterval(()=>{
       //         if(this.demoUser.password===""){
       //           clearInterval(setPassword);
-      //           user = {user:this.state};
+      //           user = this.state;
       //           this.props.login(user);
       //         }else if(currentPassword){
       //           this.setState({password: this.demoUser.password[0]});
