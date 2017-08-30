@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import GreetingContainer from '../greeting/greeting_container';
 
 class Landing extends React.Component {
   constructor(props) {

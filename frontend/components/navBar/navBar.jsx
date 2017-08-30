@@ -18,7 +18,7 @@ render() {
      <div className="navBar">
             <img className="logo" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png" />
                 <div className="dash-right-corner">
-                    <Link to="/appointments">
+                    <Link to="/account">
                       <div className="dashboard">Home</div>
                     </Link>
             <button className="nav-logout" onClick={this.logout}>Log Out</button>

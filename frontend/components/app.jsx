@@ -11,7 +11,6 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
-import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import SignUpContainer from './sign_up/sign_up_container';
 import LandingContainer from './landing_page/landing_container';
@@ -33,6 +32,8 @@ const App = () => (
       <ProtectedRoute exact path="/doctors" component={DoctorIndexContainer} />
       <ProtectedRoute exact path="/appointments/new" component={BookingFormContainer} />
       <ProtectedRoute exact path="/account" component={AccountFormContainer} />
+      <ProtectedRoute exact path='/landing' component={LandingContainer} />
+      <ProtectedRoute exact path='/account' component={AccountFormContainer} />
     </Switch>
   </div>
 );

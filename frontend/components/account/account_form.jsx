@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import GreetingContainer from '../greeting/greeting_container';
+
+import NavBarContainer from '../navBar/NavBar_Container';
 
 class AccountForm extends React.Component {
   constructor(props){
@@ -16,99 +17,16 @@ class AccountForm extends React.Component {
       id: user.id,
       image_url: user.image_url,
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.update = this.update.bind(this);
   }
 
 
 
-update(field) {
-return e => this.setState({
-  [field]: e.currentTarget.value
-});
-}
-
-
 
   render() {
-    if (!this.props.currentUser) {
-      return (
-        <GreetingContainer/>
-      );
-    }
     return (
-      <div className="user-profile-container">
-        <NavBarContainer/>
-        <form onSubmit={this.handleSubmit} className="user-profile">
-          <p className="account-header"> Edit Account Information</p>
-          <img src={this.props.currentUser.image_url} alt="User profile pic" className="user-profile-pic"/>
-          <br/>
-          {this.state.edited}
-        {  // this.renderErrors()
-          }
-
-          <div className="user-info">
-            {//<p className="account-info"> Email : &nbsp; &nbsp; {this.state.email}  </p>
-          }
-            <ul className="user-inputs">
-              <li className="user-info-item">
-              </li>
-              <br/>
-{/*              <li className="user-info-item">
-                <label> Password : &nbsp; &nbsp;
-                  <input type="password"
-                    value={//this.state.password
-                  }
-                    onChange={//this.handleChange("password")
-                  }
-                    className="user-info-input" />
-                </label>
-              </li>
-              <br/>
-          */  }
-
-              <li className="user-info-item">
-                <label> <p className="account-info">First Name : &nbsp; &nbsp;</p>
-                  <input type="text"
-                    value={this.state.first_name}
-                    onChange={this.handleChange("first_name")}
-                    className="user-info-input" />
-                </label>
-              </li>
-              <br/>
-              <li className="user-info-item">
-                <label> <p className="account-info">Last Name : &nbsp; &nbsp;</p>
-                  <input type="text"
-                    value={this.state.last_name}
-                    onChange={this.handleChange("last_name")}
-                    className="user-info-input" />
-                </label>
-              </li>
-              <br/>
-              <li className="user-info-item">
-                <label> <p className="account-info">Zip Code : &nbsp; &nbsp;</p>
-                  <input type="text"
-                    value={this.state.zip}
-                    onChange={this.handleChange("zip")}
-                    className="user-info-input" />
-                </label>
-              </li>
-              <br/>
-              <li className="user-info-item">
-                <label> <p className="account-info">Image Url : &nbsp; &nbsp;</p>
-                  <input type="text"
-                    value={this.state.image_url}
-                    onChange={this.handleChange("image_url")}
-                    className="user-info-input" />
-                </label>
-              </li>
-              <br/>
-
-              <input className="edit-user-submit" type="submit" value="Submit" />
-            </ul>
-          </div>
-        </form>
+      <div>
+        <NavBarContainer />
+        <h1>User Account</h1>
       </div>
     );
   }
