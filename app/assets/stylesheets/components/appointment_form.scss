@@ -9,8 +9,20 @@
   background-color: #dce0e6
 }
 
+.autocomplete-container {
+  width: 780px;
+}
+
+#PlacesAutocomplete__root input {
+  height: 15px;
+  margin-top: 5px;
+  border: solid black 1px;
+  width: 800px;
+  background-color: white;
+}
+
 .address-field {
-  
+
 }
 
 .appointments-form .bttn-simple.bttn-md {
@@ -54,6 +66,7 @@ label.dropdown select {
   border: solid black 1px;
   width: 800px;
   margin-top: 40px;
+  background-color: white;
 }
 
 

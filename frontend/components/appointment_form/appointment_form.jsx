@@ -58,11 +58,11 @@ changeDate(date) {
       <h1>How can we Help?</h1>
      <h2>Provide Your Address and Any Important Details for Your Physician Here:</h2>
        <label>Describe your problem<br/>
-         <textarea value={this.state.details} rows='10' cols='40' placeholder="Provide information for your physician"
+         <textarea value={this.state.details} rows='10' cols='40' placeholder=" Provide information for your physician"
          onChange={this.update("details")} className="details-field"/>
          </label>
-       <form onSubmit={this.handleSubmit}>
-         <div>
+          <form onSubmit={this.handleSubmit}>
+         <div className='autocomplete-container'>
            Address
          <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
          </div>
