@@ -28,21 +28,12 @@ handleSubmit(e) {
 render() {
 return(
   <div>
+    <NavBarContainer />
     <div className="appointments-index-screen">
       <div className="appointments-index-header">
         <div className="appointments-header-step">
           <div className="appointments-header-inner">
-            <div className="navBar">
-              <br/>
-                <img className="logo" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png" />
-                  <br/>
-                    <div className="dash-right-corner">
-                        <Link to="/appointments">
-                          <div className="dashboard">Dashboard</div>
-                        </Link>
-                <button className="nav-logout" onClick={this.props.logout}>Log Out</button>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
