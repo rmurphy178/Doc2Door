@@ -37,7 +37,6 @@ return(
                 <img className="logo" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png" />
                   <br/>
                     <div className="dash-right-corner">
-                      <div className="offer">Get $20</div>
                         <Link to="/appointments">
                           <div className="dashboard">Dashboard</div>
                         </Link>
