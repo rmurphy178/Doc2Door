@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.login(user).then( ()=> {
-      this.props.history.push('/specialties');
+      this.props.history.push('/');
     });
   }
 
@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
     };
     // TODO: replace handleSubmit with login and adjust routes accordingly
       this.props.login(demo_user).then( ()=> {
-        this.props.history.push('/specialties');
+        this.props.history.push('/');
       });
   }
 
@@ -113,7 +113,7 @@ class SessionForm extends React.Component {
 
     if(this.props.loggedIn){
       return (
-        <Redirect to='/specialties' />
+        <Redirect to='/' />
       );
     } else {
     return (
