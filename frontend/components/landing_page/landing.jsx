@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 
 
 const Landing = () => (

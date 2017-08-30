@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 
 
 class SessionForm extends React.Component {
@@ -110,6 +110,12 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
+    if(this.props.loggedIn){
+      return (
+        <Redirect to='/specialties' />
+      );
+    } else {
     return (
       <section className="login-signup-background">
 
@@ -151,6 +157,7 @@ class SessionForm extends React.Component {
     </div>
     </section>
     );
+    }
   }
 }
 
