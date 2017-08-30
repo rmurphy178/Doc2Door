@@ -53,9 +53,48 @@ class SessionForm extends React.Component {
     };
     // TODO: replace handleSubmit with login and adjust routes accordingly
     setTimeout(this.props.handleSubmit(demo_user), 1500).then(() => {
-      this.props.history.push('/appointments');
+      this.props.history.push('/specialties');
     });
   }
+
+
+      // handleDemo(e){
+      //   e.preventDefault();
+      //
+      //   let user = {};
+      //
+      //   let currentPassword = this.state.password;
+      //   let currentEmail = this.state.email;
+      //
+      //   let email = this.demoUser.email;
+      //   const setEmail = setInterval(()=>{
+      //     if(this.demoUser.email===""){
+      //       clearInterval(setEmail);
+      //       const setPassword = setInterval(()=>{
+      //         if(this.demoUser.password===""){
+      //           clearInterval(setPassword);
+      //           user = {user:this.state};
+      //           this.props.login(user);
+      //         }else if(currentPassword){
+      //           this.setState({password: this.demoUser.password[0]});
+      //           this.demoUser.password = this.demoUser.password.slice(1);
+      //           currentPassword = "";
+      //         }else{
+      //           this.setState({password: this.state.password+this.demoUser.password[0]});
+      //           this.demoUser.password = this.demoUser.password.slice(1);
+      //         }
+      //       },100);
+      //     }else if(currentEmail){
+      //       currentEmail = "";
+      //       this.setState({email: this.demoUser.email[0]});
+      //       this.demoUser.email = this.demoUser.email.slice(1);
+      //     }else{
+      //       this.setState({email: this.state.email+this.demoUser.email[0]});
+      //       this.demoUser.email = this.demoUser.email.slice(1);
+      //     }
+      //   },100);
+      // }
+
 
 
   renderErrors() {
