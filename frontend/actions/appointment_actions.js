@@ -36,6 +36,6 @@ export const fetchAppointment = id => dispatch => (
 export const createAppointment = appointment => dispatch => (
   APIUtil.createAppointment(appointment).then(appointment => (
     dispatch(receiveAppointment(appointment))
-  ), err => (dispatch(receiveErrors(err.responseJSON))
+  ), err => (dispatch(receiveAppointmentErrors(err.responseJSON))
   ))
 );

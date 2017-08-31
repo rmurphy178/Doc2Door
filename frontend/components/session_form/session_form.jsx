@@ -110,6 +110,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    console.log(this.props.errors);
 
     if(this.props.loggedIn){
       return (

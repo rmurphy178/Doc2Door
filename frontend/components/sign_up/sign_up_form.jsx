@@ -51,63 +51,61 @@ class SignUpForm extends React.Component {
   render() {
     return (
 
-      <section className="login-signup-background">
-
-
-    <div className="login-page">
-      <div className="login-signup-form">
-        <header className='login-container'>
-          <Link to="/greeting" className="header-link">
-            <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
-          </Link>
-        </header>
-        <form onSubmit={this.handleSubmit} className="register-form">
-          <br/>
-          {this.renderErrors()}
-          <br/>
-              <input
-                type="text"
-                placeholder="First Name"
-                value={this.state.first_name}
-                onChange={this.update("first_name")}
-                className="signup-input"
-                />
-              <input
-                type="text"
-                placeholder="Last Name"
-                value={this.state.last_name}
-                onChange={this.update("last_name")}
-                className="signup-input"
-                />
-              <input
-                type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update("email")}
-                className="signup-input"
-                />
-              <input
-                type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                className="signup-input"
-                />
-              <input
-                type="text"
-                placeholder="Zip Code"
-                value={this.props.city}
-                onChange={this.update("zip")}
-                className="signup-input"
-                />
-              <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
-              <p className="message">Already registered?
-                <Link to="/login">Sign In</Link>
-              </p>
-        </form>
-      </div>
-      </div>
-      </section>
+            <section className="login-signup-background">
+              <div className="login-page">
+              <div className="login-signup-form">
+              <header className='login-container'>
+                <Link to="/greeting" className="header-link">
+                  <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
+                </Link>
+              </header>
+              <form onSubmit={this.handleSubmit} className="register-form">
+                <br/>
+                {this.renderErrors()}
+                <br/>
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      value={this.state.first_name}
+                      onChange={this.update("first_name")}
+                      className="signup-input"
+                      />
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      value={this.state.last_name}
+                      onChange={this.update("last_name")}
+                      className="signup-input"
+                      />
+                    <input
+                      type="text"
+                      placeholder="Email"
+                      value={this.state.email}
+                      onChange={this.update("email")}
+                      className="signup-input"
+                      />
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      value={this.state.password}
+                      onChange={this.update("password")}
+                      className="signup-input"
+                      />
+                    <input
+                      type="text"
+                      placeholder="Zip Code"
+                      value={this.props.city}
+                      onChange={this.update("zip")}
+                      className="signup-input"
+                      />
+                    <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
+                    <p className="message">Already registered?
+                      <Link to="/login">Sign In</Link>
+                    </p>
+              </form>
+            </div>
+            </div>
+          </section>
     );
   }
 }

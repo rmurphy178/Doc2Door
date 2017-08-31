@@ -8,7 +8,8 @@ import { fetchSpecialties } from  '../../actions/specialty_actions';
 import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
 
 const mapStateToProps = ({session, specialties, doctors }) => ({
-  session,
+  errors: session.errors,
+  currentUser: session.currentUser,
   specialties,
   doctors
 });

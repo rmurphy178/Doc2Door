@@ -19,12 +19,11 @@ const AppointmentsReducer = (state = {}, action) => {
       return merge({}, null, appointment);
     case RECEIVE_APPOINTMENT_ERRORS:
       const errors = action.errors;
-      return merge({}, null, errors);
+      return merge({}, state, errors);
     default:
       return state;
     }
 };
-
 
 
 

@@ -56,7 +56,7 @@ renderErrors() {
 }
 
   render() {
-
+    console.log(this.props.errors);
     const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
     const inputProps = { value: this.state.address, onChange: this.onChange };
 
