@@ -72,6 +72,9 @@ renderErrors() {
          onChange={this.update("details")} className="details-field"/>
          </label>
           <form onSubmit={this.handleSubmit}>
+            <br/>
+              {this.renderErrors}
+            <br/>
          <div className='autocomplete-container'>
            Address
          <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>

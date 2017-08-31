@@ -1,7 +1,9 @@
 import merge from 'lodash/merge';
 
 import {
-  RECEIVE_APPOINTMENTS, RECEIVE_APPOINTMENT
+  RECEIVE_APPOINTMENTS,
+  RECEIVE_APPOINTMENT,
+  RECEIVE_APPOINTMENT_ERRORS
 } from '../actions/appointment_actions';
 
 
@@ -14,7 +16,10 @@ const AppointmentsReducer = (state = {}, action) => {
       return merge({}, null, appointments);
     case RECEIVE_APPOINTMENT:
       const appointment = action.appointment;
-    return merge({}, null, appointment);
+      return merge({}, null, appointment);
+    case RECEIVE_APPOINTMENT_ERRORS:
+      const errors = action.errors;
+      return merge({}, null, errors);
     default:
       return state;
     }
