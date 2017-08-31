@@ -30,13 +30,6 @@ return(
   <div>
     <NavBarContainer />
     <div className="appointments-index-screen">
-      <div className="appointments-index-header">
-        <div className="appointments-header-step">
-          <div className="appointments-header-inner">
-
-          </div>
-        </div>
-      </div>
       <div className="appointments-main-body">
         <span className="welcome-pic">
           <img className="user-pic" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500882198/doc_icon_ojffjn.png" />
