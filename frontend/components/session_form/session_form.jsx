@@ -117,46 +117,44 @@ class SessionForm extends React.Component {
       );
     } else {
     return (
-      <section className="login-signup-background">
+        <section className="login-signup-background">
+          <div className="login-page">
+            <div className="login-signup-form">
+              <header className='login-container'>
+                <Link to="/greeting" className="header-link">
+                  <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
+                </Link>
+              </header>
+              <form onSubmit={this.handleSubmit} className="login-form">
+                <br/>
+                {this.renderErrors()}
+                  <br/>
+                    <input type="text"
+                      placeholder="Email"
+                      value={this.state.email}
+                      onChange={this.update('email')}
+                      className="login-input"
+                    />
 
-
-    <div className="login-page">
-      <div className="login-signup-form">
-        <header className='login-container'>
-          <Link to="/greeting" className="header-link">
-            <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
-          </Link>
-        </header>
-        <form onSubmit={this.handleSubmit} className="login-form">
-          <br/>
-          {this.renderErrors()}
-            <br/>
-              <input type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-
-              <input type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
-             <button
-               onClick={this.handleDemo}>
-               Guest Login
-             </button>
-             <p className="message">Not registered?
-             <Link to="/signup">Sign Up</Link>
-             </p>
-        </form>
-      </div>
-    </div>
-    </section>
-    );
+                    <input type="password"
+                      placeholder="Password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className="login-input"
+                    />
+                  <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
+                   <button
+                     onClick={this.handleDemo}>
+                     Guest Login
+                   </button>
+                   <p className="message">Not registered?
+                   <Link to="/signup">Sign Up</Link>
+                   </p>
+              </form>
+            </div>
+          </div>
+        </section>
+      );
     }
   }
 }

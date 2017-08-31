@@ -8,7 +8,6 @@ import NavBarContainer from '../navBar/navBar_container';
 class AppointmentForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       details: '',
       address: '',
@@ -44,6 +43,17 @@ changeDate(date) {
   this.setState({date: date});
 }
 
+renderErrors() {
+  return(
+    <ul>
+      {this.props.errors.map((error, i) => (
+        <li key={`error-${i}`}>
+          {error}
+        </li>
+      ))}
+    </ul>
+  );
+}
 
   render() {
 
