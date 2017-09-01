@@ -6,9 +6,10 @@ import NavBarContainer from '../navBar/NavBar_Container';
 class AccountForm extends React.Component {
   constructor(props){
     super(props);
-
+    console.log(props);
     let user = this.props.currentUser;
     let doctor = this.props.doctor;
+
     this.state  = {
       email: user.email,
       zip: user.zip,
@@ -27,6 +28,10 @@ class AccountForm extends React.Component {
       <div>
         <NavBarContainer />
         <h1>User Account</h1>
+        <div>First Name: {this.state.first_name}</div>
+        <div>Last Name: {this.state.last_name}</div>
+        <div>Email: {this.state.email}</div>
+        <div>Zip: {this.state.zip}</div>
       </div>
     );
   }
