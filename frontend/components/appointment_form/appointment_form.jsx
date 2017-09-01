@@ -9,9 +9,11 @@ class AppointmentForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      date: '',
       details: '',
       address: '',
       specialty: '',
+      errors: []
     };
     this.onChange = (address) => this.setState({ address });
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,11 +21,37 @@ class AppointmentForm extends React.Component {
   }
 
 
+
 handleSubmit(e) {
   e.preventDefault();
-  this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
-  this.props.history.push('/doctors');
+
+  let errorFlag = false;
+  let errorMessages = [];
+
+  if (this.state.details === '') {
+      errorMessages.push('Details cannot be blank');
+  }
+  if (this.state.specialty === '') {
+      errorMessages.push('Please select a specialty');
+  }
+  if (this.state.address === '') {
+      errorMessages.push('Address cannot be blank');
+  }
+
+  if (errorMessages[0]) {
+    errorFlag = true;
+  }
+
+  this.setState({
+    errors: errorMessages
   });
+
+  if (errorFlag) {
+  } else {
+    this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
+    this.props.history.push('/doctors');
+    });
+  }
 }
 
 
@@ -43,20 +71,11 @@ changeDate(date) {
   this.setState({date: date});
 }
 
-renderErrors() {
-  return(
-    <ul>
-      {this.props.errors.map((error, i) => (
-        <li key={`error-${i}`}>
-          {error}
-        </li>
-      ))}
-    </ul>
-  );
-}
+
+
 
   render() {
-    console.log(this.props.errors);
+
     const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
     const inputProps = { value: this.state.address, onChange: this.onChange };
 
@@ -71,7 +90,9 @@ renderErrors() {
 
           <form onSubmit={this.handleSubmit}>
             <br/>
-              {this.renderErrors}
+              {this.state.errors.map((error, idx) => {
+                return (<span key={`error-${idx}`}>{error}</span>);
+              })}
             <br/>
          <div className='autocomplete-container'>
            Address
