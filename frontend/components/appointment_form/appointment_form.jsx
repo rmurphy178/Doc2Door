@@ -89,13 +89,15 @@ changeDate(date) {
      <h2>Provide Your Address and Any Important Details for Your Physician Here:</h2>
 
           <form onSubmit={this.handleSubmit}>
-            <br/>
-              {this.state.errors.map((error, idx) => {
-                return (<span key={`error-${idx}`}>{error}</span>);
-              })}
-            <br/>
+            <ul>
+              {this.state.errors.map((error, i) => (
+                <li className="appt-error" key={`error-${i}`}>
+                  {error}
+                </li>
+              ))}
+            </ul>
          <div className='autocomplete-container'>
-           Address
+           Address:
          <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
          </div>
   <label className="dropdown">
@@ -110,7 +112,7 @@ changeDate(date) {
         <option value="dermatology">Dermatology</option>
       </select>
     </label>
-    <label>Describe your problem<br/>
+    <label>Describe your problem:<br/>
       <textarea value={this.state.details} rows='10' cols='40' placeholder=" Provide information for your physician"
       onChange={this.update("details")} className="details-field"/>
       </label>

@@ -1,4 +1,9 @@
-
+.appt-error {
+  color: crimson;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
 .appointments-form {
   height: 100vw;
   width: 100vw;
@@ -74,7 +79,7 @@ label.dropdown select {
   width: 800px;
   background-color: white;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
 
 }
