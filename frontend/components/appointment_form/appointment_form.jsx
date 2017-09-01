@@ -29,13 +29,13 @@ handleSubmit(e) {
   let errorMessages = [];
 
   if (this.state.details === '') {
-      errorMessages.push('Details cannot be blank');
+      errorMessages.push('Details cannot be blank! ');
   }
   if (this.state.specialty === '') {
-      errorMessages.push('Please select a specialty');
+      errorMessages.push('Please select a specialty! ');
   }
   if (this.state.address === '') {
-      errorMessages.push('Address cannot be blank');
+      errorMessages.push('Address cannot be blank! ');
   }
 
   if (errorMessages[0]) {
