@@ -100,7 +100,7 @@ class SignUpForm extends React.Component {
                       />
                     <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
                     <p className="message">Already registered?
-                      <Link to="/login">Sign In</Link>
+                      <Link to="/login"> Sign In</Link>
                     </p>
               </form>
             </div>

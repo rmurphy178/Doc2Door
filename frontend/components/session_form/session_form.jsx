@@ -149,7 +149,7 @@ class SessionForm extends React.Component {
                      Guest Login
                    </button>
                    <p className="message">Not registered?
-                   <Link to="/signup">Sign Up</Link>
+                   <Link to="/signup"> Sign Up</Link>
                    </p>
               </form>
             </div>
