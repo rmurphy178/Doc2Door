@@ -1,12 +1,11 @@
+
 .appointments-form {
+  height: 100vw;
+  width: 100vw;
+  background-color: #dce0e6;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  margin: 20px;
-  width: 100%;
-  height: 100vh;
-  background-color: #dce0e6
 }
 
 .autocomplete-container {
@@ -21,9 +20,6 @@
   background-color: white;
 }
 
-.address-field {
-
-}
 
 .appointments-form .bttn-simple.bttn-md {
   background: #39579b;

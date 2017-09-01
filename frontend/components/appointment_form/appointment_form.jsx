@@ -62,7 +62,8 @@ renderErrors() {
 
 
     return (
-    <div className="appointments-form">
+    <div>
+      <div className="appointments-form">
       <NavBarContainer/>
       <div className="dropdown-container">
       <h1>How can we Help?</h1>
@@ -94,6 +95,7 @@ renderErrors() {
       <input className='bttn-simple bttn-md' type="submit" value="See Doctors" />
      </form>
      </div>
+    </div>
     </div>
     );
   }
