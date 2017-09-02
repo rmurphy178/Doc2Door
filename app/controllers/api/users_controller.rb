@@ -12,16 +12,18 @@ class Api::UsersController < ApplicationController
 	end
 
 	def update
-	@user = User.find_by_id(params[:id])
+		@user = User.find_by_credentials(
+      params[:user][:id]
+    )
 	@user.update(user_params)
-	render `api/users/${id}`
-end
+		render `api/users/show`
+	end
 
 	private
 
 	def user_params
 		params.require(:user).permit(:email, :password,
-		 :zip, :first_name, :last_name)
+		 :zip, :first_name, :last_name, :id)
 	end
 
 end
