@@ -6,7 +6,6 @@ import NavBarContainer from '../navBar/NavBar_Container';
 class AccountForm extends React.Component {
   constructor(props){
     super(props);
-    console.log(props);
     let user = this.props.currentUser;
     let doctor = this.props.doctor;
 
@@ -19,13 +18,13 @@ class AccountForm extends React.Component {
       image_url: user.image_url,
     };
 
-    this.update = this.update.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
-  update(field) {
-    e => this.setState({[field]: e.target.value});
+  handleChange(field) {
+    return e => this.setState({[field]: e.target.value});
   }
 
   handleSubmit(e) {
@@ -44,28 +43,38 @@ class AccountForm extends React.Component {
         <h1>Update Account Information</h1>
         <label>First Name:
           <input type="text"
+           placeholder="First Name"
            value={this.state.first_name}
-           onChange={this.update("first_name")}
+           onChange={this.handleChange("first_name")}
+           className="account-input"
            />
+
        </label>
         <label>Last Name:
           <input type="text"
+           placeholder="Last Name"
            value={this.state.last_name}
-           onChange={this.update("last_name")}
+           onChange={this.handleChange("last_name")}
+           className="account-input"
            />
         </label>
         <label>Email:
-          <input type="text"
-           value={this.state.email}
-           onChange={this.update("email")}
+           <input type="text"
+             placeholder="Email"
+             value={this.state.email}
+             onChange={this.handleChange('email')}
+             className="account-input"
            />
         </label>
         <label>Zip:
           <input type="text"
+           placeholder="Zip Code"
            value={this.state.zip}
-           onChange={this.update("zip")}
+           onChange={this.handleChange("zip")}
+           className="account-input"
            />
         </label>
+        <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
         </form>
       </div>
     );
