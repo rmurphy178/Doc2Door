@@ -18,9 +18,14 @@ class AccountForm extends React.Component {
       id: user.id,
       image_url: user.image_url,
     };
+
+    this.update = this.update.bind(this);
   }
 
 
+  update(field) {
+    e => this.setState({[field]: e.target.value});
+  }
 
 
   render() {
