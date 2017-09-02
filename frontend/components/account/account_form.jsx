@@ -20,6 +20,7 @@ class AccountForm extends React.Component {
     };
 
     this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
@@ -27,16 +28,45 @@ class AccountForm extends React.Component {
     e => this.setState({[field]: e.target.value});
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    let user = this.state;
+    this.props.update(user);
+    this.props.history.push('/');
+  }
+
 
   render() {
     return (
       <div>
         <NavBarContainer />
-        <h1>User Account</h1>
-        <div>First Name: {this.state.first_name}</div>
-        <div>Last Name: {this.state.last_name}</div>
-        <div>Email: {this.state.email}</div>
-        <div>Zip: {this.state.zip}</div>
+        <form onSubmit={this.handleSubmit} >
+        <h1>Update Account Information</h1>
+        <label>First Name:
+          <input type="text"
+           value={this.state.first_name}
+           onChange={this.update("first_name")}
+           />
+       </label>
+        <label>Last Name:
+          <input type="text"
+           value={this.state.last_name}
+           onChange={this.update("last_name")}
+           />
+        </label>
+        <label>Email:
+          <input type="text"
+           value={this.state.email}
+           onChange={this.update("email")}
+           />
+        </label>
+        <label>Zip:
+          <input type="text"
+           value={this.state.zip}
+           onChange={this.update("zip")}
+           />
+        </label>
+        </form>
       </div>
     );
   }
