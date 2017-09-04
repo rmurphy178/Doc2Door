@@ -5,18 +5,18 @@ class Api::UsersController < ApplicationController
 
 		if @user.save
 			login(@user)
-			render `api/users/${id}`
+			render `api/users/user`
 		else
 			render json: @user.errors.full_messages, status: 422
 		end
 	end
 
 	def update
-		@user = User.find_by_credentials(
-      params[:user][:id]
+		@user = User.find_by_id(
+      params[:id]
     )
-	@user.update(user_params)
-		render `api/users/show`
+		@user.update(user_params)
+		render `api/users/user`
 	end
 
 	private

@@ -14,8 +14,7 @@ class AccountForm extends React.Component {
       zip: user.zip,
       first_name: user.first_name,
       last_name: user.last_name,
-      id: user.id,
-      image_url: user.image_url,
+      id: user.id
     };
 
     this.handleChange = this.handleChange.bind(this);
