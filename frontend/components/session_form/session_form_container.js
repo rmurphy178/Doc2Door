@@ -6,12 +6,10 @@ import { login, logout, clearErrors } from '../../actions/session_actions';
 
 
 
-const mapStateToProps = ({ session }) => {
-  return {
+const mapStateToProps = ({ session }) => ({
     loggedIn: Boolean(session.currentUser),
     errors: session.errors
-  };
-};
+});
 
 const mapDispatchToProps = ( dispatch ) => ({
     login: (user) => dispatch(login(user)),

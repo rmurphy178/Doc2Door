@@ -12,7 +12,9 @@ logout(e) {
 }
 
 render() {
- return(
+
+
+ return (
 
    <div className="navBar-wrapper">
      <div className="navBar">
@@ -25,7 +27,8 @@ render() {
           </div>
         </div>
       </div>
-      );
+        );
+
     }
   }
 

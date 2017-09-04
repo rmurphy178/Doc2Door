@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import HomeNav from './homeNav';
 
 
 class Homepage extends React.Component {
@@ -11,17 +12,13 @@ class Homepage extends React.Component {
 
     render() {
 
-      if(this.props.loggedIn){
-        return (
-          <Redirect to='/' />
-        );
-      } else {
       return (
           <section className="login-signup-background">
+            <HomeNav />
             <div className="login-page">
               <div className="login-signup-form">
                 <header className='login-container'>
-                  <Link to="/greeting" className="header-link">
+                  <Link to="/login" className="header-link">
                     <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
                   </Link>
                 </header>
@@ -29,7 +26,6 @@ class Homepage extends React.Component {
             </div>
           </section>
         );
-      }
     }
   }
 
