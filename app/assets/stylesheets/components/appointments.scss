@@ -92,7 +92,7 @@ div .logo {
 .appointments-overview {
   display: flex;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .user-pic {
@@ -113,9 +113,8 @@ div .logo {
 }
 li img {
   font-size: 1.25em;
-  display: inline-block;
   height: 50px;
-  width: 50px;
+  width: 55px;
   border-radius: 50%;
   text-align: center;
   line-height: 43px;
