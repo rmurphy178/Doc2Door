@@ -10,7 +10,7 @@ import {
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-
+import Homepage from './homepage/homepage';
 import SessionFormContainer from './session_form/session_form_container';
 import SignUpContainer from './sign_up/sign_up_container';
 import LandingContainer from './landing_page/landing_container';
@@ -20,15 +20,14 @@ import DoctorIndexContainer from './doctors/doctor_index_container';
 import DoctorItemContainer from './doctors/doctor_item_container';
 import BookingFormContainer from './booking/booking_form_container';
 import AccountFormContainer from './account/account_form_container';
-import Homepage from './homepage/homepage';
 
 const App = () => (
   <div>
     <Switch>
-      <Route exact path="/homepage" component={Homepage} />
+      <AuthRoute exact path="/" component={Homepage} />
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
-      <ProtectedRoute exact path="/" component={AppointmentsContainer} />
+      <ProtectedRoute exact path="/home" component={AppointmentsContainer} />
       <ProtectedRoute exact path="/appointments" component={AppointmentFormContainer} />
       <ProtectedRoute exact path="/doctors/:doctorId" component={DoctorItemContainer} />
       <ProtectedRoute exact path="/doctors" component={DoctorIndexContainer} />
