@@ -25,6 +25,7 @@ import Homepage from './homepage/homepage';
 const App = () => (
   <div>
     <Switch>
+      <Route exact path="/homepage" component={Homepage} />
       <AuthRoute exact path="/login" component={SessionFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpContainer} />
       <ProtectedRoute exact path="/" component={AppointmentsContainer} />

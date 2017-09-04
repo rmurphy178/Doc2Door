@@ -121,7 +121,7 @@ class SessionForm extends React.Component {
           <div className="login-page">
             <div className="login-signup-form">
               <header className='login-container'>
-                <Link to="/greeting" className="header-link">
+                <Link to="/login" className="header-link">
                   <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500894666/1212_rt3hls.png"/>
                 </Link>
               </header>
