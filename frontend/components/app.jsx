@@ -20,6 +20,7 @@ import DoctorIndexContainer from './doctors/doctor_index_container';
 import DoctorItemContainer from './doctors/doctor_item_container';
 import BookingFormContainer from './booking/booking_form_container';
 import AccountFormContainer from './account/account_form_container';
+import Homepage from './homepage/homepage';
 
 const App = () => (
   <div>

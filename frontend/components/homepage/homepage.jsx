@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 
-class Landing extends React.Component {
+class Homepage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,3 +17,6 @@ class Landing extends React.Component {
     );
   }
 }
+
+
+export default withRouter(Homepage);
