@@ -110,7 +110,7 @@ return(
       <label className="dropdown">
           Choose a Specialty:
           <select value={this.state.specialty} onChange={this.handleChange}>
-            <option >Select</option>
+            <option value="">Select</option>
             <option value="general">General</option>
             <option value="pediatrics">Pediatrics</option>
             <option value="allergy">Allergy & Immunology</option>
