@@ -18,8 +18,9 @@ class Homepage extends React.Component {
         );
       } else {
       return (
-          <div className='home-screen'>
+          <div>
             <HomeNav />
+          <div className='home-screen'>
           <section className="login-signup-background">
               <div className='home'>
                 <h1 className='home-header'>Find the right doctor, right now</h1>
@@ -27,6 +28,7 @@ class Homepage extends React.Component {
               </div>
           </section>
             <HomeFooter />
+          </div>
           </div>
         );
       }

@@ -8,7 +8,8 @@
 
 .home-screen {
   display: flex;
-  flex-direction: column;
+  height: calc(100vh - 70px);
+  width: calc(100vw);
 }
 
 .home-header {
@@ -47,10 +48,10 @@
 
 .home-footer{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   background-color: lightblue;
-  margin-top: 56%;
+  align-self: flex-end;
+  width: 100%;
 }
 
 .github {
