@@ -35,11 +35,10 @@ class AccountForm extends React.Component {
 
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <NavBarContainer />
-        <form onSubmit={this.handleSubmit} >
+        <form className='account-form' onSubmit={this.handleSubmit} >
         <h1>Update Account Information</h1>
         <label>First Name:
           <input type="text"

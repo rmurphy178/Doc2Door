@@ -98,9 +98,9 @@ class SignUpForm extends React.Component {
                       onChange={this.update("zip")}
                       className="signup-input"
                       />
-                    <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
+                    <input className="bttn-simple bttn-md" type="submit" value="Submit" />
                     <p className="message">Already registered?
-                      <Link to="/login"> Sign In</Link>
+                      <Link className='login-link' to="/login"> Sign In</Link>
                     </p>
               </form>
             </div>

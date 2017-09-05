@@ -29,11 +29,18 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.login-signup-form button {
+
+.login-signup-form .bttn-simple {
+  background-color: #39579b;
+  font-family: sans-serif;
+}
+
+
+.login-signup-form .demo-button {
   font-family: sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #39579b;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -46,11 +53,22 @@
 .login-signup-form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
+  font-family: sans-serif;
   font-size: 18px;
+  font-weight: bold;
 }
+
+.login-link {
+  color: black;
+}
+
+
+
 .login-signup-form .message a {
-  color: #4CAF50;
+  color: lightblue;
+  font-family: sans-serif;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .login-container {
