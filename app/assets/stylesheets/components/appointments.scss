@@ -47,6 +47,11 @@
   border-color: #39579b;
 }
 
+button.landing-bttn:hover {
+  -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
 div .logo {
   width: 160px;
   height: 60px;

@@ -120,7 +120,7 @@ return(
         </label>
       </div>
         <div className='bttn-container'>
-          <button className="landing-bttn"
+          <button className="landing-bttn bttn-gradient"
             onClick={this.handleSubmit}>
             Find a Doctor
           </button>
