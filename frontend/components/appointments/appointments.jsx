@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { values } from 'lodash';
+import PlacesAutoComplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import DatePicker from 'react-datepicker';
+
 
 import NavBarContainer from '../navBar/navBar_container';
 import AppointmentFormContainer from '../appointment_form/appointment_form_container';
@@ -16,7 +19,9 @@ class Appointments extends React.Component {
       errors: []
     };
 
+    this.onChange = (address) => this.setState({ address });
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.update = this.update.bind(this);
   }
 
@@ -27,12 +32,37 @@ update(field) {
   });
 }
 
+handleChange(e) {
+  e.preventDefault();
+  this.setState({specialty: e.target.value});
+}
+
 handleSubmit(e) {
   e.preventDefault();
+
+  let errorFlag = false;
+  let errorMessages = [];
+
+  if (this.state.specialty === '') {
+      errorMessages.push('Please select a specialty! ');
+  }
+
+  if (errorMessages[0]) {
+    errorFlag = true;
+  }
+
+  this.setState({
+    errors: errorMessages
+  });
+
   this.props.history.push('/appointments');
 }
 
 render() {
+
+  const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
+  const inputProps = { value: this.state.address, onChange: this.onChange };
+
 return(
   <div>
     <NavBarContainer />
@@ -72,7 +102,11 @@ return(
           <li>Dermatology</li>
         </ul>
       </ul>
-
+      <div className="dropdown-container">
+      <div className='autocomplete-container'>
+        Address:
+      <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
+      </div>
       <label className="dropdown">
           Choose a Specialty:
           <select value={this.state.specialty} onChange={this.handleChange}>
@@ -85,13 +119,11 @@ return(
             <option value="dermatology">Dermatology</option>
           </select>
         </label>
-
-        <div className="btt-container">
+      </div>
           <button className="landing-bttn"
             onClick={this.handleSubmit}>
             Find a Doctor
           </button>
-        </div>
       </div>
     </div>
   </div>
