@@ -63,12 +63,15 @@
 }
 
 
-
 .login-signup-form .message a {
   color: lightblue;
   font-family: sans-serif;
   text-decoration: none;
   font-weight: bold;
+}
+
+.login-signup-form .message a:hover {
+  color: crimson;
 }
 
 .login-container {

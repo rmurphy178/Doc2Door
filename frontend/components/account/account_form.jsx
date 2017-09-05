@@ -28,7 +28,7 @@ class AccountForm extends React.Component {
     e.preventDefault();
     let user = this.state;
     this.props.update(user);
-    this.props.history.push('/');
+    this.props.history.push('/home');
   }
 
 
@@ -36,12 +36,12 @@ class AccountForm extends React.Component {
     return (
       <div>
         <NavBarContainer />
+      <div className='account-screen'>
         <form className='account-form' onSubmit={this.handleSubmit} >
-        <h1>Update Account Information</h1>
+        <h1 className='account-header'>Update Account Information</h1>
         <label>First Name:
           <input type="text"
-           placeholder="First Name"
-           value={this.state.first_name}
+           placeholder={this.state.first_name}
            onChange={this.handleChange("first_name")}
            className="account-input"
            />
@@ -49,30 +49,28 @@ class AccountForm extends React.Component {
        </label>
         <label>Last Name:
           <input type="text"
-           placeholder="Last Name"
-           value={this.state.last_name}
+           placeholder={this.state.last_name}
            onChange={this.handleChange("last_name")}
            className="account-input"
            />
         </label>
         <label>Email:
            <input type="text"
-             placeholder="Email"
-             value={this.state.email}
+             placeholder={this.state.email}
              onChange={this.handleChange('email')}
              className="account-input"
            />
         </label>
         <label>Zip:
           <input type="text"
-           placeholder="Zip Code"
-           value={this.state.zip}
+           placeholder={this.state.zip}
            onChange={this.handleChange("zip")}
            className="account-input"
            />
         </label>
-        <input className="bttn-gradient bttn-md" type="submit" value="Submit" />
+        <input className="bttn-simple bttn-md" type="submit" value="Update" />
         </form>
+      </div>
       </div>
     );
   }

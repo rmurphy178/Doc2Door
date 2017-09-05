@@ -1,4 +1,44 @@
 .account-form input {
   font-family: sans-serif;
+  margin-top: 10px;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
+.account-header {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.account-screen {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+
+.account-form .bttn-simple {
+  background-color: #39579b;
+  font-family: sans-serif;
+}
+
+.account-form label {
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: sans-serif;
 }
