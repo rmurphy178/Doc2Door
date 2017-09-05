@@ -6,6 +6,11 @@
   margin-top: 400px;
 }
 
+.home-screen {
+  display: flex;
+  flex-direction: column;
+}
+
 .home-header {
   color: #39579b;
   font-weight: bold;
@@ -42,30 +47,41 @@
 
 .home-footer{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  background-color: gray;
+  background-color: lightblue;
+  margin-top: 56%;
 }
 
-.creatorLine{
+.github {
+  height: 40px;
+  width: 40px;
+}
+.linkedin {
+  height: 40px;
+  width: 40px;
+}
+.myLine {
   margin: 10px;
   color: white;
+  text-shadow: black 0px 0px 5px;
 }
 
-.creatorLinks{
+.myLinks{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.creatorLinks > a{
+.myLinks > a{
   padding: 0px 10px;
 }
 
-.creatorLinks > a > .fa{
+.myLinks > a > .fa{
   color: white;
   font-size: 25px;
 }
 
-.creatorLinks > a > .fa:hover{
+.myLinks > a > .fa:hover{
   opacity: 0.5;
 }
