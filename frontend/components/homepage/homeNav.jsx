@@ -12,7 +12,7 @@ const HomeNav = () => (
                          <div className="dashboard">Login</div>
                        </Link>
                        <Link to='/signup'>
-                         <button className="nav-logout">SignUp</button>
+                         <button className="nav-logout">Sign Up</button>
                        </Link>
              </div>
            </div>
