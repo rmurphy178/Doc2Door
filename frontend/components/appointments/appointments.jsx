@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { values } from 'lodash';
 
-
 import NavBarContainer from '../navBar/navBar_container';
+import AppointmentFormContainer from '../appointment_form/appointment_form_container';
 
 class Appointments extends React.Component {
   constructor(props){
@@ -76,7 +76,7 @@ return(
       <label className="dropdown">
           Choose a Specialty:
           <select value={this.state.specialty} onChange={this.handleChange}>
-            <option disabled>Select</option>
+            <option >Select</option>
             <option value="general">General</option>
             <option value="pediatrics">Pediatrics</option>
             <option value="allergy">Allergy & Immunology</option>
