@@ -113,7 +113,7 @@ class SessionForm extends React.Component {
 
     if(this.props.loggedIn){
       return (
-        <Redirect to='/' />
+        <Redirect to='/home' />
       );
     } else {
     return (
