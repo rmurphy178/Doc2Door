@@ -8,6 +8,13 @@ import NavBarContainer from '../navBar/navBar_container';
 class Appointments extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      date: '',
+      details: '',
+      address: '',
+      specialty: '',
+      errors: []
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -65,6 +72,19 @@ return(
           <li>Dermatology</li>
         </ul>
       </ul>
+
+      <label className="dropdown">
+          Choose a Specialty:
+          <select value={this.state.specialty} onChange={this.handleChange}>
+            <option disabled>Select</option>
+            <option value="general">General</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="allergy">Allergy & Immunology</option>
+            <option value="geriatrics">Geriatrics</option>
+            <option value="endocrinology">Endocrinology</option>
+            <option value="dermatology">Dermatology</option>
+          </select>
+        </label>
 
         <div className="btt-container">
           <button className="landing-bttn"
