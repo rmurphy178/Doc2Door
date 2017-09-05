@@ -68,7 +68,7 @@ class AccountForm extends React.Component {
            className="account-input"
            />
         </label>
-        <input className="bttn-simple bttn-md" type="submit" value="Update" />
+        <input className="bttn-gradient bttn-md" type="submit" value="Save Changes" />
         </form>
       </div>
       </div>

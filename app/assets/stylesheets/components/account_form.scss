@@ -8,6 +8,7 @@
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .account-header {
@@ -29,16 +30,23 @@
   flex-direction: column;
   justify-content: center;
   font-family: sans-serif;
+  margin-bottom: 30px;
 }
 
 
-.account-form .bttn-simple {
+.account-form .bttn-gradient {
   background-color: #39579b;
   font-family: sans-serif;
+  color: white;
+  text-align: center;
 }
 
 .account-form label {
   font-size: 20px;
   margin-top: 20px;
   font-family: sans-serif;
+}
+
+input.bttn-simple.bttn-md {
+
 }
