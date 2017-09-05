@@ -88,12 +88,14 @@ div .logo {
 }
 
 .appointments-main-body h2 {
-  font-size: 20px;
+  font-size: 30px;
   font-family: sans-serif;
+  margin: 15px;
 }
-.appointments-main-body h4 {
-  font-size: 20px;
+.appointments-main-body h3 {
+  font-size: 30px;
   font-family: sans-serif;
+  font-weight: normal;
 }
 .appointments-overview {
   display: flex;
@@ -157,11 +159,13 @@ li img {
 }
 
 .specialties-top {
-  margin: 20px;
+  margin: 15px;
+  margin-top: 5px;
 }
 
 .specialties-bottom {
-  margin: 20px;
+  margin: 15px;
+  margin-top: 5px;
 }
 
 .appointments-main-body {
