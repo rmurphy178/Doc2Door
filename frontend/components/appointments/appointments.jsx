@@ -119,10 +119,12 @@ return(
           </select>
         </label>
       </div>
+        <div className='bttn-container'>
           <button className="landing-bttn"
             onClick={this.handleSubmit}>
             Find a Doctor
           </button>
+        </div>
       </div>
     </div>
   </div>

@@ -28,12 +28,23 @@
 }
 
 .appointments-main-body button {
+  border: solid 1.5px #FFF;
+  border-radius: 256px;
+  color: #FFF;
+  display: block;
+  font-size: 16px;
+  letter-spacing: .03em;
+  line-height: 1.25em;
+  margin: 20px auto;
+  max-width: 320px;
+  height: 41px;
+  overflow: hidden;
+  padding: 2px 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 320px;
   background: #39579b;
   border-color: #39579b;
-  align-self: center;
-  width: 600px;
-  padding-bottom: 10px;
-  font-size: 18px;
 }
 
 div .logo {
@@ -45,6 +56,7 @@ div .logo {
 .bttn-container {
   justify-content: center;
   align-items: center;
+  max-height: 41px;
 }
 
 .dash-right-corner {
