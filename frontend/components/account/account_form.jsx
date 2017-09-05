@@ -7,8 +7,6 @@ class AccountForm extends React.Component {
   constructor(props){
     super(props);
     let user = this.props.currentUser;
-    let doctor = this.props.doctor;
-
     this.state  = {
       email: user.email,
       zip: user.zip,
