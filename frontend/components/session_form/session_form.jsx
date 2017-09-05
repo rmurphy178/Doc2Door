@@ -147,7 +147,7 @@ class SessionForm extends React.Component {
                    <button
                      className='bttn-simple bttn-md'
                      onClick={this.handleDemo}>
-                     Guest Login
+                     Demo Login
                    </button>
                    <p className="message">Not registered?
                    <Link to="/signup"> Sign Up</Link>
