@@ -7,12 +7,14 @@
   height: 100vw;
   width: 100vw;
   background-color: #dce0e6;
+  font-family: sans-serif;
 }
 
 .appointments-index-header {
   font-size: 100%;
   vertical-align: baseline;
   background-color: #dce0e6;
+  font-family: sans-serif;
 }
 
 
@@ -87,14 +89,17 @@ div .logo {
 
 .appointments-main-body h2 {
   font-size: 20px;
+  font-family: sans-serif;
 }
 .appointments-main-body h4 {
   font-size: 20px;
+  font-family: sans-serif;
 }
 .appointments-overview {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
+  font-family: sans-serif;
 }
 
 .user-pic {
@@ -112,7 +117,9 @@ div .logo {
 
 .appointments-overview li {
   align-items: center;
+  font-family: sans-serif;
 }
+
 li img {
   font-size: 1.25em;
   height: 50px;
@@ -139,12 +146,14 @@ li img {
   justify-content: space-around;
   font-size: 20px;
   margin: 15px;
+  font-family: sans-serif;
 }
 
 .specialties li {
   display: list-item;
   list-style-type: disc;
   margin: 10px;
+  font-family: sans-serif;
 }
 
 .specialties-top {

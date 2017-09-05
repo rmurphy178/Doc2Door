@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
+import HomeFooter from '../homepage/home_footer';
 
 
 class SessionForm extends React.Component {
