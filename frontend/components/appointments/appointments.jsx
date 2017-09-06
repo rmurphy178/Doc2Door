@@ -5,7 +5,6 @@ import PlacesAutoComplete, { geocodeByAddress, getLatLng } from 'react-places-au
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 
-
 import NavBarContainer from '../navBar/navBar_container';
 import AppointmentFormContainer from '../appointment_form/appointment_form_container';
 
@@ -28,9 +27,8 @@ class Appointments extends React.Component {
     this.handleSelect = this.handleSelect.bind(this);
   }
 
-handleSelect(e) {
-  e.preventDefault();
-  this.setState({date: e.target.value});
+handleSelect(date) {
+  this.setState({date: date});
 }
 
 changeDate(date) {
@@ -73,6 +71,8 @@ render() {
 
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
+
+  console.log(this.state);
 
 return(
   <div>
@@ -129,12 +129,14 @@ return(
             <option value="dermatology">Dermatology</option>
           </select>
         </label>
+        <div className='autocomplete-container'>Appointment Date:
         <DatePicker
           selected={this.state.date}
           onSelect={this.handleSelect}
           onChange={this.changeDate}
           className='date'
         />
+      </div>
       </div>
         <div className='bttn-container'>
           <button className="landing-bttn bttn-gradient"
