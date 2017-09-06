@@ -72,8 +72,6 @@ render() {
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
 
-  console.log(this.state);
-
 return(
   <div>
     <NavBarContainer />
@@ -117,6 +115,7 @@ return(
         Address:
       <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
       </div>
+      <div className='specialty-date'>
       <label className="dropdown">
           Choose a Specialty:
           <select value={this.state.specialty} onChange={this.handleChange}>
@@ -129,13 +128,15 @@ return(
             <option value="dermatology">Dermatology</option>
           </select>
         </label>
-        <div className='autocomplete-container'>Appointment Date:
+        <div className='date-container'>
+          <label className='date-label'>Appointment Date: </label>
         <DatePicker
           selected={this.state.date}
           onSelect={this.handleSelect}
           onChange={this.changeDate}
           className='date'
         />
+      </div>
       </div>
       </div>
         <div className='bttn-container'>
