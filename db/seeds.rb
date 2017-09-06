@@ -48,84 +48,84 @@ ActiveRecord::Base.transaction do
 
   doctor1 = Doctor.create!(
     name: 'Dr. O',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738282/dr-1_fl0ax3.png',
     rating: 90,
     specialty: 'pediatrics'
 
   )
   doctor2 = Doctor.create!(
     name: 'Dr. Lurch',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738288/dr-2_akc3c3.png',
     rating: 90,
     specialty: 'allergy'
   )
 
   doctor3 = Doctor.create!(
     name: 'Dr. Peck',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738288/dr-3_tcgcws.png',
     rating: 90,
     specialty: 'dermatology'
   )
   doctor4 = Doctor.create!(
     name: 'Dr. Brown',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738292/dr-4_cshecy.png',
     rating: 90,
     specialty: 'general'
 
   )
   doctor5 = Doctor.create!(
     name: 'Dr. Troy',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738295/dr-5_tnpdnf.png',
     rating: 90,
     specialty: 'geriatrics'
   )
 
   doctor6 = Doctor.create!(
     name: 'Dr. Johnson',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738298/dr-6_wnrz5f.png',
     rating: 90,
     specialty: 'endocrinology'
   )
   doctor7 = Doctor.create!(
     name: 'Dr. F',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738303/dr-7_bc4kko.png',
     rating: 90,
     specialty: 'pediatrics'
 
   )
   doctor8 = Doctor.create!(
     name: 'Dr. X',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738305/dr-8_ou6hrl.png',
     rating: 90,
     specialty: 'allergy'
   )
 
   doctor9 = Doctor.create!(
     name: 'Dr. Z',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738307/dr-9_rayrth.png',
     rating: 90,
     specialty: 'dermatology'
   )
   doctor10 = Doctor.create!(
     name: 'Dr. L',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738298/dr-6_wnrz5f.png',
     rating: 90,
     specialty: 'geriatrics'
 
   )
   doctor11 = Doctor.create!(
     name: 'Dr. Q',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738303/dr-7_bc4kko.png',
     rating: 90,
     specialty: 'allergy'
   )
 
   doctor12 = Doctor.create!(
     name: 'Dr. P',
-    image_url: '-',
+    image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738307/dr-9_rayrth.png',
     rating: 90,
     specialty: 'general'
   )
 
-  
+
 end

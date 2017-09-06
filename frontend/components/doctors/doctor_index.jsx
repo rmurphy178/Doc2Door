@@ -31,7 +31,9 @@ render() {
           <ul className="doctor-list-step">
             {doctors.map( (doctor, idx) => (
               <Link to={`/doctors/${doctor.id}/`} key={idx} className="doc-info">
-               <li>{doctor.image_url}</li>
+              <li>
+              <img src={doctor.image_url} alt="Doctor Photo" className="doctor-image"/>
+              </li>
                <li>Name: {doctor.name}</li>
                <li>Specialty: {doctor.specialty}</li>
                <li>Rating: {doctor.rating}</li>

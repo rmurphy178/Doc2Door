@@ -11,7 +11,6 @@ class DoctorItem extends React.Component {
       doctor: values(props.doctors).filter(doctor => doctor.id === this.props.match.params.doctorId)
     };
     this.handleClick = this.handleClick.bind(this);
-    console.log(this.state);
   }
 
 componentWillReceiveProps() {
@@ -34,8 +33,7 @@ render() {
         <NavBarContainer/>
           <div className="doctor-item" key={this.props.doctors.id}>
             <div className="doctor-bio">
-              <img src={this.props.doctors.image_url} alt="Doctor Photo" className="doctor-image"/>
-              <br/>
+              <img src={this.props.doctors.image_url} className="doctor-image"/>
               <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
               <p className="doctor-detail">Specialty: {this.props.doctors.specialty}</p>
               <p className="doctors-detail">Rating: {this.props.doctors.rating}</p>
