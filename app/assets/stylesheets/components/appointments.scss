@@ -36,6 +36,7 @@
   font-size: 20px;
   width: 200px;
   margin-left: 20px;
+  z-index: 2;
 }
 
 
@@ -44,6 +45,7 @@ input.date {
   height: 40px;
   padding-left: 10px;
   margin-top: 10px;
+  z-index: 2;
 }
 
 .appointments-header-step {

@@ -52,8 +52,12 @@ handleSubmit(e) {
   let errorFlag = false;
   let errorMessages = [];
 
+
   if (this.state.specialty === '') {
       errorMessages.push('Please select a specialty! ');
+  }
+  if (this.state.address === '') {
+      errorMessages.push('Address cannot be blank! ');
   }
 
   if (errorMessages[0]) {
@@ -64,7 +68,12 @@ handleSubmit(e) {
     errors: errorMessages
   });
 
-  this.props.history.push('/appointments');
+  if (errorFlag) {
+  } else {
+    this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
+    this.props.history.push('/doctors');
+    });
+  }
 }
 
 render() {
@@ -111,10 +120,7 @@ return(
         </ul>
       </ul>
       <div className="dropdown-container">
-      <div className='autocomplete-container'>
-        Address:
-      <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
-      </div>
+
       <div className='specialty-date'>
       <label className="dropdown">
           Choose a Specialty:
@@ -137,6 +143,10 @@ return(
           className='date'
         />
       </div>
+      </div>
+      <div className='autocomplete-container'>
+        Address:
+      <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
       </div>
       </div>
         <div className='bttn-container'>
