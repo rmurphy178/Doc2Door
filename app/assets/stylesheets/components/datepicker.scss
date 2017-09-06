@@ -61,19 +61,19 @@
 
   &--previous {
     left: 10px;
-    border-right-color: red;
+    border-right-color: crimson;
 
     &:hover {
-      border-right-color: darken(red, 10%);
+      border-right-color: darken(crimson, 10%);
     }
   }
 
   &--next {
     right: 10px;
-    border-left-color: red;
+    border-left-color: crimson;
 
     &:hover {
-      border-left-color: darken(red, 10%);
+      border-left-color: darken(crimson, 10%);
     }
   }
 
@@ -86,19 +86,19 @@
 
     &-previous {
       top: 4px;
-      border-top-color: red;
+      border-top-color: crimson;
 
       &:hover {
-        border-top-color: darken(red, 10%);
+        border-top-color: darken(crimson, 10%);
       }
     }
 
     &-upcoming {
       top: -4px;
-      border-bottom-color: red;
+      border-bottom-color: crimson;
 
       &:hover {
-        border-bottom-color: darken(red, 10%);
+        border-bottom-color: darken(crimson, 10%);
       }
     }
   }
@@ -115,7 +115,7 @@
 }
 
 .react-datepicker__week-number {
-  color: red;
+  color: crimson;
   display: inline-block;
   width: 1.7rem;
   line-height: 1.7rem;
@@ -180,7 +180,7 @@
 
   &--disabled {
     cursor: default;
-    color: red;
+    color: crimson;
 
     &:hover {
       background-color: transparent;
@@ -205,12 +205,12 @@
     cursor: pointer;
 
     .react-datepicker__year-read-view--down-arrow {
-      border-top-color: darken(red, 10%);
+      border-top-color: darken(crimson, 10%);
     }
   }
 
   &--down-arrow {
-    border-top-color: red;
+    border-top-color: crimson;
     margin-bottom: 3px;
     left: 5px;
     top: 9px;
@@ -266,14 +266,14 @@
   }
 
   &:hover {
-    background-color: red;
+    background-color: crimson;
 
     .react-datepicker__navigation--years-upcoming {
-      border-bottom-color: darken(red, 10%);
+      border-bottom-color: darken(crimson, 10%);
     }
 
     .react-datepicker__navigation--years-previous {
-      border-top-color: darken(red, 10%);
+      border-top-color: darken(crimson, 10%);
     }
   }
 
