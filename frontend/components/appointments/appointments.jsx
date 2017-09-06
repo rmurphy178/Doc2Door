@@ -77,7 +77,7 @@ handleSubmit(e) {
 }
 
 render() {
-
+  
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
 
@@ -120,6 +120,14 @@ return(
         </ul>
       </ul>
       <div className="dropdown-container">
+
+        <ul>
+          {this.state.errors.map((error, i) => (
+            <li className="appt-error" key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
 
       <div className='specialty-date'>
       <label className="dropdown">
