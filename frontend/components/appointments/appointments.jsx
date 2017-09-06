@@ -145,7 +145,7 @@ return(
       </div>
       </div>
       <div className='autocomplete-container'>
-        Address:
+        Appointment Address:
       <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
       </div>
       </div>
