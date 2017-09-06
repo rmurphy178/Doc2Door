@@ -32,7 +32,7 @@ render() {
             {doctors.map( (doctor, idx) => (
               <Link to={`/doctors/${doctor.id}/`} key={idx} className="doc-info">
               <li>
-              <img src={doctor.image_url} alt="Doctor Photo" className="doctor-image"/>
+              <img src={doctor.image_url} className="doctor-image"/>
               </li>
                <li>Name: {doctor.name}</li>
                <li>Specialty: {doctor.specialty}</li>
