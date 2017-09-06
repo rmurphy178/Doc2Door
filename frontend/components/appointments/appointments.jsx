@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { values } from 'lodash';
 import PlacesAutoComplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
 
 import NavBarContainer from '../navBar/navBar_container';
@@ -12,7 +13,7 @@ class Appointments extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      date: '',
+      date: moment(),
       details: '',
       address: '',
       specialty: '',
@@ -23,8 +24,18 @@ class Appointments extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.update = this.update.bind(this);
+    this.changeDate = this.changeDate.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
+handleSelect(e) {
+  e.preventDefault();
+  this.setState({date: e.target.value});
+}
+
+changeDate(date) {
+  this.setState({date: date});
+}
 
 update(field) {
   return e => this.setState({
@@ -118,6 +129,12 @@ return(
             <option value="dermatology">Dermatology</option>
           </select>
         </label>
+        <DatePicker
+          selected={this.state.date}
+          onSelect={this.handleSelect}
+          onChange={this.changeDate}
+          className='date'
+        />
       </div>
         <div className='bttn-container'>
           <button className="landing-bttn bttn-gradient"
