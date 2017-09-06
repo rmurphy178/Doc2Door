@@ -31,6 +31,17 @@
 
 .date {
   background-color: white;
+  border: solid black 1px;
+  height: 20px;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 2px 2px rgba(150,58,59,0.15);
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+input.date {
+  height: 30px;
+  text-align: center;
 }
 
 .appointments-form .bttn-simple.bttn-md {
@@ -43,7 +54,6 @@
 .dropdown-container {
   display: flex;
   flex-direction: column;
-
   margin: 30px;
 }
 .dropdown-container h1 {
