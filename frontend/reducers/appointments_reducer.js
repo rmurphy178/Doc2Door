@@ -7,8 +7,15 @@ import {
 } from '../actions/appointment_actions';
 
 
+const nullAppointment = Object.freeze({
+  userId: null,
+  address: null,
+  date: null,
+  doctorId: null,
+  errors: []
+});
 
-const AppointmentsReducer = (state = {}, action) => {
+const AppointmentsReducer = (state = nullAppointment, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_APPOINTMENTS:
