@@ -11,12 +11,17 @@ import AppointmentFormContainer from '../appointment_form/appointment_form_conta
 class Appointments extends React.Component {
   constructor(props){
     super(props);
+
+    let dateString = moment().format("DD/MM/YYYY");
+    let startDate = moment(dateString, "DD/MM/YYYY");
+    
     this.state = {
-      date: moment(),
+      date: startDate,
       details: '',
       address: '',
       specialty: '',
-      errors: []
+      errors: [],
+      userId: this.props.currentUser.id
     };
 
     this.onChange = (address) => this.setState({ address });
@@ -52,7 +57,6 @@ handleSubmit(e) {
   let errorFlag = false;
   let errorMessages = [];
 
-
   if (this.state.specialty === '') {
       errorMessages.push('Please select a specialty! ');
   }
@@ -70,14 +74,22 @@ handleSubmit(e) {
 
   if (errorFlag) {
   } else {
-    this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
-    this.props.history.push('/doctors');
+
+    let converted = this.state.date.toDate();
+    this.setState({date: converted});
+
+
+    this.props.createAppointment({appointment: this.state}).then( () => {
+      this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
+      this.props.history.push('/doctors');
+      });
     });
   }
 }
 
 render() {
-  
+  console.log(this.state.date['_i']);
+
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
 

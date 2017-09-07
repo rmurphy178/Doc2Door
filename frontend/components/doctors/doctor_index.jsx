@@ -11,6 +11,11 @@ class DoctorIndex extends React.Component {
  constructor(props) {
    super(props);
    this.state = {
+     date: '',
+     details: '',
+     address: '',
+     specialty: '',
+     errors: []
    };
    this.handleClick = this.handleClick.bind(this);
  }
