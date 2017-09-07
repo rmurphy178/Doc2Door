@@ -21,6 +21,11 @@ class DoctorIndex extends React.Component {
  }
 
 
+ componentWillMount() {
+   this.props.fetchAppointments();
+ }
+
+
 handleClick(e) {
  e.preventDefault();
  this.setState({selectedDoctor: e.target.value});
@@ -30,9 +35,8 @@ handleClick(e) {
 render() {
   const {doctors} = this.props;
 
-  console.log(this.props.appointment);
-
   console.log(this.state);
+
   return (
         <div className='doc-index'>
         <div className="doc-list-bg">
