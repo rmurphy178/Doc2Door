@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { values } from 'lodash';
 
 
 import NavBarContainer from '../navBar/navBar_container';
@@ -12,17 +13,21 @@ class DoctorIndex extends React.Component {
    super(props);
    this.state = {
      date: '',
-     details: '',
      address: '',
-     specialty: '',
-     errors: []
+     user_id: '',
+     doctor_id: '',
+     errors: [],
+     appointment: null
    };
    this.handleClick = this.handleClick.bind(this);
  }
 
 
  componentWillMount() {
-   this.props.fetchAppointments();
+   this.setState({appointment: this.props.appointment});
+   this.setState({address: this.props.appointment.address});
+   this.setState({user_id: this.props.appointment.user_id});
+   this.setState({date: this.props.appointment.date});
  }
 
 
@@ -33,9 +38,12 @@ handleClick(e) {
 }
 
 render() {
-  const {doctors} = this.props;
 
   console.log(this.state);
+  console.log(this.props);
+  const {doctors} = this.props;
+
+
 
   return (
         <div className='doc-index'>

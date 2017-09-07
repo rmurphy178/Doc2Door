@@ -4,10 +4,11 @@ import { values } from 'lodash';
 import { fetchDoctor, fetchDoctors } from '../../actions/doctor_actions';
 import { createAppointment, fetchAppointments, fetchAppointment } from '../../actions/appointment_actions';
 
-const appointment = {appointment};
+
+
 const mapStateToProps = ({session, doctors, appointments}) => ({
   doctors: values(doctors),
-  appointment: appointment
+  appointment: appointments
 });
 
 const mapDispatchToProps = dispatch => ({

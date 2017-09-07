@@ -8,13 +8,15 @@ class DoctorItem extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      doctor: values(props.doctors).filter(doctor => doctor.id === this.props.match.params.doctorId)
+      doctor: values(this.props.doctors).filter(doctor => doctor.id === this.props.match.params.doctorId),
+      appointment: this.props.appointment,
+      doctor_id: this.props.match.params.doctorId
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
 componentWillReceiveProps() {
-
+  this.setState({appointment: this.props.appointment});
 }
 
 componentDidMount() {
@@ -24,10 +26,13 @@ componentDidMount() {
 handleClick(e) {
   e.preventDefault();
   this.props.fetchDoctor(e.target.value);
-    this.props.history.push('/appointments/new');
+  this.props.history.push('/appointments/new');
 }
 
 render() {
+  console.log(this.props);
+  console.log(this.state);
+
   return (
       <div className="doc-show-bg">
         <NavBarContainer/>
