@@ -9,14 +9,36 @@ class BookingForm extends React.Component {
     super(props);
 
     this.state = {
-      appointment: this.props.appointments
+      appointment: this.props.appointments,
+      date: '',
+      address: '',
+      user_id: '',
+      doctor_id: '',
+      new_appointment: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
 
 componentDidMount(){
-  this.props.currentUser;
+  let key = keys(this.state.appointment);
+  let val = values(this.state.appointment);
+  const appt = new Map();
+
+  key.forEach((el, idx) => {
+    appt.set(el, val[idx]);
+  });
+
+  appt.delete('id');
+
+  let new_appt = {};
+
+  appt.forEach((k, v) => {
+    new_appt[k] = v;
+  });
+
+
+  this.setState({new_appointment: appt});
 }
 
 
@@ -39,24 +61,13 @@ update(field) {
 
   render(){
 
-    let key = keys(this.state.appointment);
-    let val = values(this.state.appointment);
-    const appt = new Map();
-
-    key.forEach((el, idx) => {
-      appt.set(el, val[idx]);
-    });
-
-    appt.delete('id');
-    console.log(appt);
-
+    console.log(this.props);
 
     return (
       <div className="booking-form">
         <NavBarContainer/>
         <h1>Booking & Confirmation</h1>
-        <div>{appt}</div>
-
+        <div>{this.state.new_appointment}</div>
         <form onSubmit={this.handleSubmit}>
           <label>
             Choose a day for your appointment:
