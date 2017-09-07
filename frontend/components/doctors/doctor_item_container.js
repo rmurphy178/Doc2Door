@@ -8,8 +8,10 @@ import { createAppointment } from '../../actions/appointment_actions';
 
 
 
-const mapStateToProps = ({ doctors }) => ({
-  doctors
+const mapStateToProps = ({ doctors, session, appointments }) => ({
+  doctors: doctors,
+  currentUser: session.currentUser,
+  appointments: appointments
 });
 
 const mapDispatchToProps = dispatch => ({

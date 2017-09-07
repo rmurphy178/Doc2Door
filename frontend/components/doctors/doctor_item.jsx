@@ -8,9 +8,12 @@ class DoctorItem extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      doctor: values(this.props.doctors).filter(doctor => doctor.id === this.props.match.params.doctorId),
       appointment: this.props.appointment,
-      doctor_id: this.props.match.params.doctorId
+      doctor_id: Number(this.props.match.params.doctorId),
+      user_id: this.props.currentUser.id,
+      address: '',
+      date: '',
+      errors: []
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -19,18 +22,24 @@ componentWillReceiveProps() {
   this.setState({appointment: this.props.appointment});
 }
 
-componentDidMount() {
+componentWillMount() {
   this.props.fetchDoctor(this.props.match.params.doctorId);
+  this.setState({appointment: this.props.appointment});
+  this.setState({appointment: this.props.appointment});
+  this.setState({appointment: this.props.appointment});
+  this.setState({appointment: this.props.appointment});
 }
 
 handleClick(e) {
   e.preventDefault();
-  this.props.fetchDoctor(e.target.value);
+  let appt = this.props.appointment;
+  appt.doctor_id = this.state.doctor.doctor_id;
+  this.props.createAppointment(appt);
   this.props.history.push('/appointments/new');
 }
 
 render() {
-  console.log(this.props);
+  console.log(this.props.appointment);
   console.log(this.state);
 
   return (
