@@ -13,7 +13,7 @@ class BookingForm extends React.Component {
       date: '',
       address: '',
       user_id: '',
-      doctor_id: '',
+      doctor_id: this.props.doctors.id,
       new_appointment: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -61,7 +61,7 @@ update(field) {
 
   render(){
 
-    console.log(this.props);
+    console.log(this.state);
 
     return (
       <div className="booking-form">
