@@ -3,9 +3,8 @@ class CreateAppointments < ActiveRecord::Migration
     create_table :appointments do |t|
       t.integer :user_id, null: false
       t.integer :doctor_id, null: false
-      t.string :location, null: false
-      t.string :time, null: false
-      t.string :day, null: false
+      t.string :address, null: false
+      t.string :date, null: false
       t.timestamps null: false
     end
     add_index :appointments, :user_id

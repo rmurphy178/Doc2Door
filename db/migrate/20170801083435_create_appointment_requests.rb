@@ -5,7 +5,7 @@ class CreateAppointmentRequests < ActiveRecord::Migration
       t.integer :user_id, null: false
       t.integer :doctor_id, null: false
       t.string :address, null: false
-      t.string :details, null: false
+      t.string :date, null: false
 
       t.timestamps null: false
     end
