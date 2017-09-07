@@ -37,7 +37,7 @@ componentDidMount(){
     new_appt[k] = v;
   });
 
-
+  appt.set('doctor_id', this.state.doctor_id);
   this.setState({new_appointment: appt});
 }
 
@@ -67,7 +67,9 @@ update(field) {
       <div className="booking-form">
         <NavBarContainer/>
         <h1>Booking & Confirmation</h1>
+
         <div>{this.state.new_appointment}</div>
+
         <form onSubmit={this.handleSubmit}>
           <label>
             Choose a day for your appointment:
