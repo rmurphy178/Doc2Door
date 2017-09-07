@@ -25,10 +25,12 @@ handleClick(e) {
 render() {
   const {doctors} = this.props;
   return (
+        <div className='doc-index'>
         <div className="doc-list-bg">
           <NavBarContainer/>
-        <section className="doctors-list">
-          <ul className="doctor-list-step">
+        <div className="doctors-list">
+          <h1 className='doc-header'>Doctors Available in Your Area</h1>
+          <ul className="doc-list-step">
             {doctors.map( (doctor, idx) => (
               <Link to={`/doctors/${doctor.id}/`} key={idx} className="doc-info">
               <li>
@@ -40,9 +42,11 @@ render() {
                  </Link>
               ))}
           </ul>
-      </section>
-      </div>);
-    }
+      </div>
+      </div>
+     </div>
+    );
+  }
 }
 
 export default withRouter(DoctorIndex);

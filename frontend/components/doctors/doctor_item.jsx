@@ -33,7 +33,7 @@ render() {
         <NavBarContainer/>
           <div className="doctor-item" key={this.props.doctors.id}>
             <div className="doctor-bio">
-              <img src={this.props.doctors.image_url} className="doctor-image"/>
+              <img src={this.props.doctors.image_url} className="doctor-show-image"/>
               <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
               <p className="doctor-detail">Specialty: {this.props.doctors.specialty}</p>
               <p className="doctors-detail">Rating: {this.props.doctors.rating}</p>
