@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import NavBarContainer from '../navBar/navBar_Container';
+import NavBarContainer from '../navBar/navBar_container';
 
 class AccountForm extends React.Component {
   constructor(props){
