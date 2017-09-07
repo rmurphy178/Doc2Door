@@ -29,6 +29,10 @@ handleClick(e) {
 
 render() {
   const {doctors} = this.props;
+
+  console.log(this.props.appointment);
+
+  console.log(this.state);
   return (
         <div className='doc-index'>
         <div className="doc-list-bg">
@@ -43,7 +47,7 @@ render() {
               </li>
                <li>Name: {doctor.name}</li>
                <li>Specialty: {doctor.specialty}</li>
-               <li>Rating: {doctor.rating}</li>
+               <li>Patient Rating: {doctor.rating}</li>
                  </Link>
               ))}
           </ul>
