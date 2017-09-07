@@ -12,11 +12,9 @@ class Api::UsersController < ApplicationController
 	end
 
 	def update
-		@user = User.find_by_id(
-      params[:id]
-    )
+		@user = current_user
 		@user.update(user_params)
-		render `api/users/user`
+		render :show
 	end
 
 	private
