@@ -4,9 +4,10 @@ import BookingForm from './booking_form';
 import { fetchDoctors } from '../../actions/doctor_actions';
 import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
 
-const mapStateToProps = ({session, doctor}) => ({
+
+const mapStateToProps = ({session, appointments}) => ({
   currentUser: session.currentUser,
-  doctor
+  appointments: appointments
 });
 
 const mapDispatchToProps = dispatch => ({

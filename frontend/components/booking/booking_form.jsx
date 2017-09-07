@@ -1,17 +1,15 @@
 import React from 'react';
 import {Link, withRouter } from 'react-router-dom';
+import { values, keys } from 'lodash';
 
 import NavBarContainer from '../navBar/navBar_container';
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
+
     this.state = {
-      appointment: {
-        day: '',
-        time: ''
-      }
+      appointment: this.props.appointments
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -40,10 +38,25 @@ update(field) {
 
 
   render(){
+
+    let key = keys(this.state.appointment);
+    let val = values(this.state.appointment);
+    const appt = new Map();
+
+    key.forEach((el, idx) => {
+      appt.set(el, val[idx]);
+    });
+
+    appt.delete('id');
+    console.log(appt);
+
+
     return (
       <div className="booking-form">
         <NavBarContainer/>
         <h1>Booking & Confirmation</h1>
+        <div>{appt}</div>
+
         <form onSubmit={this.handleSubmit}>
           <label>
             Choose a day for your appointment:
