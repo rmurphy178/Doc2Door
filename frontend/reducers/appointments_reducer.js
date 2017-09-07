@@ -8,10 +8,10 @@ import {
 
 
 const nullAppointment = Object.freeze({
-  userId: null,
+  user_id: null,
   address: null,
   date: null,
-  doctorId: null,
+  doctor_id: null,
   errors: []
 });
 
