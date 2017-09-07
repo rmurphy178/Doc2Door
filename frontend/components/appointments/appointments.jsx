@@ -14,21 +14,21 @@ class Appointments extends React.Component {
 
     let dateString = moment().format("DD/MM/YYYY");
     let startDate = moment(dateString, "DD/MM/YYYY");
-    
+
     this.state = {
       date: startDate,
-      details: '',
       address: '',
       specialty: '',
       errors: [],
-      userId: this.props.currentUser.id
+      userId: this.props.currentUser.id,
+      doctorId: 1
     };
 
     this.onChange = (address) => this.setState({ address });
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.update = this.update.bind(this);
-    this.changeDate = this.changeDate.bind(this);
+    this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
   }
 
@@ -36,7 +36,7 @@ handleSelect(date) {
   this.setState({date: date});
 }
 
-changeDate(date) {
+handleChangeDate(date) {
   this.setState({date: date});
 }
 
@@ -75,11 +75,17 @@ handleSubmit(e) {
   if (errorFlag) {
   } else {
 
-    let converted = this.state.date.toDate();
-    this.setState({date: converted});
+    let data = this.state;
+    data.date = data.date._i.toString();
+    this.setState({date: data.date});
 
+    data = {date: data['date'], userId: data['userId'],
+      address: data['address'], doctorId: data['doctorId'],
+      errors: data['errors']};
 
-    this.props.createAppointment({appointment: this.state}).then( () => {
+    this.setState({data});
+
+    this.props.createAppointment(data).then( () => {
       this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
       this.props.history.push('/doctors');
       });
@@ -88,8 +94,8 @@ handleSubmit(e) {
 }
 
 render() {
-  console.log(this.state.date['_i']);
 
+  console.log(this.state);
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
 
@@ -159,7 +165,7 @@ return(
         <DatePicker
           selected={this.state.date}
           onSelect={this.handleSelect}
-          onChange={this.changeDate}
+          onChange={this.handleChangeDate}
           className='date'
         />
       </div>
