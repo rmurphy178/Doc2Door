@@ -9,7 +9,7 @@ class Api::AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
     if @appointment.save
-      render `api/appointments/${id}`
+      render `api/appointments/appointment`
     else
       render json: @appointment.errors.full_messages, status: 422
     end

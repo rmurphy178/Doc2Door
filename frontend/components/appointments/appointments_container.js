@@ -7,14 +7,14 @@ import { fetchSpecialty, fetchSpecialties } from '../../actions/specialty_action
 import { createAppointment } from '../../actions/appointment_actions';
 
 
-const mapStateToProps = ({session, specialties, doctors}) => ({
+const mapStateToProps = ({session, specialties, doctors, appointments}) => ({
   currentUser: session.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchDoctors: (filters) => dispatch(fetchDoctors(filters)),
-  createAppointment: (data) => dispatch(createAppointment(data))
+  createAppointment: (appointment) => dispatch(createAppointment(appointment))
 });
 
 export default connect(

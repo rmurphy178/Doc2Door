@@ -20,8 +20,9 @@ class Appointments extends React.Component {
       address: '',
       specialty: '',
       errors: [],
-      userId: this.props.currentUser.id,
-      doctorId: 1
+      user_id: this.props.currentUser.id,
+      doctor_id: 1,
+      appointment: {}
     };
 
     this.onChange = (address) => this.setState({ address });
@@ -76,26 +77,25 @@ handleSubmit(e) {
   } else {
 
     let data = this.state;
-    data.date = data.date._i.toString();
+    data.date = data.date._i;
     this.setState({date: data.date});
 
-    data = {date: data['date'], userId: data['userId'],
-      address: data['address'], doctorId: data['doctorId'],
+    data = {date: data['date'], user_id: data['user_id'],
+      address: data['address'], doctor_id: data['doctor_id'],
       errors: data['errors']};
 
-    this.setState({data});
+    this.setState({appointment: data});
 
-    this.props.createAppointment(data).then( () => {
+    this.props.createAppointment({appointment: data}).then( () => {
       this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
       this.props.history.push('/doctors');
       });
     });
+    console.log(data);
   }
 }
 
 render() {
-
-  console.log(this.state);
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
 

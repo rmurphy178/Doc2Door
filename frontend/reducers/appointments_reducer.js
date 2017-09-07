@@ -23,7 +23,7 @@ const AppointmentsReducer = (state = nullAppointment, action) => {
       return merge({}, null, appointments);
     case RECEIVE_APPOINTMENT:
       const appointment = action.appointment;
-      return merge({}, null, appointment);
+      return merge({}, nullAppointment, appointment);
     case RECEIVE_APPOINTMENT_ERRORS:
       const errors = action.errors;
       return merge({}, state, errors);
