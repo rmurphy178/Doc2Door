@@ -14,6 +14,7 @@ class BookingForm extends React.Component {
       address: '',
       user_id: '',
       doctor_id: this.props.doctors.id,
+      doctor: this.props.doctors.name,
       new_appointment: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,6 +31,9 @@ componentDidMount(){
   });
 
   appt.delete('id');
+  appt.delete('doctor_id');
+  appt.delete('user_id');
+  appt.delete('errors');
 
   let new_appt = {};
 
@@ -38,7 +42,8 @@ componentDidMount(){
   });
 
 
-  appt.set('doctor_id', this.state.doctor_id);
+  // appt.set('doctor_id', this.state.doctor_id);
+  appt.set('Doctor', this.state.doctor);
   this.setState({new_appointment: appt});
 }
 
@@ -63,15 +68,16 @@ update(field) {
   render(){
 
   const appt_info = Array.from(this.state.new_appointment);
+  console.log(this.state);
 
     return (
       <div className="booking-form">
         <NavBarContainer/>
         <h1>Booking & Confirmation</h1>
-
-        <ul>{appt_info.map((el, idx) => (
-            <li key={idx}>
-              {el[0]}: {el[1]}
+        <h2>Is this Information Correct?</h2>
+        <ul className='appt-ul'>{appt_info.map((el, idx) => (
+            <li className='appt-li' key={idx}>
+              {el[0].slice(0, 1).toUpperCase() + el[0].slice(1)}: {el[1]}
             </li>
           ))}
         </ul>
@@ -98,7 +104,9 @@ update(field) {
               <option value="Evening">Evening</option>
             </select>
           </label>
-          <input className='bttn-simple bttn-md' type="submit" value="Confirm Appointment" />
+          <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>
+            Confirm Appointment
+          </button>
         </form>
       </div>
     );

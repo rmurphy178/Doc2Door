@@ -1,3 +1,23 @@
+.doctor-item .landing-bttn {
+  border: solid 1.5px #FFF;
+  border-radius: 256px;
+  color: #FFF;
+  display: block;
+  font-size: 16px;
+  letter-spacing: .03em;
+  line-height: 1.25em;
+  margin: 20px auto;
+  max-width: 320px;
+  height: 41px;
+  overflow: hidden;
+  padding: 2px 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 320px;
+  background: #39579b;
+  border-color: #39579b;
+}
+
 .doctors-list {
   display: flex;
   flex-direction: column;
