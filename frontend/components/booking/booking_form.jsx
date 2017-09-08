@@ -37,6 +37,7 @@ componentDidMount(){
     new_appt[k] = v;
   });
 
+
   appt.set('doctor_id', this.state.doctor_id);
   this.setState({new_appointment: appt});
 }
@@ -61,14 +62,19 @@ update(field) {
 
   render(){
 
-    console.log(this.state);
+  const appt_info = Array.from(this.state.new_appointment);
 
     return (
       <div className="booking-form">
         <NavBarContainer/>
         <h1>Booking & Confirmation</h1>
 
-        <div>{this.state.new_appointment}</div>
+        <ul>{appt_info.map((el, idx) => (
+            <li key={idx}>
+              {el[0]}: {el[1]}
+            </li>
+          ))}
+        </ul>
 
         <form onSubmit={this.handleSubmit}>
           <label>
