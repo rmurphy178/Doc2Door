@@ -78,9 +78,10 @@ update(field) {
         <h1>Booking & Confirmation</h1>
         <h2>Is this Information Correct?</h2>
         <ul className='appt-ul'>{appt_info.map((el, idx) => (
-            <li className='appt-li' key={idx}>
-              {el[0].slice(0, 1).toUpperCase() + el[0].slice(1)}: {el[1]}
-            </li>
+            <ul className='appt-li' key={idx}>
+              <li className='appt-key'>{el[0].slice(0, 1).toUpperCase() + el[0].slice(1)}: </li>
+              <li className='appt-value'>{el[1]}</li>
+            </ul>
           ))}
         </ul>
 

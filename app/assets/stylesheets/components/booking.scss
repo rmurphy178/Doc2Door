@@ -1,10 +1,16 @@
 .appt-ul {
   font-family: sans-serif;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .appt-li {
-  margin: 10px;
+  margin: 15px;
+}
+
+.appt-key {
+  margin-bottom: 10px;
 }
 
 .booking-form .landing-bttn {
