@@ -52,8 +52,10 @@ componentDidMount(){
 handleSubmit(e) {
   e.preventDefault();
   let appointment = this.state;
+
+  alert('Your Appointment has been Booked!');
   this.props.createAppointment(appointment).then( () => {
-  this.props.history.push('/account');
+  this.props.history.push('/home');
   });
 }
 
@@ -82,32 +84,11 @@ update(field) {
           ))}
         </ul>
 
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Choose a day for your appointment:
-            <select value={this.state.day} onChange={this.update}>
-              <option disabled>Select</option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="Wednesday">Wednesday</option>
-              <option value="Thursday">Thursday</option>
-              <option value="Friday">Friday</option>
-              <option value="Saturday">Saturday</option>
-              <option value="Sunday">Sunday</option>
-            </select>
 
-            Choose a preferred appointment time:
-            <select value={this.state.time} onChange={this.update}>
-              <option disabled>Select</option>
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
-            </select>
-          </label>
+
           <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>
             Confirm Appointment
           </button>
-        </form>
       </div>
     );
   }
