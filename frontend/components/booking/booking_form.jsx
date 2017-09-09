@@ -70,11 +70,11 @@ update(field) {
   render(){
 
   const appt_info = Array.from(this.state.new_appointment);
-  console.log(this.state);
 
     return (
       <div className="booking-form">
         <NavBarContainer/>
+        <div className='booking-bg'>
         <h1>Booking & Confirmation</h1>
         <h2>Is this Information Correct?</h2>
         <ul className='appt-ul'>{appt_info.map((el, idx) => (
@@ -90,6 +90,7 @@ update(field) {
           <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>
             Confirm Appointment
           </button>
+          </div>
       </div>
     );
   }
