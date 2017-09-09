@@ -55,8 +55,17 @@
   background-color: #dce0e6;
 }
 
-img.doctor-image:hover {
-  color: gray;
+
+li .doctor-image {
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+li .doctor-image:hover {
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
 }
 
 .doc-list-step {
@@ -74,9 +83,7 @@ img.doctor-image:hover {
   margin-bottom: 20px;
 }
 
-.doctor-image:hover {
-  color: crimson;
-}
+
 
 .doc-index {
   height: 100vh;
