@@ -16,6 +16,7 @@
   width: 320px;
   background: #39579b;
   border-color: #39579b;
+  font-family: sans-serif;
 }
 
 .doctors-list {
@@ -70,8 +71,7 @@ li .doctor-image {
 }
 
 li .doctor-image:hover {
-  -webkit-transform: scale(1.3);
-	transform: scale(1.3);
+
 }
 
 .doc-list-step {

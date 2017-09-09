@@ -58,7 +58,7 @@ render() {
               <img src={doctor.image_url} className="doctor-image"/>
               </li>
                <li>Name: {doctor.name}</li>
-               <li>Specialty: {doctor.specialty}</li>
+               <li>Specialty: {doctor.specialty.slice(0, 1).toUpperCase() + doctor.specialty.slice(1)}</li>
                <li>Patient Rating: {doctor.rating}</li>
                  </Link>
               ))}
