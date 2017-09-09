@@ -42,7 +42,6 @@ componentDidMount(){
   });
 
 
-  // appt.set('doctor_id', this.state.doctor_id);
   appt.set('Doctor', this.state.doctor);
   this.setState({new_appointment: appt});
 }
