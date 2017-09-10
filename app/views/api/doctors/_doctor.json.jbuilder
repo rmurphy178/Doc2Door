@@ -1,1 +1,1 @@
-json.extract! doctor, :id, :name, :image_url, :rating, :specialty
+json.extract! doctor, :id, :name, :image_url, :rating, :specialty, :bio

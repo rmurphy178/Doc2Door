@@ -11,7 +11,8 @@ const nullDoctor = Object.freeze({
   rating: null,
   specialty: null,
   appointments: [],
-  reviews: []
+  reviews: [],
+  bio: null
 });
 
 
