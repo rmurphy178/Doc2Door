@@ -1,24 +1,35 @@
 .doctor-item {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 30px;
   margin: 20px;
   font-family: sans-serif;
 }
 
-.doc-detail-specialty {
+.doctor-detail-specialty {
   text-transform: capitalize;
 }
 
-.doctor-details1 {
+.bio-label {
+  margin-bottom: 15px;
+}
 
+.doctor-bio {
+  margin: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
 }
 
 .doc-bio {
   margin-left: 50px;
   max-width: 800px;
   font-family: sans-serif;
-  margin-top: 60px;
+  font-size: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .doc-show-bg {

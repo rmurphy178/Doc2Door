@@ -39,6 +39,7 @@ handleClick(e) {
 
 render() {
 
+
   return (
       <div className="doc-show-bg">
         <NavBarContainer/>
@@ -53,7 +54,9 @@ render() {
               </button>
             </div>
             <div className='doc-bio'>
-                Bio:
+              <label className='bio-label'>
+                {this.props.doctors.name} Biography:
+              </label>
               <p className="doctors-detail"> {this.props.doctors.bio}</p>
             </div>
           </div>
