@@ -50,81 +50,93 @@ ActiveRecord::Base.transaction do
     name: 'Dr. O',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738282/dr-1_fl0ax3.png',
     rating: 90,
-    specialty: 'pediatrics'
+    specialty: 'pediatrics',
+    bio: 'Doctor bio goes here'
 
   )
   doctor2 = Doctor.create!(
     name: 'Dr. Lurch',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738288/dr-2_akc3c3.png',
     rating: 90,
-    specialty: 'allergy'
+    specialty: 'allergy',
+    bio: 'Doctor bio goes here'
   )
 
   doctor3 = Doctor.create!(
     name: 'Dr. Peck',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738288/dr-3_tcgcws.png',
     rating: 90,
-    specialty: 'dermatology'
+    specialty: 'dermatology',
+    bio: 'Doctor bio goes here'
   )
   doctor4 = Doctor.create!(
     name: 'Dr. Brown',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738292/dr-4_cshecy.png',
     rating: 90,
-    specialty: 'general'
+    specialty: 'general',
+    bio: 'Doctor bio goes here'
 
   )
   doctor5 = Doctor.create!(
     name: 'Dr. Troy',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738295/dr-5_tnpdnf.png',
     rating: 90,
-    specialty: 'geriatrics'
+    specialty: 'geriatrics',
+    bio: 'Doctor bio goes here'
   )
 
   doctor6 = Doctor.create!(
     name: 'Dr. Johnson',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738298/dr-6_wnrz5f.png',
     rating: 90,
-    specialty: 'endocrinology'
+    specialty: 'endocrinology',
+    bio: 'Doctor bio goes here'
   )
   doctor7 = Doctor.create!(
     name: 'Dr. F',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738303/dr-7_bc4kko.png',
     rating: 90,
-    specialty: 'pediatrics'
+    specialty: 'pediatrics',
+    bio: 'Doctor bio goes here'
 
   )
   doctor8 = Doctor.create!(
     name: 'Dr. X',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738305/dr-8_ou6hrl.png',
     rating: 90,
-    specialty: 'allergy'
+    specialty: 'allergy',
+    bio: 'Doctor bio goes here'
   )
 
   doctor9 = Doctor.create!(
     name: 'Dr. Z',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738307/dr-9_rayrth.png',
     rating: 90,
-    specialty: 'dermatology'
+    specialty: 'dermatology',
+    bio: 'Doctor bio goes here'
   )
   doctor10 = Doctor.create!(
     name: 'Dr. L',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738298/dr-6_wnrz5f.png',
     rating: 90,
-    specialty: 'geriatrics'
+    specialty: 'geriatrics',
+    bio: 'Doctor bio goes here'
 
   )
   doctor11 = Doctor.create!(
     name: 'Dr. Q',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738303/dr-7_bc4kko.png',
     rating: 90,
-    specialty: 'allergy'
+    specialty: 'allergy',
+    bio: 'Doctor bio goes here'
   )
 
   doctor12 = Doctor.create!(
     name: 'Dr. P',
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738307/dr-9_rayrth.png',
     rating: 90,
-    specialty: 'general'
+    specialty: 'general',
+    bio: 'Doctor bio goes here'
   )
 
 

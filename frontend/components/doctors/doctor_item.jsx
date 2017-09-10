@@ -48,6 +48,7 @@ render() {
               <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
               <p className="doctor-detail">Specialty: {this.props.doctors.specialty}</p>
               <p className="doctors-detail">Rating: {this.props.doctors.rating}</p>
+              <p className="doctors-detail">Bio: {this.props.doctors.bio}</p>
               <button className="landing-bttn bttn-gradient" value={this.props.doctors.id} onClick={this.handleClick}>
                 Select & Continue
               </button>
