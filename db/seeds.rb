@@ -74,7 +74,7 @@ ActiveRecord::Base.transaction do
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738292/dr-4_cshecy.png',
     rating: 90,
     specialty: 'general',
-    bio: 'Doctor bio goes here'
+    bio: "Raised in rural Arizona, he attended medical school at the University of Arizona where he also received his Master’s in Public Health with a focus in Public Health Policy and Management. He completed his emergency medicine residency training right here in the Bay Area at the UCSF-SFGH program in San Francisco. He also served on the prestigious American Medical Association's Board of Trustees during formation of the Affordable Care Act. He also continues to practice emergency medicine in one of the Bay Area's busy emergency departments. Offering coverage for Burlingame, CA and the SF Peninsula, including Silicon Valley."
 
   )
   doctor5 = Doctor.create!(
@@ -105,7 +105,7 @@ ActiveRecord::Base.transaction do
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738305/dr-8_ou6hrl.png',
     rating: 90,
     specialty: 'allergy',
-    bio: 'Doctor bio goes here'
+    bio: "Graduated with honors from UCLA with a bachelor’s degree in microbiology, immunology, and molecular genetics, followed by medical school at Sidney Kimmel Medical College at Thomas Jefferson University in Philadelphia. She then returned to Southern California for her pediatric residency at Mattel Children’s Hospital at UCLA. She has conducted research on pediatric obesity prevention, streamlining asthma care for pediatric patients, and quality improvement for treating eye injuries in trauma centers."
   )
 
   doctor9 = Doctor.create!(
@@ -120,7 +120,7 @@ ActiveRecord::Base.transaction do
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738298/dr-6_wnrz5f.png',
     rating: 90,
     specialty: 'geriatrics',
-    bio: 'Doctor bio goes here'
+    bio: 'Attended Yale University School of Nursing for RN and MSN degrees after obtaining BA from Evergreen State College, Olympia Washington. She has worked in various healthcare settings around San Francisco, including UCSF, SF General Hospital, Haight Ashbury Free Clinic, and has provided house calls on the streets with the San Francisco Homeless Outreach Team. She is fluent in Spanish, as well as basic French and Portuguese. She is currently offering house calls in San Francisco and the surrounding areas.'
 
   )
   doctor11 = Doctor.create!(
