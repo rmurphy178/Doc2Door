@@ -17,7 +17,8 @@ class Api::DoctorsController < ApplicationController
     :name,
     :rating,
     :image_url,
-    :specialty
+    :specialty,
+    :bio
     )
   end
 end
