@@ -1,10 +1,13 @@
 .doctor-item {
   display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 30px;
   margin: 20px;
   font-family: sans-serif;
+}
+
+.doc-detail-specialty {
+  text-transform: capitalize;
 }
 
 .doctor-details1 {
@@ -12,9 +15,10 @@
 }
 
 .doc-bio {
-  margin-left: 30px;
+  margin-left: 50px;
   max-width: 800px;
   font-family: sans-serif;
+  margin-top: 60px;
 }
 
 .doc-show-bg {

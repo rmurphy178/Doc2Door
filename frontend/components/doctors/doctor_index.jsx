@@ -38,12 +38,8 @@ handleClick(e) {
 }
 
 render() {
-
-  console.log(this.state);
-  console.log(this.props);
+  
   const {doctors} = this.props;
-
-
 
   return (
         <div className='doc-index'>

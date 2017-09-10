@@ -46,7 +46,7 @@ render() {
             <div className="doctor-bio">
               <img src={this.props.doctors.image_url} className="doctor-show-image"/>
               <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
-              <p className="doctor-detail">Specialty: {this.props.doctors.specialty}</p>
+              <p className="doctor-detail-specialty">Specialty: {this.props.doctors.specialty}</p>
               <p className="doctors-detail">Patient Rating: {this.props.doctors.rating}%</p>
               <button className="landing-bttn bttn-gradient" value={this.props.doctors.id} onClick={this.handleClick}>
                 Select & Continue
