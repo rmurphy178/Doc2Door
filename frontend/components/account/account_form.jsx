@@ -20,6 +20,10 @@ class AccountForm extends React.Component {
   }
 
 
+  componentDidMount() {
+    this.props.fetchAppointments(this.props.currentUser.id);
+  }
+
   handleChange(field) {
     return e => this.setState({[field]: e.target.value});
   }
