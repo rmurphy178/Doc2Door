@@ -38,7 +38,7 @@ handleClick(e) {
 }
 
 render() {
-  
+
   const {doctors} = this.props;
 
   return (
@@ -55,7 +55,7 @@ render() {
               </li>
                <li>Name: {doctor.name}</li>
                <li>Specialty: {doctor.specialty.slice(0, 1).toUpperCase() + doctor.specialty.slice(1)}</li>
-               <li>Patient Rating: {doctor.rating}</li>
+               <li>Patient Rating: {doctor.rating}%</li>
                  </Link>
               ))}
           </ul>
