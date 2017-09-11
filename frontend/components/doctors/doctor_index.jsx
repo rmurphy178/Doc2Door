@@ -47,7 +47,7 @@ closeModal() {
 handleClick(e) {
  e.preventDefault();
  this.setState({selectedDoctor: e.target.value});
-   this.props.history.push('/appointments/new');
+  this.props.history.push('appointments/new');
 }
 
 render() {

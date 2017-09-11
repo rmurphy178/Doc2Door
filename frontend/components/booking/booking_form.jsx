@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, withRouter } from 'react-router-dom';
 import { values, keys } from 'lodash';
+import Modal from 'react-awesome-modal';
 
 import NavBarContainer from '../navBar/navBar_container';
 
@@ -15,10 +16,24 @@ class BookingForm extends React.Component {
       user_id: '',
       doctor_id: this.props.doctors.id,
       doctor: this.props.doctors.name,
-      new_appointment: ''
+      new_appointment: '',
+      visible: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+  }
+
+
+openModal() {
+    this.setState({
+        visible : true
+    });
+  }
+
+closeModal() {
+    this.setState({
+        visible : false
+    });
   }
 
 componentDidMount(){
