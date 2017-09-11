@@ -2,10 +2,9 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { values } from 'lodash';
-
+import Modal from 'react-awesome-modal';
 
 import NavBarContainer from '../navBar/navBar_container';
-
 import DoctorItem from './doctor_item';
 
 class DoctorIndex extends React.Component {
@@ -17,10 +16,24 @@ class DoctorIndex extends React.Component {
      user_id: '',
      doctor_id: '',
      errors: [],
-     appointment: null
+     appointment: null,
+     visible: false
    };
    this.handleClick = this.handleClick.bind(this);
  }
+
+
+openModal() {
+    this.setState({
+        visible : true
+    });
+  }
+
+closeModal() {
+    this.setState({
+        visible : false
+    });
+  }
 
 
  componentWillMount() {
