@@ -105,9 +105,10 @@ body .landing-wrapper {
   background-color: transparent;
   border: solid 3.5px #FFF;
   border-radius: 256px;
-  color: #FFF;
+  color: black;
+  font-weight: bold;
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: .03em;
   line-height: 1.25em;
   margin: 20px auto;
@@ -119,6 +120,15 @@ body .landing-wrapper {
   text-transform: uppercase;
   width: 100%;
 }
+
+.landing-bttn-2:hover {
+  color: crimson;
+  font-weight: bolder;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+}
+
 .landing-overview {
   padding: 45px;
   position: relative;

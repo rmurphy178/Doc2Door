@@ -57,6 +57,11 @@ render() {
               <button className="landing-bttn bttn-gradient" value={this.props.doctors.id} onClick={this.handleClick}>
                 Select & Continue
               </button>
+              <Link to="/home">
+              <button className="landing-bttn-2">
+                GO BACK
+              </button>
+              </Link>
             </div>
             <div className='doc-bio'>
               <label className='bio-label'>

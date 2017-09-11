@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { values, keys } from 'lodash';
 import Modal from 'react-awesome-modal';
 
@@ -102,6 +102,11 @@ update(field) {
           <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>
             Confirm Appointment
           </button>
+          <Link to="/home">
+          <button className='landing-bttn-2'>
+            GO BACK
+          </button>
+          </Link>
           </div>
       </div>
     );
