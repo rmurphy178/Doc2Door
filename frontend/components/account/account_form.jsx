@@ -22,7 +22,8 @@ class AccountForm extends React.Component {
 
 
   componentDidMount() {
-    this.props.fetchAppointment(this.props.appointments.id);
+    // this.props.fetchAppointment(this.props.appointments.id);
+    this.props.fetchAppointments();
   }
 
   handleChange(field) {
@@ -32,8 +33,9 @@ class AccountForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let user = this.state;
-    this.props.update(user);
-    this.props.history.push('/home');
+    this.props.update(user).then(() => {
+      this.props.history.push('/home');
+    });
   }
 
 

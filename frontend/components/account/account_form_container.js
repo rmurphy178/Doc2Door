@@ -14,7 +14,8 @@ const mapDispatchToProps = dispatch => ({
   fetchDoctor: (id) => dispatch(fetchDoctors(id)),
   createAppointment: (data) => dispatch(createAppointment(data)),
   update: (user) => dispatch(update(user)),
-  fetchAppointment: (id) => dispatch(fetchAppointment(id))
+  fetchAppointment: (id) => dispatch(fetchAppointment(id)),
+  fetchAppointments: () => dispatch(fetchAppointments())
 });
 
 
