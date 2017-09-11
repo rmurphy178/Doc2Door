@@ -99,8 +99,6 @@ update(field) {
             </ul>
           ))}
         </ul>
-
-
           <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>
             Confirm Appointment
           </button>
