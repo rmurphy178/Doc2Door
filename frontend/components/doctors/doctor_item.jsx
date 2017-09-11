@@ -11,34 +11,39 @@ class DoctorItem extends React.Component {
       appointment: '',
       doctor_id: Number(this.props.match.params.doctorId),
       user_id: this.props.currentUser.id,
+      address: this.props.appointments.address,
+      date: this.props.appointments.date
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
 componentWillReceiveProps() {
   this.setState({appointment: this.props.appointment});
-}
 
-componentDidMount() {
-  this.props.fetchDoctor(this.props.match.params.doctorId);
-  this.setState({appointment: this.props.appointment});
-}
-
-handleClick(e) {
-  e.preventDefault();
   let appt = {};
 
   appt['user_id'] = this.state.user_id;
   appt['doctor_id'] = this.state.doctor_id;
   appt['address'] = this.state.address;
-  appt['date'] = this.state.address;
+  appt['date'] = this.state.date;
 
-  this.props.createAppointment(appt);
-  this.props.history.push('/appointments/new');
+  this.setState({appointment: appt});
+}
+
+componentDidMount() {
+  this.props.fetchDoctor(this.props.match.params.doctorId);
+}
+
+handleClick(e) {
+  e.preventDefault();
+
+  this.props.createAppointment({appointment: this.state.appointment}).then(() => {
+      this.props.history.push('/appointments/new');
+  });
 }
 
 render() {
-
+  console.log(this.state);
 
   return (
       <div className="doc-show-bg">
