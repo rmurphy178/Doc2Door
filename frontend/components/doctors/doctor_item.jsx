@@ -60,7 +60,7 @@ render() {
             </div>
             <div className='doc-bio'>
               <label className='bio-label'>
-                {this.props.doctors.name} Biography:
+                About {this.props.doctors.name}:
               </label>
               <p className="doctors-detail"> {this.props.doctors.bio}</p>
             </div>
