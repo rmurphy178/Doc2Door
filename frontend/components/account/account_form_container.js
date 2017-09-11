@@ -2,18 +2,19 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import AccountForm from './account_form';
 import { fetchDoctors } from '../../actions/doctor_actions';
-import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
+import { fetchAppointments, createAppointment, fetchAppointment } from '../../actions/appointment_actions';
 import { update } from '../../actions/session_actions';
 
-const mapStateToProps = ({session}) => ({
-  currentUser: session.currentUser
+const mapStateToProps = ({session, appointments}) => ({
+  currentUser: session.currentUser,
+  appointments: appointments
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: (id) => dispatch(fetchDoctors(id)),
   createAppointment: (data) => dispatch(createAppointment(data)),
   update: (user) => dispatch(update(user)),
-  fetchAppointments: () => dispatch(fetchAppointments())
+  fetchAppointment: (id) => dispatch(fetchAppointment(id))
 });
 
 

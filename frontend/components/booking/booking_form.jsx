@@ -76,6 +76,7 @@ update(field) {
         <div className='booking-bg'>
         <h1>Booking & Confirmation</h1>
         <h2>Is this Information Correct?</h2>
+
         <ul className='appt-ul'>{appt_info.map((el, idx) => (
             <ul className='appt-li' key={idx}>
               <li className='appt-key'>{el[0].slice(0, 1).toUpperCase() + el[0].slice(1)}: </li>
@@ -83,7 +84,6 @@ update(field) {
             </ul>
           ))}
         </ul>
-
 
 
           <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>

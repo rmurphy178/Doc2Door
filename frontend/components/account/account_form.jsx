@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import {values} from 'lodash';
 
 import NavBarContainer from '../navBar/navBar_container';
 
@@ -12,7 +13,7 @@ class AccountForm extends React.Component {
       zip: user.zip,
       first_name: user.first_name,
       last_name: user.last_name,
-      id: user.id
+      id: user.id,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +22,7 @@ class AccountForm extends React.Component {
 
 
   componentDidMount() {
-    this.props.fetchAppointments(this.props.currentUser.id);
+    this.props.fetchAppointment(this.props.appointments.id);
   }
 
   handleChange(field) {
@@ -37,6 +38,7 @@ class AccountForm extends React.Component {
 
 
   render() {
+
     return (
       <div>
         <NavBarContainer />
