@@ -13,8 +13,10 @@ class Api::UsersController < ApplicationController
 
 	def update
 		@user = current_user
-		@user.update(user_params)
-		render :show
+			if @user.update(user_params)
+				login(@user)
+				render :show
+			end
 	end
 
 	private
