@@ -104,21 +104,21 @@ return(
     <div className="appointments-index-screen">
       <div className="appointments-main-body">
         <span className="welcome-pic">
-          <img className="user-pic" src="http://res.cloudinary.com/dq5wzf090/image/upload/v1500882198/doc_icon_ojffjn.png" />
+          <img className="user-pic" src="https://res.cloudinary.com/dq5wzf090/image/upload/v1500882198/doc_icon_ojffjn.png" />
           <h1 className="appointments-welcome-user">Welcome to Doc2Door, {this.props.currentUser.first_name}!</h1>
         </span>
         <h2>We're Excited to Help! Here's how it Works:</h2>
         <ul className="appointments-overview">
           <li>
-            <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1501143963/1_icon_s2mrfa.png" />
+            <img src="https://res.cloudinary.com/dq5wzf090/image/upload/v1501143963/1_icon_s2mrfa.png" />
               Select a Specialty
             </li>
             <li>
-              <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1501143970/2_icon_iwvs3z.png" />
+              <img src="https://res.cloudinary.com/dq5wzf090/image/upload/v1501143970/2_icon_iwvs3z.png" />
               Get Matched
             </li>
             <li>
-              <img src="http://res.cloudinary.com/dq5wzf090/image/upload/v1501143970/3_icon_sv0oum.png" />
+              <img src="https://res.cloudinary.com/dq5wzf090/image/upload/v1501143970/3_icon_sv0oum.png" />
               Receive Care
             </li>
           </ul>
