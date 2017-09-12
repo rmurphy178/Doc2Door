@@ -51,7 +51,7 @@ ActiveRecord::Base.transaction do
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738282/dr-1_fl0ax3.png',
     rating: 94,
     specialty: 'pediatrics',
-    bio: "Earned his MD from the University of California, San Francisco School of Medicine and completed his residency at UCSF Fresno’s family medicine program. He completed a fellowship in geriatric medicine at the University of Southern California before earning his master’s degree in public health from UCLA. He subsequently completed another fellowship in endocrinology from the NIH’s National Institute of Diabetes and Digestive and Kidney Diseases. He has been practicing medicine for over 30 years and has held a number of leadership positions including a role as chief physician of Community Health Foundation and medical director of HealthMed Solutions."
+    bio: "Earned his MD from the University of California, San Francisco School of Medicine and completed his residency at UCSF Fresno’s family medicine program. He completed a fellowship in pediatric medicine at the University of California before earning his master’s degree in public health from UCLA. He subsequently completed another fellowship in endocrinology from the NIH’s National Institute of Diabetes and Digestive and Kidney Diseases. He has been practicing medicine for over 30 years and has held a number of leadership positions including a role as chief physician of Community Health Foundation and medical director of HealthMed Intent Solutions."
 
   )
   doctor2 = Doctor.create!(
@@ -67,7 +67,7 @@ ActiveRecord::Base.transaction do
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738288/dr-3_tcgcws.png',
     rating: 92,
     specialty: 'dermatology',
-    bio: "Graduated with honors from UCLA with a bachelor’s degree in microbiology, immunology, and molecular genetics, followed by medical school at Sidney Kimmel Medical College at Thomas Jefferson University in Philadelphia. She then returned to Southern California for her pediatric residency at Mattel Children’s Hospital at UCLA. She has conducted research on pediatric obesity prevention, streamlining asthma care for pediatric patients, and quality improvement for treating eye injuries in trauma centers."
+    bio: "Graduated with honors from UCLA with a bachelor’s degree in microbiology, immunology, and molecular genetics, followed by medical school at Sydney Kimmel Medical College at Thomas Jefferson University in Philadelphia. She then returned to Southern California for her pediatric residency at Mattel Children’s Hospital at UCLA. She has conducted research on pediatric obesity prevention, streamlining asthma care for pediatric patients, and quality improvement for treating eye injuries in trauma centers."
   )
   doctor4 = Doctor.create!(
     name: 'Dr. Brown',
@@ -82,7 +82,7 @@ ActiveRecord::Base.transaction do
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738295/dr-5_tnpdnf.png',
     rating: 92,
     specialty: 'geriatrics',
-    bio: "Originally from Baltimore, Dr. Lurch completed his undergraduate degree in computer science at Harvard College in Boston before attending New York University of Health Sciences for medical school. He completed his family medicine residency at Mount Spritzer Hospital in New York City where he served as chief resident. He returned to Southern California to continue practicing family medicine and received specialty training in primary care medicine. Dr. Lurch is passionate about the intersection of technology and healthcare and has even published a paper on current technology trends in wearable medical devices in the Journal of the Boston State Academy of Family Physicians. He is fluent in Mandarin."
+    bio: "Originally from Baltimore, Dr. Troy completed his undergraduate degree in computer science at Harvard College in Boston before attending New York University of Health Sciences for medical school. He completed his family medicine residency at Mount Spritzer Hospital in New York City where he served as chief resident. He returned to Southern California to continue practicing family medicine and received specialty training in primary care medicine. Dr. Troy is passionate about the intersection of technology and healthcare and has even published a paper on current technology trends in wearable medical devices in the Journal of the Boston State Academy of Family Physicians. He is fluent in Mandarin."
   )
 
   doctor6 = Doctor.create!(
@@ -128,7 +128,7 @@ ActiveRecord::Base.transaction do
     image_url: 'http://res.cloudinary.com/dq5wzf090/image/upload/v1504738303/dr-7_bc4kko.png',
     rating: 92,
     specialty: 'allergy',
-    bio: "Raised in rural Arizona, he attended medical school at the University of Arizona where he also received his Master’s in Public Health with a focus in Public Health Policy and Management. He completed his emergency medicine residency training right here in the Bay Area at the UCSF-SFGH program in San Francisco. He also served on the prestigious American Medical Association's Board of Trustees during formation of the Affordable Care Act. He also continues to practice emergency medicine in one of the Bay Area's busy emergency departments. Offering coverage for Burlingame, CA and the SF Peninsula, including Silicon Valley."
+    bio: "Raised in rural Idaho, he attended medical school at the University of Arizona where he also received his Master’s in Public Health with a focus in Public Health Policy and Management. He completed his emergency medicine residency training right here in the Bay Area at the UCSF-SFGH program in San Francisco. He also served on the prestigious American Medical Association's Board of Trustees during formation of the Affordable Care Act. He also continues to practice emergency medicine in one of the Bay Area's busy emergency departments. Offering coverage for Burlingame, CA and the SF Peninsula, including Silicon Valley."
   )
 
   doctor12 = Doctor.create!(
