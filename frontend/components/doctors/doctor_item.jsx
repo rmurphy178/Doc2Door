@@ -43,7 +43,6 @@ handleClick(e) {
 }
 
 render() {
-  console.log(this.state);
 
   return (
       <div className="doc-show-bg">

@@ -91,7 +91,6 @@ handleSubmit(e) {
       this.props.history.push('/doctors');
       });
     });
-    console.log(data);
   }
 }
 
