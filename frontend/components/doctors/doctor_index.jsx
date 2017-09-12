@@ -54,12 +54,16 @@ render() {
 
   const {doctors} = this.props;
 
+  const specialty = doctors[0].specialty.slice(0, 1)
+    .toUpperCase() + doctors[0].specialty.slice(1);
+
+
   return (
         <div className='doc-index'>
         <div className="doc-list-bg">
           <NavBarContainer/>
         <div className="doctors-list">
-          <h1 className='doc-header'>Doctors Available in Your Area</h1>
+          <h1 className='doc-header'>{specialty} Specialists Available in Your Area</h1>
           <ul className="doc-list-step">
             {doctors.map( (doctor, idx) => (
               <Link to={`/doctors/${doctor.id}/`} key={idx} className="doc-info">
