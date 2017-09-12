@@ -12,14 +12,14 @@
   height: 100vw;
   width: 100vw;
   background-color: #dce0e6;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .appointments-index-header {
   font-size: 100%;
   vertical-align: baseline;
   background-color: #dce0e6;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .date-label {
@@ -30,7 +30,7 @@
   background-color: white;
   border: solid black 1px;
   height: 40px;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   box-shadow: 2px 2px 2px 2px rgba(150,58,59,0.15);
   border-radius: 4px;
   font-size: 20px;
@@ -41,7 +41,7 @@
 
 
 input.date {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   height: 40px;
   padding-left: 10px;
   margin-top: 10px;
@@ -136,19 +136,19 @@ div .logo {
 
 .appointments-main-body h2 {
   font-size: 30px;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 15px;
 }
 .appointments-main-body h3 {
   font-size: 30px;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
 }
 .appointments-overview {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .user-pic {
@@ -166,7 +166,7 @@ div .logo {
 
 .appointments-overview li {
   align-items: center;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 li img {
@@ -195,14 +195,14 @@ li img {
   justify-content: space-around;
   font-size: 20px;
   margin: 15px;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .specialties li {
   display: list-item;
   list-style-type: disc;
   margin: 10px;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .specialties-top {
