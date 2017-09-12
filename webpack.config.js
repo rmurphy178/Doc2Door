@@ -1,8 +1,8 @@
 var path = require("path");
 var webpack = require("webpack");
 
-var plugins = [];
-var devPlugins = [];
+var plugins = []; // if using any plugins for both dev and production
+var devPlugins = []; // if using any plugins for development
 
 var prodPlugins = [
   new webpack.DefinePlugin({
@@ -28,6 +28,7 @@ module.exports = {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: "bundle.js"
   },
+  plugins: plugins,
   module: {
     loaders: [
       {
@@ -40,7 +41,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-maps',
+  devtool: 'source-map',
   resolve: {
     extensions: [".js", ".jsx", "*"]
   }
