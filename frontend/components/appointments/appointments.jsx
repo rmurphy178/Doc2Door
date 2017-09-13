@@ -12,8 +12,8 @@ class Appointments extends React.Component {
   constructor(props){
     super(props);
 
-    let dateString = moment().format("DD/MM/YYYY");
-    let startDate = moment(dateString, "DD/MM/YYYY");
+    let dateString = moment().format("MM/DD/YYYY");
+    let startDate = moment(dateString, "MM/DD/YYYY");
 
     this.state = {
       date: startDate,
@@ -98,6 +98,7 @@ render() {
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
 
+  console.log(this.state);
 return(
   <div>
     <NavBarContainer />
