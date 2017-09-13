@@ -30,12 +30,9 @@ class Appointments extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.update = this.update.bind(this);
     this.handleChangeDate = this.handleChangeDate.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
   }
 
-handleSelect(date) {
-  this.setState({date: date});
-}
+
 
 handleChangeDate(date) {
   this.setState({date: date});
@@ -49,7 +46,7 @@ update(field) {
 
 handleChange(e) {
   e.preventDefault();
-  this.setState({specialty: e.target.value});
+  this.setState({specialty: e.currentTarget.value});
 }
 
 handleSubmit(e) {
@@ -77,7 +74,7 @@ handleSubmit(e) {
   } else {
 
     let data = this.state;
-    data.date = data.date._i;
+    data.date = data.date.format("MM/DD/YYYY");
     this.setState({date: data.date});
 
     data = {date: data['date'], user_id: data['user_id'],
@@ -98,7 +95,7 @@ render() {
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
 
-  console.log(this.state);
+
 return(
   <div>
     <NavBarContainer />
@@ -164,7 +161,6 @@ return(
           <label className='date-label'>Appointment Date: </label>
         <DatePicker
           selected={this.state.date}
-          onSelect={this.handleSelect}
           onChange={this.handleChangeDate}
           className='date'
         />
