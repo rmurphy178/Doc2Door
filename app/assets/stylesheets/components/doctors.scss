@@ -23,18 +23,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 25px;
+  font-size: 30px;
   margin: 60px;
   margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .doc-header {
-  font-size: 40px;
+  font-size: 55px;
   font-family: 'Open Sans', sans-serif;
   align-self: center;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  font-weight: bolder;
+  z-index: 10;
+  color: white;
 }
 
 .doc-info {
@@ -45,12 +48,18 @@
   transform: scale(1);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+  font-weight: bolder;
+  z-index: 10;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  margin-top: 5px;
 }
 
 .doc-info:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+  text-shadow: 2px 2px 4px black, 0 0 1em black, 0 0 0.2em black;
+  font-weight: bolder;
 }
 
 .doc-list-step li {
@@ -59,8 +68,15 @@
   margin: 5px;
 }
 
+
 .doc-list-bg {
   background-color: #dce0e6;
+  background-image: url("https://res.cloudinary.com/dq5wzf090/image/upload/c_scale,e_art:aurora,h_1320/v1505344846/doc-bg_zmgxec.jpg");
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
 }
 
 
@@ -69,6 +85,8 @@ li .doctor-image {
 	transform: scale(1);
 	-webkit-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
+  z-index: 10;
+  background-color: lightblue;
 }
 
 li .doctor-image:hover {
