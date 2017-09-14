@@ -3,19 +3,22 @@ import DoctorIndex from './doctor_index';
 import { values } from 'lodash';
 import { fetchDoctor, fetchDoctors } from '../../actions/doctor_actions';
 import { createAppointment, fetchAppointments, fetchAppointment } from '../../actions/appointment_actions';
+import { fetchSpecialties } from '../../actions/specialty_actions';
 
 
 
-const mapStateToProps = ({session, doctors, appointments}) => ({
+const mapStateToProps = ({session, doctors, appointments, specialties}) => ({
   doctors: values(doctors),
-  appointment: appointments
+  appointment: appointments,
+  specialties
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchDoctor: (doctorId) => dispatch(fetchDoctor(doctorId)),
   fetchDoctors: (filters) => dispatch(fetchDoctors(filters)),
   createAppointment: (data) => dispatch(createAppointment(data)),
-  fetchAppointments: () => dispatch(fetchAppointments())
+  fetchAppointments: () => dispatch(fetchAppointments()),
+  fetchSpecialties: (data) => dispatch(fetchSpecialties(data))
 });
 
 export default connect(

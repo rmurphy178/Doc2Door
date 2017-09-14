@@ -1,8 +1,13 @@
 class Api::SpecialtiesController < ApplicationController
 
   def index
-    @specialties = Specialty.all
-    render "api/specialties/index"
+    @specialties = Specialty.where(name: specialty_params[:name])
+    render :index
+  end
+
+  def show
+    @specialty = Specialty.find(params[:id])
+    render :show
   end
 
 
@@ -10,7 +15,8 @@ class Api::SpecialtiesController < ApplicationController
 
   def specialty_params
     params.require(:specialty).permit(
-    :name
+    :name,
+    :id
     )
   end
 end

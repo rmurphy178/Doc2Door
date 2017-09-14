@@ -14,7 +14,9 @@ const mapStateToProps = ({session, specialties, doctors, appointments}) => ({
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchDoctors: (filters) => dispatch(fetchDoctors(filters)),
-  createAppointment: (appointment) => dispatch(createAppointment(appointment))
+  createAppointment: (appointment) => dispatch(createAppointment(appointment)),
+  fetchSpecialty: (specialty) => dispatch(fetchSpecialty(specialty)),
+  fetchSpecialties: (filters) => dispatch(fetchSpecialties(filters))
 });
 
 export default connect(

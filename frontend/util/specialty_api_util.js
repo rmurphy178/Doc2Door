@@ -1,15 +1,17 @@
-export const fetchSpecialties = data => (
-  $.ajax({
+export const fetchSpecialties = name => {
+  return $.ajax({
     method: 'GET',
     url: '/api/specialties',
-    data
-  })
-);
+    data: {
+      specialty: {name: name.specialty}
+    }
+  });
+};
 
-export const fetchSpecialty = id => (
+export const fetchSpecialty = specialty => (
   $.ajax({
   method: 'GET',
-  url: `api/specialties/${id}`,
-  id
+  url: `api/specialties/specialty`,
+  specialty
   })
 );

@@ -1,7 +1,7 @@
 import * as APIUtil from '../util/specialty_api_util';
 
-export const RECEIVE_SPECIALTIES = "RECEIVE_APPOINTMENTS";
-export const RECEIVE_SPECIALTY = "RECEIVE_APPOINTMENT";
+export const RECEIVE_SPECIALTIES = "RECEIVE_SPECIALTIES";
+export const RECEIVE_SPECIALTY = "RECEIVE_SPECIALTY";
 
 export const receciveSpecialties = specialties => ({
   type: RECEIVE_SPECIALTIES,
@@ -14,14 +14,14 @@ export const receciveSpecialty = specialty => ({
 });
 
 
-export const fetchSpecialties = filters => dispatch => (
-  APIUtil.fetchSpecialties(filters).then(specialties => (
+export const fetchSpecialties = name => dispatch => (
+  APIUtil.fetchSpecialties(name).then(specialties => (
     dispatch(receciveSpecialties(specialties))
   ))
 );
 
-export const fetchSpecialty = id => dispatch => (
-  APIUtil.fetchSpecialty(id).then(specialty => (
+export const fetchSpecialty = name => dispatch => (
+  APIUtil.fetchSpecialty(name).then(specialty => (
     dispatch(receciveSpecialty(specialty))
   ))
 );

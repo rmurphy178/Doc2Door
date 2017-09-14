@@ -2,7 +2,7 @@ import merge from 'lodash/merge';
 
 import { RECEIVE_SPECIALTY, RECEIVE_SPECIALTIES } from '../actions/specialty_actions';
 
-const _defaultState = {};
+const _defaultState = Object.freeze({id: null, name: null});
 
 
 const SpecialtiesReducer = (state = _defaultState, action) => {
@@ -15,7 +15,7 @@ const SpecialtiesReducer = (state = _defaultState, action) => {
       const specialty = action.specialty;
       return merge({}, null, specialty);
     default:
-      return state;
+      return _defaultState;
   }
 };
 

@@ -1,1 +1,1 @@
-json.partial! `api/specialties/${id}`, specialty: @specialty
+json.partial! `api/specialties/specialty`, specialty: @specialty
