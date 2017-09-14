@@ -40,6 +40,7 @@ handleClick(e) {
   e.preventDefault();
 
   this.props.createAppointment({appointment: this.state.appointment}).then(() => {
+      this.props.fetchSpecialties({specialty: {name: this.state.specialty}});
       this.props.history.push('/appointments/new');
   });
 }
