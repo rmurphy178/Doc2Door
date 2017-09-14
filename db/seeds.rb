@@ -139,12 +139,12 @@ ActiveRecord::Base.transaction do
     bio: "Earned her MD from the University of California, San Francisco School of Medicine and completed her residency at UCSF Fresno’s family medicine program. She completed a fellowship in geriatric medicine at the University of Southern California before earning her master’s degree in public health from UCLA. She subsequently completed another fellowship in endocrinology from the NIH’s National Institute of Diabetes and Digestive and Kidney Diseases. She has been practicing medicine for over 30 years and has held a number of leadership positions including a role as chief physician of Community Health Foundation and medical director of Health Intent Solutions."
   )
 
-  allergy = Specialty.create!(name: 'allergy')
-  pediatrics = Specialty.create!(name: 'pediatrics')
-  geriatrics = Specialty.create!(name: 'geriatrics')
-  endocrinology = Specialty.create!(name: 'endocrinology')
-  general = Specialty.create!(name: 'general')
-  dermatology = Specialty.create!(name: 'dermatology')
+  specialty1 = Specialty.create!(name: 'allergy')
+  specialty2 = Specialty.create!(name: 'pediatrics')
+  specialty3 = Specialty.create!(name: 'geriatrics')
+  specialty4 = Specialty.create!(name: 'endocrinology')
+  specialty5 = Specialty.create!(name: 'general')
+  specialty6 = Specialty.create!(name: 'dermatology')
 
 
 

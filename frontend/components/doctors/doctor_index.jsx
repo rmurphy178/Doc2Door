@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { values } from 'lodash';
+import { keys, values } from 'lodash';
 import Modal from 'react-awesome-modal';
 
 import NavBarContainer from '../navBar/navBar_container';
@@ -18,7 +18,7 @@ class DoctorIndex extends React.Component {
      errors: [],
      appointment: null,
      visible: false,
-     specialty: this.props.doctors[0].specialty
+     specialty: keys(this.props.specialties)[0]
    };
    this.handleClick = this.handleClick.bind(this);
  }
@@ -52,8 +52,7 @@ handleClick(e) {
 }
 
 render() {
-  console.log(this.props.doctors);
-
+  console.log(this.state);
   const {doctors} = this.props;
 
   const specialty = doctors[0].specialty.slice(0, 1)
