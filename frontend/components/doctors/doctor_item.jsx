@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import NavBarContainer from '../navBar/navBar_container';
 
-import values from 'lodash/values';
+import { values, keys } from 'lodash';
+
 
 class DoctorItem extends React.Component {
   constructor(props){
@@ -13,7 +14,7 @@ class DoctorItem extends React.Component {
       user_id: this.props.currentUser.id,
       address: this.props.appointments.address,
       date: this.props.appointments.date,
-      specialty: ''
+      specialty: keys(this.props.specialties)[0]
     };
     this.handleClick = this.handleClick.bind(this);
   }
