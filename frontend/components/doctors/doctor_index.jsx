@@ -18,7 +18,7 @@ class DoctorIndex extends React.Component {
      errors: [],
      appointment: null,
      visible: false,
-     specialty: ''
+     specialty: this.props.doctors[0].specialty
    };
    this.handleClick = this.handleClick.bind(this);
  }
@@ -42,7 +42,6 @@ closeModal() {
    this.setState({address: this.props.appointment.address});
    this.setState({user_id: this.props.appointment.user_id});
    this.setState({date: this.props.appointment.date});
-   this.setState({specialty: this.props.specialties});
  }
 
 
@@ -53,9 +52,7 @@ handleClick(e) {
 }
 
 render() {
-
-  console.log(this.state);
-  console.log(this.props);
+  console.log(this.props.doctors);
 
   const {doctors} = this.props;
 

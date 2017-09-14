@@ -12,7 +12,8 @@ class DoctorItem extends React.Component {
       doctor_id: Number(this.props.match.params.doctorId),
       user_id: this.props.currentUser.id,
       address: this.props.appointments.address,
-      date: this.props.appointments.date
+      date: this.props.appointments.date,
+      specialty: ''
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -43,6 +44,7 @@ handleClick(e) {
 }
 
 render() {
+  console.log(this.state);
 
   return (
       <div className="doc-show-bg">
