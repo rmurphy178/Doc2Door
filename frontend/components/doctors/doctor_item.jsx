@@ -52,7 +52,6 @@ handleClick(e) {
 }
 
 render() {
-
   return (
       <div className="doc-show-bg">
         <NavBarContainer/>

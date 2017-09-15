@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import BookingForm from './booking_form';
-import { fetchDoctors } from '../../actions/doctor_actions';
+import { fetchDoctors, fetchDoctor } from '../../actions/doctor_actions';
 import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
 
 

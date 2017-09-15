@@ -8,7 +8,7 @@ import NavBarContainer from '../navBar/navBar_container';
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log(props);
     this.state = {
       appointment: this.props.appointments,
       date: '',
@@ -84,10 +84,12 @@ update(field) {
   render(){
 
   const appt_info = Array.from(this.state.new_appointment);
+  console.log(appt_info);
 
     return (
       <div className="booking-form">
         <NavBarContainer/>
+        <div className='booking-main'>
         <div className='booking-bg'>
         <h1>Booking & Confirmation</h1>
         <h2>Is this Information Correct?</h2>
@@ -107,6 +109,7 @@ update(field) {
             GO BACK
           </button>
           </Link>
+          </div>
           </div>
       </div>
     );
