@@ -8,14 +8,13 @@ import NavBarContainer from '../navBar/navBar_container';
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       appointment: this.props.appointments,
       date: '',
       address: '',
       user_id: '',
-      doctor_id: this.props.doctors.id,
-      doctor: this.props.doctors.name,
+      doctor_id: '',
+      doctor: props.doctors.name,
       new_appointment: '',
       visible: false
     };
@@ -84,7 +83,6 @@ update(field) {
   render(){
 
   const appt_info = Array.from(this.state.new_appointment);
-  console.log(appt_info);
 
     return (
       <div className="booking-form">
