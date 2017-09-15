@@ -5,10 +5,11 @@ import { fetchDoctors, fetchDoctor } from '../../actions/doctor_actions';
 import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
 
 
-const mapStateToProps = ({session, appointments, doctors}) => ({
+const mapStateToProps = ({session, appointments, doctors, specialties}) => ({
   currentUser: session.currentUser,
   appointments: appointments,
-  doctors: doctors
+  doctors: doctors,
+  specialties
 });
 
 const mapDispatchToProps = dispatch => ({

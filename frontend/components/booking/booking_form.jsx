@@ -16,7 +16,8 @@ class BookingForm extends React.Component {
       doctor_id: '',
       doctor: props.doctors.name,
       new_appointment: '',
-      visible: false
+      visible: false,
+      specialty: keys(this.props.specialties)[0]
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
