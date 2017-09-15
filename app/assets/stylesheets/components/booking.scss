@@ -33,6 +33,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .booking-buttons {
@@ -91,7 +94,6 @@
 .booking-bg {
   height: 100vw;
   background-color: #dce0e6;
-  margin-top: 20px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -100,7 +102,6 @@
   flex-direction: column;;
   justify-content: center;
   align-items: center;
-  background-color: #dce0e6;
   width: 100vw;
 }
 .booking-bg h1 {
