@@ -14,7 +14,9 @@ class DoctorItem extends React.Component {
       user_id: this.props.currentUser.id,
       address: this.props.appointments.address,
       date: this.props.appointments.date,
-      specialty: keys(this.props.specialties)[0]
+      specialty: keys(this.props.specialties)[0],
+      doctor: '',
+      doctors: ''
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -33,7 +35,12 @@ componentWillReceiveProps() {
 }
 
 componentDidMount() {
-  this.props.fetchDoctor(this.props.match.params.doctorId);
+  this.props.fetchDoctor(this.props.match.params.doctorId).then( (result) => {
+    this.setState({doctor: result.doctor});
+  });
+  this.props.fetchDoctors({specialty: this.state.specialty}).then( (result) => {
+    this.setState({doctors: result.doctors});
+  });
 }
 
 handleClick(e) {
@@ -45,18 +52,18 @@ handleClick(e) {
 }
 
 render() {
-  console.log(this.state);
+  console.log(this.state.doctor);
 
   return (
       <div className="doc-show-bg">
         <NavBarContainer/>
-          <div className="doctor-item" key={this.props.doctors.id}>
+          <div className="doctor-item" key={this.state.doctor_id}>
             <div className="doctor-bio">
-              <img src={this.props.doctors.image_url} className="doctor-show-image"/>
-              <p className="doctor-detail-1">Name: {this.props.doctors.name}</p>
-              <p className="doctor-detail-specialty">Specialty: {this.props.doctors.specialty}</p>
-              <p className="doctors-detail">Patient Rating: {this.props.doctors.rating}%</p>
-              <button className="landing-bttn bttn-gradient" value={this.props.doctors.id} onClick={this.handleClick}>
+              <img src={this.state.doctor.image_url} className="doctor-show-image"/>
+              <p className="doctor-detail-1">Name: {this.state.doctor.name}</p>
+              <p className="doctor-detail-specialty">Specialty: {this.state.doctor.specialty}</p>
+              <p className="doctors-detail">Patient Rating: {this.state.doctor.rating}%</p>
+              <button className="landing-bttn bttn-gradient" value={this.state.doctor.id} onClick={this.handleClick}>
                 Select & Continue
               </button>
               <Link to="/home">
@@ -67,9 +74,9 @@ render() {
             </div>
             <div className='doc-bio'>
               <label className='bio-label'>
-                About {this.props.doctors.name}:
+                About {this.state.doctor.name}:
               </label>
-              <p className="doctors-detail"> {this.props.doctors.bio}</p>
+              <p className="doctors-detail"> {this.state.doctor.bio}</p>
             </div>
           </div>
         </div>
