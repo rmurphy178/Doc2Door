@@ -18,7 +18,8 @@ class DoctorIndex extends React.Component {
      errors: [],
      appointment: null,
      visible: false,
-     specialty: ''
+     specialty: '',
+     doctors: ''
    };
    this.handleClick = this.handleClick.bind(this);
  }
@@ -36,6 +37,18 @@ closeModal() {
     });
   }
 
+  componentWillReceiveProps() {
+    this.setState({appointment: this.props.appointment});
+
+    let appt = {};
+
+    appt['user_id'] = this.state.user_id;
+    appt['doctor_id'] = this.state.doctor_id;
+    appt['address'] = this.state.address;
+    appt['date'] = this.state.date;
+
+    this.setState({appointment: appt});
+  }
 
  componentDidMount() {
    this.setState({appointment: this.props.appointment});
@@ -44,6 +57,9 @@ closeModal() {
    this.setState({date: this.props.appointment.date});
    this.props.fetchSpecialties({specialty: this.props.doctors[0].specialty}).then( (result) => {
      this.setState({specialty: keys(result.specialties)[0]});
+   });
+   this.props.fetchDoctors({specialty: this.props.doctors[0].specialty}).then( (result) => {
+     this.setState({doctors: result.doctors});
    });
  }
 
@@ -55,11 +71,7 @@ handleClick(e) {
 }
 
 render() {
-  console.log(this.state);
-  const {doctors} = this.props;
-
-  const specialty = doctors[0].specialty.slice(0, 1)
-    .toUpperCase() + doctors[0].specialty.slice(1);
+  const doctors = this.state.doctors;
 
 
   return (
@@ -67,15 +79,15 @@ render() {
         <div className="doc-list-bg">
           <NavBarContainer/>
         <div className="doctors-list">
-          <h1 className='doc-header'>{specialty} Specialists Available in Your Area</h1>
+          <h1 className='doc-header'>{this.state.specialty} Specialists Available in Your Area</h1>
           <ul className="doc-list-step">
-            {doctors.map( (doctor, idx) => (
+            {values(doctors).map( (doctor, idx) => (
               <Link to={`/doctors/${doctor.id}/`} key={idx} className="doc-info">
               <li>
               <img src={doctor.image_url} className="doctor-image"/>
               </li>
                <li>Name: {doctor.name}</li>
-               <li>Specialty: {doctor.specialty.slice(0, 1).toUpperCase() + doctor.specialty.slice(1)}</li>
+               <li>Specialty: {this.state.specialty.slice(0, 1).toUpperCase() + this.state.specialty.slice(1)}</li>
                <li>Patient Rating: {doctor.rating}%</li>
                  </Link>
               ))}
