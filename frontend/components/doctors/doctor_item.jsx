@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import NavBarContainer from '../navBar/navBar_container';
+import BookingFormContainer from '../booking/booking_form_container';
+import Modal from 'react-awesome-modal';
 
 import { values, keys } from 'lodash';
 
@@ -16,9 +18,23 @@ class DoctorItem extends React.Component {
       date: this.props.appointments.date,
       specialty: keys(this.props.specialties)[0],
       doctor: '',
-      doctors: ''
+      doctors: '',
+      visible: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.openModal = this.openModal.bind(this);
+  }
+
+openModal() {
+    this.setState({
+        visible : true
+    });
+  }
+
+closeModal() {
+    this.setState({
+        visible : false
+    });
   }
 
 componentWillReceiveProps() {
@@ -57,19 +73,29 @@ render() {
   return (
       <div className="doc-show-bg">
         <NavBarContainer/>
+
+          <section className='booking-modal'>
+          <Modal visible={this.state.visible} width="100%" height="100%" effect="fadeInDown" onClickAway={() => this.closeModal()}>
+              <div>
+                  <BookingFormContainer />
+                  <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+              </div>
+          </Modal>
+        </section>
+
           <div className="doctor-item" key={this.state.doctor_id}>
             <div className="doctor-bio">
               <img src={this.state.doctor.image_url} className="doctor-show-image"/>
               <p className="doctor-detail-1">Name: {this.state.doctor.name}</p>
               <p className="doctor-detail-specialty">Specialty: {this.state.doctor.specialty}</p>
               <p className="doctors-detail">Patient Rating: {this.state.doctor.rating}%</p>
-              <button className="landing-bttn bttn-gradient" value={this.state.doctor.id} onClick={this.handleClick}>
-                Select & Continue
-              </button>
+                <button className="landing-bttn bttn-gradient" value={this.state.doctor.id} onClick={this.handleClick}>
+                  Select & Continue
+                </button>
               <Link to="/home">
-              <button className="landing-bttn-2">
-                GO BACK
-              </button>
+                <button className="landing-bttn-2">
+                  GO BACK
+                </button>
               </Link>
             </div>
             <div className='doc-bio'>
@@ -78,6 +104,7 @@ render() {
               </label>
               <p className="doctors-detail"> {this.state.doctor.bio}</p>
             </div>
+
           </div>
         </div>
     );

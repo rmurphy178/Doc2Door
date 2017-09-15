@@ -86,9 +86,9 @@ update(field) {
 
     return (
       <div className="booking-form">
-        <NavBarContainer/>
-        <div className='booking-main'>
         <div className='booking-bg'>
+        <div className='booking-main'>
+        <NavBarContainer/>
         <h1>Booking & Confirmation</h1>
         <h2>Is this Information Correct?</h2>
 
