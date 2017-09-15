@@ -4,6 +4,7 @@ import AccountForm from './account_form';
 import { fetchDoctors } from '../../actions/doctor_actions';
 import { fetchAppointments, createAppointment, fetchAppointment } from '../../actions/appointment_actions';
 import { update } from '../../actions/session_actions';
+import { getUserAppointments } from '../../reducers/selectors';
 
 const mapStateToProps = ({session, appointments}) => ({
   currentUser: session.currentUser,

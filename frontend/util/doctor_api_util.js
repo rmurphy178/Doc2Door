@@ -1,11 +1,11 @@
 
 export const fetchDoctors = data => {
-  const specialty = data ?  `doctor[specialty]=${data.specialty}` : ''
+  const specialty = data ?  `doctor[specialty]=${data.specialty}` : '';
   return $.ajax({
     method: 'GET',
     url: `/api/doctors?${specialty}`,
     data
-  })
+  });
 };
 
 
