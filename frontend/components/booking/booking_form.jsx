@@ -37,6 +37,7 @@ closeModal() {
   }
 
 componentDidMount(){
+  this.openModal();
   let key = keys(this.state.appointment);
   let val = values(this.state.appointment);
   const appt = new Map();
@@ -100,16 +101,18 @@ update(field) {
             </ul>
           ))}
         </ul>
-          <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>
-            Confirm Appointment
-          </button>
+
+            <button className='landing-bttn bttn-gradient' onClick={this.handleSubmit}>
+              Confirm Appointment
+            </button>
           <Link to="/home">
-          <button className='landing-bttn-2'>
-            GO BACK
-          </button>
+            <button className='landing-bttn-2'>
+              GO BACK
+            </button>
           </Link>
-          </div>
-          </div>
+          
+        </div>
+        </div>
       </div>
     );
   }
