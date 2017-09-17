@@ -92,11 +92,11 @@ render() {
                 <button className="landing-bttn bttn-gradient" value={this.state.doctor.id} onClick={this.handleClick}>
                   Select & Continue
                 </button>
-              <Link to="/home">
-                <button className="landing-bttn-2">
+
+                <button className="landing-bttn-2" onClick={this.props.history.goBack}>
                   GO BACK
                 </button>
-              </Link>
+
             </div>
             <div className='doc-bio'>
               <label className='bio-label'>
