@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resource :user, only: [:create, :update, :show]
     resource :session, only: [:create, :destroy, :show]
     resources :appointments, only: [:index, :create, :show]
+    resources :appointment_requests, only: [:index, :create, :show]
     resources :doctors, only: [:index, :show]
     resources :specialties, only: [:index, :show]
 
