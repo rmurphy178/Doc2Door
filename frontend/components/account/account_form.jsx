@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { keys, values} from 'lodash';
+import Modal from 'react-awesome-modal';
 
 import NavBarContainer from '../navBar/navBar_container';
 
@@ -64,6 +65,9 @@ class AccountForm extends React.Component {
 
 
   render() {
+    console.log(this.state.user_appointments);
+
+    const appointments = this.state.user_appointments;
 
     return (
       <div>
@@ -101,7 +105,27 @@ class AccountForm extends React.Component {
            />
         </label>
         <input className="bttn-gradient bttn-md" type="submit" value="Save Changes" />
+        <input type="button" className="bttn-gradient bttn-md" value="View Appointments" onClick={() => this.openModal()} />
         </form>
+
+        <section className='account-modal'>
+        <Modal visible={this.state.visible} width="800" height="400" effect="fadeInDown" onClickAway={() => this.closeModal()}>
+            <div>
+              <ul className='user-appointments'>
+                <h1 className='modal-header'>Your Appointments</h1>
+                {appointments.map( (appointment, idx) => (
+                  <ul key={idx} className='display-user-appt'>
+                  <li>Appointment ID: {appointment.id}</li>
+                  <li>Patient ID: {appointment.user_id}</li>
+                  <li>Doctor ID: {appointment.doctor_id}</li>
+                  <li>Address: {appointment.address}</li>
+                  <li>Date: {appointment.date}</li>
+                </ul>
+                ))}
+              </ul>
+            </div>
+        </Modal>
+      </section>
       </div>
       </div>
     );
