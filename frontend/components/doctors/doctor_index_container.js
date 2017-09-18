@@ -7,10 +7,11 @@ import { fetchSpecialties } from '../../actions/specialty_actions';
 
 
 
-const mapStateToProps = ({session, doctors, appointments, specialties}) => ({
+const mapStateToProps = ({session, doctors, appointments, specialties, appointment_requests}) => ({
   doctors: values(doctors),
   appointment: appointments,
-  specialties: specialties
+  specialties: specialties,
+  appointment_requests: appointment_requests
 });
 
 const mapDispatchToProps = dispatch => ({

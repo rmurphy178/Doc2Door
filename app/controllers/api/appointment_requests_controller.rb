@@ -1,13 +1,13 @@
 class Api::AppointmentRequestsController < ApplicationController
 
   def index
-    @appointment_requests = Appointment_request.all
+    @appointment_requests = AppointmentRequest.all
     render :index
   end
 
 
   def create
-    @appointment_request = Appointment_request.new(appointment_request_params)
+    @appointment_request = AppointmentRequest.new(appointment_request_params)
     if @appointment_request.save
       render :show
     else
@@ -16,7 +16,7 @@ class Api::AppointmentRequestsController < ApplicationController
   end
 
   def show
-    @appointment_request = Appointment_request.find(params[:id])
+    @appointment_request = AppointmentRequest.find(params[:id])
     render :show
   end
 
