@@ -65,7 +65,6 @@ class AccountForm extends React.Component {
 
 
   render() {
-    console.log(this.state.user_appointments);
 
     const appointments = this.state.user_appointments;
 
