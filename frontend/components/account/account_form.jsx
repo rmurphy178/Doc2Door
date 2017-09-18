@@ -108,7 +108,7 @@ class AccountForm extends React.Component {
         </form>
 
         <section className='account-modal'>
-        <Modal visible={this.state.visible} width="600" height="400" effect="fadeInDown" onClickAway={() => this.closeModal()}>
+        <Modal visible={this.state.visible} width="700" height="400" effect="fadeInDown" onClickAway={() => this.closeModal()}>
             <div className='account-modal-body'>
               <ul className='user-appointments'>
                 <h1 className='modal-header'>Your Appointments</h1>
@@ -122,7 +122,7 @@ class AccountForm extends React.Component {
                 </ul>
                 ))}
               </ul>
-              <a className='close-modal' href="javascript:void(0);" onClick={() => this.closeModal()}></a>
+              <a className='close-modal' href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
             </div>
         </Modal>
       </section>

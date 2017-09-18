@@ -63,12 +63,14 @@
   font-size: 30px;
   margin-bottom: 20px;
   margin-top: 20px;
+
 }
 
 .account-modal {
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .account-modal-body {
@@ -77,5 +79,5 @@
 }
 
 .close-modal {
-  margin-right: 5px;
+  margin-top: 5px;
 }
