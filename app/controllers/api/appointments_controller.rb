@@ -20,6 +20,12 @@ class Api::AppointmentsController < ApplicationController
     render :show
   end
 
+  def destroy
+    @appointment = Appointment.find(params[:id])
+    @appointment.destroy
+    render :show
+  end
+
 
 
   private

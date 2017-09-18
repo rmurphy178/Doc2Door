@@ -18,8 +18,16 @@ export const fetchAppointment = id => (
 
 export const createAppointment = (appointment) => (
   $.ajax({
-  method: 'POST',
-  url: `api/appointments`,
-  data: appointment
+    method: 'POST',
+    url: `api/appointments`,
+    data: appointment
+  })
+);
+
+
+export const deleteAppointment = id => (
+$.ajax({
+  method: 'DELETE',
+  url: `api/appointments/${id}`
   })
 );

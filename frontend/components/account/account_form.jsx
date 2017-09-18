@@ -36,6 +36,7 @@ class AccountForm extends React.Component {
     }
 
 
+
   componentDidMount() {
     // this.props.fetchAppointment(this.props.appointments.id);
     this.props.fetchAppointments().then( (result) => {
@@ -119,6 +120,10 @@ class AccountForm extends React.Component {
                   <li>Doctor ID: {appointment.doctor_id}</li>
                   <li>Address: {appointment.address}</li>
                   <li>Date: {appointment.date}</li>
+                  <button className='delete-appointment' onClick={() => this.props.deleteAppointment(appointment.id).then( () => {
+                      alert('This appointment has been canceled!');
+                      this.props.history.push('/home');
+                    })}>Cancel Appointment</button>
                 </ul>
                 ))}
               </ul>
