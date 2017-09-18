@@ -91,9 +91,7 @@ handleSubmit(e) {
 
 
 
-    this.props.createAppointment({appointment: data}).then( () => {
-      this.props.createAppointmentRequest({appointment_request: data});
-
+    this.props.createAppointmentRequest({appointment_request: data}).then( () => {
       this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
       this.props.fetchSpecialties({specialty: {name: this.state.specialty}});
       this.props.history.push('/doctors');

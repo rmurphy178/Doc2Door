@@ -14,8 +14,8 @@ class DoctorItem extends React.Component {
       appointment: '',
       doctor_id: Number(this.props.match.params.doctorId),
       user_id: this.props.currentUser.id,
-      address: this.props.appointments.address,
-      date: this.props.appointments.date,
+      address: this.props.appointment_requests.address,
+      date: this.props.appointment_requests.date,
       specialty: keys(this.props.specialties)[0],
       doctor: '',
       doctors: '',
@@ -62,8 +62,7 @@ componentDidMount() {
 handleClick(e) {
   e.preventDefault();
 
-  this.props.createAppointmentRequest({appointment_request: this.state.appointment});
-  this.props.createAppointment({appointment: this.state.appointment}).then(() => {
+  this.props.createAppointmentRequest({appointment_request: this.state.appointment}).then(() => {
       this.props.fetchDoctor(this.state.doctor_id).then( () => {
         this.props.history.push('/appointments/new');
       });
