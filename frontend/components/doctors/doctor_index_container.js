@@ -4,6 +4,7 @@ import { values } from 'lodash';
 import { fetchDoctor, fetchDoctors } from '../../actions/doctor_actions';
 import { createAppointment, fetchAppointments, fetchAppointment } from '../../actions/appointment_actions';
 import { fetchSpecialties } from '../../actions/specialty_actions';
+import { createAppointmentRequest } from '../../actions/appointment_request_actions';
 
 
 
@@ -18,6 +19,7 @@ const mapDispatchToProps = dispatch => ({
   fetchDoctor: (doctorId) => dispatch(fetchDoctor(doctorId)),
   fetchDoctors: (filters) => dispatch(fetchDoctors(filters)),
   createAppointment: (data) => dispatch(createAppointment(data)),
+  createAppointmentRequest: (data) => dispatch(createAppointmentRequest(data)),
   fetchAppointments: () => dispatch(fetchAppointments()),
   fetchSpecialties: (data) => dispatch(fetchSpecialties(data))
 });

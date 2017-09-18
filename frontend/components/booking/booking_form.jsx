@@ -8,6 +8,7 @@ import NavBarContainer from '../navBar/navBar_container';
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       appointment: this.props.appointments,
       date: '',

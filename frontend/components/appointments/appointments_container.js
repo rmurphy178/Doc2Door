@@ -8,7 +8,7 @@ import { createAppointment } from '../../actions/appointment_actions';
 import { createAppointmentRequest } from '../../actions/appointment_request_actions';
 
 
-const mapStateToProps = ({session, specialties, doctors, appointments}) => ({
+const mapStateToProps = ({session, specialties, doctors, appointments, appointment_requests}) => ({
   currentUser: session.currentUser,
 });
 

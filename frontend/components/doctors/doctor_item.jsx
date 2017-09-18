@@ -62,6 +62,7 @@ componentDidMount() {
 handleClick(e) {
   e.preventDefault();
 
+  this.props.createAppointmentRequest({appointment_request: this.state.appointment});
   this.props.createAppointment({appointment: this.state.appointment}).then(() => {
       this.props.fetchDoctor(this.state.doctor_id).then( () => {
         this.props.history.push('/appointments/new');
