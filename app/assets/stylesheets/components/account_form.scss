@@ -76,6 +76,8 @@
 .account-modal-body {
   display: flex;
   justify-content: center;
+  height: 400px;
+  overflow: auto;
 }
 
 .close-modal {
