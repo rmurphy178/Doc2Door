@@ -14,12 +14,25 @@ class AccountForm extends React.Component {
       first_name: user.first_name,
       last_name: user.last_name,
       id: user.id,
-      user_appointments: []
+      user_appointments: [],
+      visible: false
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  openModal() {
+      this.setState({
+          visible : true
+      });
+    }
+
+  closeModal() {
+      this.setState({
+          visible : false
+      });
+    }
 
 
   componentDidMount() {
@@ -51,7 +64,7 @@ class AccountForm extends React.Component {
 
 
   render() {
-    
+
     return (
       <div>
         <NavBarContainer />
