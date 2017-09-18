@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/appointment_api_util';
+import * as APIUtil from '../util/appointment_request_api_util';
 
 export const RECEIVE_APPOINTMENT_REQUESTS = "RECEIVE_APPOINTMENT_REQUESTS";
 export const RECEIVE_APPOINTMENT_REQUEST = "RECEIVE_APPOINTMENT_REQUEST";
