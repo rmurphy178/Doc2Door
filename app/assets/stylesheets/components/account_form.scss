@@ -70,3 +70,12 @@
   flex-direction: column;
   font-size: 20px;
 }
+
+.account-modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+.close-modal {
+  margin-right: 5px;
+}

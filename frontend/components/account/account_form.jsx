@@ -109,7 +109,7 @@ class AccountForm extends React.Component {
 
         <section className='account-modal'>
         <Modal visible={this.state.visible} width="600" height="400" effect="fadeInDown" onClickAway={() => this.closeModal()}>
-            <div>
+            <div className='account-modal-body'>
               <ul className='user-appointments'>
                 <h1 className='modal-header'>Your Appointments</h1>
                 {appointments.map( (appointment, idx) => (
@@ -122,6 +122,7 @@ class AccountForm extends React.Component {
                 </ul>
                 ))}
               </ul>
+              <a className='close-modal' href="javascript:void(0);" onClick={() => this.closeModal()}></a>
             </div>
         </Modal>
       </section>
