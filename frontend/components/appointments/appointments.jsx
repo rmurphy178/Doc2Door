@@ -8,6 +8,7 @@ import moment from 'moment';
 import NavBarContainer from '../navBar/navBar_container';
 import AppointmentFormContainer from '../appointment_form/appointment_form_container';
 
+
 class Appointments extends React.Component {
   constructor(props){
     super(props);
@@ -166,15 +167,17 @@ return(
             <option value="dermatology">Dermatology</option>
           </select>
         </label>
-        <div className='date-container'>
-          <label className='date-label'>Appointment Date: </label>
-        <DatePicker
-          selected={this.state.date}
-          onChange={this.handleChangeDate}
-          className='date'
-        />
+          <div className='date-container'>
+            <label className='date-label'>Appointment Date: </label>
+          <DatePicker
+            dateFormat="MM/DD/YYYY"
+            selected={this.state.date}
+            onChange={this.handleChangeDate}
+            className='date'
+          />
+        </div>
       </div>
-      </div>
+
       <div className='autocomplete-container'>
         Your Address:
       <PlacesAutoComplete placeholder="Address" inputProps={inputProps} autocompleteItem={AutocompleteItem}/>
