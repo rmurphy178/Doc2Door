@@ -108,13 +108,13 @@ class AccountForm extends React.Component {
         </form>
 
         <section className='account-modal'>
-        <Modal visible={this.state.visible} width="800" height="400" effect="fadeInDown" onClickAway={() => this.closeModal()}>
+        <Modal visible={this.state.visible} width="600" height="400" effect="fadeInDown" onClickAway={() => this.closeModal()}>
             <div>
               <ul className='user-appointments'>
                 <h1 className='modal-header'>Your Appointments</h1>
                 {appointments.map( (appointment, idx) => (
                   <ul key={idx} className='display-user-appt'>
-                  <li>Appointment ID: {appointment.id}</li>
+                  <li>Appointment {appointment.id}</li>
                   <li>Patient ID: {appointment.user_id}</li>
                   <li>Doctor ID: {appointment.doctor_id}</li>
                   <li>Address: {appointment.address}</li>
