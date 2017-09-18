@@ -5,9 +5,8 @@
 #  id         :integer          not null, primary key
 #  user_id    :integer          not null
 #  doctor_id  :integer          not null
-#  location   :string           not null
-#  time       :string           not null
-#  day        :string           not null
+#  address    :string           not null
+#  date       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
