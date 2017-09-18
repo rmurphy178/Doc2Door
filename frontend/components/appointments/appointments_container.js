@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchDoctors: (filters) => dispatch(fetchDoctors(filters)),
   createAppointment: (appointment) => dispatch(createAppointment(appointment)),
-  createAppointmentRequest: (request) => dispatch(createAppointmentRequest(request)),
+  createAppointmentRequest: (appointment_request) => dispatch(createAppointmentRequest(appointment_request)),
   fetchSpecialty: (specialty) => dispatch(fetchSpecialty(specialty)),
   fetchSpecialties: (filters) => dispatch(fetchSpecialties(filters))
 });

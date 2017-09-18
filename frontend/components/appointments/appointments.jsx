@@ -22,7 +22,8 @@ class Appointments extends React.Component {
       errors: [],
       user_id: this.props.currentUser.id,
       doctor_id: 1,
-      appointment: {}
+      appointment: {},
+      appointment_request: ''
     };
 
     this.onChange = (address) => this.setState({ address });
@@ -86,10 +87,13 @@ handleSubmit(e) {
       errors: data['errors']};
 
     this.setState({appointment: data});
+    this.setState({appointment_request: data});
 
 
 
     this.props.createAppointment({appointment: data}).then( () => {
+      this.props.createAppointmentRequest({appointment_request: data});
+
       this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
       this.props.fetchSpecialties({specialty: {name: this.state.specialty}});
       this.props.history.push('/doctors');

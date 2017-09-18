@@ -4,7 +4,7 @@ import {
   RECEIVE_APPOINTMENT_REQUESTS,
   RECEIVE_APPOINTMENT_REQUEST,
   RECEIVE_APPOINTMENT_REQUEST_ERRORS
-} from '../actions/appointment_actions';
+} from '../actions/appointment_request_actions';
 
 
 const nullAppointmentRequest = Object.freeze({
@@ -15,15 +15,15 @@ const nullAppointmentRequest = Object.freeze({
   errors: []
 });
 
-const AppointmentRequestsReducer = (state = nullAppointmentRequest, action) => {
+const AppointmentRequestsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_APPOINTMENT_REQUESTS:
-      const appointments = action.appointments;
-      return merge({}, null, appointments);
+      const appointment_requests = action.appointment_requests;
+      return merge({}, null, appointment_requests);
     case RECEIVE_APPOINTMENT_REQUEST:
-      const appointment = action.appointment;
-      return merge({}, nullAppointmentRequest, appointment);
+      const appointment_request = action.appointment_request;
+      return merge({}, nullAppointmentRequest, appointment_request);
     case RECEIVE_APPOINTMENT_REQUEST_ERRORS:
       const errors = action.errors;
       return merge({}, state, errors);
