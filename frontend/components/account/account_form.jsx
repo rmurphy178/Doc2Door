@@ -113,7 +113,7 @@ class AccountForm extends React.Component {
             <div className='account-modal-body'>
               <ul className='user-appointments'>
                 <h1 className='modal-header'>Your Appointments</h1>
-                {appointments.map( (appointment, idx) => (
+                {appointments.length !== 0 ? appointments.map( (appointment, idx) => (
                   <ul key={idx} className='display-user-appt'>
                   <li>Appointment {appointment.id}</li>
                   <li>Patient ID: {appointment.user_id}</li>
@@ -125,9 +125,10 @@ class AccountForm extends React.Component {
                       this.props.history.push('/home');
                     })}>Cancel Appointment</button>
                 </ul>
-                ))}
+              )) :
+                <h2>No Appointments Scheduled</h2>
+              }
               </ul>
-              <a className='close-modal' href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
             </div>
         </Modal>
       </section>
