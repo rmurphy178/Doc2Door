@@ -35,11 +35,6 @@ class Appointments extends React.Component {
   }
 
 
-componentDidMount() {
-  this.props.fetchDoctors({specialty: this.state.specialty});
-  this.props.fetchSpecialties({specialty: {name: this.state.specialty}});
-}
-
 handleChangeDate(date) {
   this.setState({date: date});
 }
