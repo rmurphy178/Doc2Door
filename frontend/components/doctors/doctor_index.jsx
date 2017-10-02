@@ -38,16 +38,26 @@ class DoctorIndex extends React.Component {
   }
 
  componentDidMount() {
-   this.setState({appointment: this.props.appointment});
-   this.setState({address: this.props.appointment.address});
-   this.setState({user_id: this.props.appointment.user_id});
-   this.setState({date: this.props.appointment.date});
+   this.setState({
+     appointment: this.props.appointment,
+     address: this.props.appointment.address,
+     user_id: this.props.appointment.user_id,
+     date: this.props.appointment.date
+   });
+
+
+   if (!keys(this.props.specialties)[0]) {
    this.props.fetchSpecialties({specialty: this.props.doctors[0].specialty}).then( (result) => {
      this.setState({specialty: keys(result.specialties)[0]});
    });
    this.props.fetchDoctors({specialty: this.props.doctors[0].specialty}).then( (result) => {
      this.setState({doctors: result.doctors});
    });
+    } else {
+      this.props.fetchDoctors({specialty: keys(this.props.specialties)[0]}).then( (result) => {
+        this.setState({doctors: result.doctors});
+      });
+  }
  }
 
 
