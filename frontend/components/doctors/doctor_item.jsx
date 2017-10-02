@@ -19,22 +19,8 @@ class DoctorItem extends React.Component {
       specialty: keys(this.props.specialties)[0],
       doctor: '',
       doctors: '',
-      visible: false
     };
     this.handleClick = this.handleClick.bind(this);
-    this.openModal = this.openModal.bind(this);
-  }
-
-openModal() {
-    this.setState({
-        visible : true
-    });
-  }
-
-closeModal() {
-    this.setState({
-        visible : false
-    });
   }
 
 componentWillReceiveProps() {

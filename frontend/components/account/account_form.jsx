@@ -38,7 +38,6 @@ class AccountForm extends React.Component {
 
 
   componentDidMount() {
-    // this.props.fetchAppointment(this.props.appointments.id);
     this.props.fetchAppointments().then( (result) => {
       this.setState({appointments: result.appointments});
       const appointment_array = Object.keys(result.appointments).map(id => result.appointments[id]);

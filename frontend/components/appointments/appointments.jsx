@@ -82,10 +82,10 @@ handleSubmit(e) {
       address: data['address'], doctor_id: data['doctor_id'],
       errors: data['errors']};
 
-    this.setState({appointment: data});
-    this.setState({appointment_request: data});
-
-
+    this.setState({
+      appointment: data,
+      appointment_request: data
+    });
 
     this.props.createAppointmentRequest({appointment_request: data}).then( () => {
       this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {

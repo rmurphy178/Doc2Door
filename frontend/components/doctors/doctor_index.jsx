@@ -24,19 +24,6 @@ class DoctorIndex extends React.Component {
  }
 
 
-  componentWillReceiveProps() {
-    this.setState({appointment: this.props.appointment});
-
-    let appt = {};
-
-    appt['user_id'] = this.state.user_id;
-    appt['doctor_id'] = this.state.doctor_id;
-    appt['address'] = this.state.address;
-    appt['date'] = this.state.date;
-
-    this.setState({appointment: appt});
-  }
-
  componentDidMount() {
    this.setState({
      appointment: this.props.appointment,

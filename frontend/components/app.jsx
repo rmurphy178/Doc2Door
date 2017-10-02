@@ -33,7 +33,6 @@ const App = () => (
       <ProtectedRoute exact path="/doctors" component={DoctorIndexContainer} />
       <ProtectedRoute exact path="/appointments/new" component={BookingFormContainer} />
       <ProtectedRoute exact path="/account" component={AccountFormContainer} />
-      <ProtectedRoute exact path='/landing' component={LandingContainer} />
       <ProtectedRoute exact path='/account' component={AccountFormContainer} />
     </Switch>
   </div>
