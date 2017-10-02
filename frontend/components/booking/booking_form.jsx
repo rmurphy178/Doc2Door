@@ -37,6 +37,17 @@ closeModal() {
   }
 
 componentDidMount(){
+  this.props.fetchDoctor(this.props.appointment_requests.doctor_id).then( (result) => {
+    this.setState({
+      doctor: result.doctor.name,
+      specialty: result.doctor.specialty
+    });
+
+    this.props.fetchSpecialties({specialty: result.doctor.specialty}).then( (result1) => {
+      this.setState({specialty: keys(result1.specialties)[0]});
+    });
+  });
+
   let key = keys(this.state.appointment);
   let val = values(this.state.appointment);
   const appt = new Map();
@@ -82,7 +93,7 @@ update(field) {
 
 
   render(){
-
+    
   const appt_info = Array.from(this.state.new_appointment);
 
     return (

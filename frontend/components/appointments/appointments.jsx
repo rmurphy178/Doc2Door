@@ -89,7 +89,7 @@ handleSubmit(e) {
 
     this.props.createAppointmentRequest({appointment_request: data}).then( () => {
       this.props.fetchDoctors({specialty: this.state.specialty}).then( () => {
-      this.props.fetchSpecialties({specialty: {name: this.state.specialty}});
+      this.props.fetchSpecialties({specialty: this.state.specialty});
       this.props.history.push('/doctors');
       });
     });
@@ -99,7 +99,6 @@ handleSubmit(e) {
 render() {
   const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);
   const inputProps = { value: this.state.address, onChange: this.onChange };
-
 
 return(
   <div>

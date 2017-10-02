@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import BookingForm from './booking_form';
 import { fetchDoctors, fetchDoctor } from '../../actions/doctor_actions';
 import { fetchAppointments, createAppointment } from '../../actions/appointment_actions';
+import { fetchSpecialties } from '../../actions/specialty_actions';
 
 
 const mapStateToProps = ({session, appointments, doctors, specialties, appointment_requests}) => ({
@@ -14,8 +15,9 @@ const mapStateToProps = ({session, appointments, doctors, specialties, appointme
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchDoctor: (id) => dispatch(fetchDoctors(id)),
-  createAppointment: (data) => dispatch(createAppointment(data))
+  fetchDoctor: (id) => dispatch(fetchDoctor(id)),
+  createAppointment: (data) => dispatch(createAppointment(data)),
+  fetchSpecialties: (data) => dispatch(fetchSpecialties(data))
 });
 
 
