@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import NavBarContainer from '../navBar/navBar_container';
 import BookingFormContainer from '../booking/booking_form_container';
-import Modal from 'react-awesome-modal';
-
 import { values, keys } from 'lodash';
 
 

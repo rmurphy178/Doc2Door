@@ -3,7 +3,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { keys, values } from 'lodash';
 import Modal from 'react-awesome-modal';
-
 import NavBarContainer from '../navBar/navBar_container';
 import DoctorItem from './doctor_item';
 

@@ -73,7 +73,6 @@ changeDate(date) {
 
 
 
-
   render() {
 
     const AutocompleteItem = ({ suggestion }) => (<div><i className="fa fa-map-marker"/>{suggestion}</div>);

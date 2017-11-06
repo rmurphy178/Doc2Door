@@ -11,7 +11,6 @@ import {
  from './actions/appointment_actions';
 
 import { fetchDoctors, fetchDoctor} from './actions/doctor_actions';
-
 import {fetchSpecialties, fetchSpecialty} from './actions/specialty_actions';
 
 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     delete window.currentUser;
   } else {
     store = configureStore();
-
   }
   ReactDOM.render(<Root store={store} />, root);
 });
